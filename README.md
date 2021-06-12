@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+## Welcome to Enterprize Library
 
-You can use the [editor on GitHub](https://github.com/EnterpriseLibrary/EnterpriseLibrary.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Enterprise Library is a collection of application blocks designed to assist developers with common enterprise development challenges. Orignially developed by Microsoft, it was abandoned in 2013, but released as Open Source, originally on CodePlex and then moved to GitHub when CodePlex was shut down.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This Enterpirse Library GitHub project took to revive the Enterprise Library project, in order to support projects that already use it, and provide a solution to common problems in new projects.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/EnterpriseLibrary/EnterpriseLibrary.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+There are currently several parts, or Application Blocks, as they are called, to Enterpise Library:
+1. Data Access Application Block
+2. Logging Application Block
+3. Semantic Logging Application Block
+4. Exception Handling Application Block
+5. Validation Application Block
+6. Transient Fault Handling Application Block
+7. Policy Injection Application Block

@@ -1,5 +1,3 @@
-## Welcome to Enterprise Library
-
 ![logo](images/entlib_new_icon_100x100.png)
 
 Enterprise Library is a collection of application blocks designed to assist developers with common enterprise development

@@ -9,6 +9,7 @@ project, in order to support projects that already use it, and provide a solutio
 
 There are currently several parts, or Application Blocks, as they are called, to Enterprise Library:
 1. Data Access Application Block
+  * [API Reference](/daab)
 2. Logging Application Block
 3. Semantic Logging Application Block
 4. Exception Handling Application Block

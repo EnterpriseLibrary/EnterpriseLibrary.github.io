@@ -1,5 +1,11 @@
 var annotated_dup =
 [
+    [ "What is the Data Access Application Block", "a00940.html#autotoc_md1", null ],
+    [ "NuGet Packages", "a00940.html#autotoc_md2", null ],
+    [ "Configuration", "a00940.html#autotoc_md3", [
+      [ "Oracle Configuration", "a00940.html#autotoc_md4", null ]
+    ] ],
+    [ "Code Examples", "a00940.html#autotoc_md5", null ],
     [ "Microsoft", "a00233.html", [
       [ "Practices", "a00234.html", [
         [ "EnterpriseLibrary", "a00235.html", [

@@ -25,9 +25,7 @@
 var NAVTREE =
 [
   [ "Enterprise Library Data Access Application Block", "index.html", [
-    [ "DATA ACCESS APPLICATION BLOCK (DAAB)", "index.html#autotoc_md0", [
-      [ "How to help", "index.html#autotoc_md1", null ]
-    ] ],
+    [ "Data Access Application Block User Guide", "a00940.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -49,7 +47,7 @@ var NAVTREEINDEX =
 "a00523.html#a9f8ee827a130d35f3cd1ae2b28eb0310",
 "a00615.html#aec4e078b46f775b90d01038bab518c57",
 "a00695.html#a27469f9c1ac7f0c4d1c86fdfc3000b0e",
-"functions_func_p.html"
+"functions_func_g.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

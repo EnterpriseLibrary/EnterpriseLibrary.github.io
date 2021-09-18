@@ -126,15 +126,15 @@ NuGet Packages</h2>
 </table>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Configuration</h2>
-<p>After installing the appropriate package(S), you should add the following configuration elements to your app.config or web.config file.</p><ol type="1">
+<p>After installing the appropriate package(s), you should add the following configuration elements to your app.config or web.config file.</p><ol type="1">
 <li>Under the <code>&lt;configSections&gt;</code> element, add the following section: <div class="fragment"><div class="line">&lt;<span class="keywordtype">section</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;dataConfiguration&quot;</span> <span class="keyword">type</span>=<span class="stringliteral">&quot;Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings, Microsoft.Practices.EnterpriseLibrary.Data&quot;</span> /&gt;</div>
 </div><!-- fragment --></li>
 <li>Under the <code>&lt;connectionStrings&gt;</code> section, add a normal connection string to your database, with a <code>name</code>, <code>connectionString</code> and <code>providerName</code> attributes. DAAB supports the following provider names:<ol type="a">
-<li><code>System.Data.SqlClient</code></li>
-<li><code>Oracle.ManagedDataAccess.Client</code></li>
+<li><code>System.Data.SqlClient</code> (.NET built-in provider for SQL Server)</li>
+<li><code>Oracle.ManagedDataAccess.Client</code> (Managed ADO.NET provider by Oracle, known as ODP.NET)</li>
 <li><code>System.Data.OleDb</code></li>
 <li><code>System.Data.Odbc</code></li>
-<li><code>System.Data.SqlServerCe.4.0</code></li>
+<li><code>System.Data.SqlServerCe.4.0</code> (Latest provider for SQL Server CE, available as a NuGet package)</li>
 </ol>
 </li>
 <li>Under the root <code>&lt;configuration&gt;</code> element, but somewhere bellow the <code>&lt;configSections&gt;</code>, add the following section: <div class="fragment"><div class="line">&lt;<span class="keywordtype">dataConfiguration</span> <span class="keyword">defaultDatabase</span>=<span class="stringliteral">&quot;MyConnectionString&quot;</span>&gt;</div>
@@ -165,8 +165,24 @@ Configuration</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">ODBC   </td><td class="markdownTableBodyNone">"Microsoft.Practices.EnterpriseLibrary.Data.Odbc.OdbcDatabase, Microsoft.Practices.EnterpriseLibrary.Data.Odbc"   </td></tr>
 </table>
+<p>You can add multiple mappings if you access more than one database type.</p>
 <h3><a class="anchor" id="autotoc_md4"></a>
 Oracle Configuration</h3>
+<p>For Oracle databases, we also need to configure packages.</p><ol type="1">
+<li>Under <code>&lt;configSections&gt;</code>, in addition to the <code>dataConfiguration</code> section, add <div class="fragment"><div class="line">&lt;<span class="keywordtype">section</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;oracleConnectionSettings&quot;</span> <span class="keyword">type</span>=<span class="stringliteral">&quot;Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings, Microsoft.Practices.EnterpriseLibrary.Data.Oracle&quot;</span> /&gt;</div>
+</div><!-- fragment --></li>
+<li>Under the root <code>&lt;configuration&gt;</code> element, but somewhere bellow the <code>&lt;configSections&gt;</code>, add the following section: <div class="fragment"><div class="line">&lt;<span class="keywordtype">oracleConnectionSettings</span>&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">add</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;OracleTest&quot;</span>&gt;</div>
+<div class="line">    &lt;<span class="keywordtype">packages</span>&gt;</div>
+<div class="line">      &lt;<span class="keywordtype">add</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;ENTLIBTEST&quot;</span> <span class="keyword">prefix</span>=<span class="stringliteral">&quot;GetProductDetailsById&quot;</span> /&gt;</div>
+<div class="line">    &lt;/<span class="keywordtype">packages</span>&gt;</div>
+<div class="line">  &lt;/<span class="keywordtype">add</span>&gt;</div>
+<div class="line">&lt;/<span class="keywordtype">oracleConnectionSettings</span>&gt;</div>
+</div><!-- fragment --><ol type="a">
+<li><code>name</code> points to the name of a connection string from section 2 above. </li>
+</ol>
+</li>
+</ol>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Code Examples</h2>
 </div></div><!-- contents -->

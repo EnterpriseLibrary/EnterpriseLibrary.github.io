@@ -186,7 +186,25 @@ Oracle Configuration</h3>
 </ol>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Code Examples</h2>
-</div></div><!-- contents -->
+<p>The simplest approach for creating a <code>Database</code> object or one of its descendants is calling the <code>CreateDefault</code> or <code>Create</code> method of the <code>DatabaseProviderFactory</code> class, as shown here, and storing these instances in application-wide variables so that they can be accessed from anywhere in the code. </p><div class="fragment"><div class="line"><span class="comment">// Configure the DatabaseFactory to read its configuration from the .config file</span></div>
+<div class="line">DatabaseProviderFactory factory = <span class="keyword">new</span> DatabaseProviderFactory();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create the default Database object from the factory.</span></div>
+<div class="line"><span class="comment">// The actual concrete type is determined by the configuration settings.</span></div>
+<div class="line">Database defaultDB = factory.CreateDefault();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create a Database object from the factory using the connection string name.</span></div>
+<div class="line">Database namedDB = factory.Create(<span class="stringliteral">&quot;ExampleDatabase&quot;</span>);</div>
+</div><!-- fragment --><p> where "ExampleDatabase" is a <code>name</code> of a connection string. With <code>CreateDefault</code>, the connection string specified by the <code>defaultDatabase</code> attribute of the <code>dataConfiguration</code> element in web.config is used, as described above. Using the default database is a useful approach because you can change which of the databases defined in your configuration is the default simply by editing the configuration file, without requiring recompilation or redeployment of the application.</p>
+<p>Some features are only available in the concrete types for a specific database. For example, the <code>ExecuteXmlReader</code> method is only available in the <code>SqlDatabase</code> class. If you want to use such features, you must cast the database type you instantiate to the appropriate concrete type.</p>
+<p>As alternative to using the <code>DatabaseProviderFactory</code> class, you could use the static <code>DatabaseFactory</code> façade to create your <code>Database</code> instances. You must invoke the <code>SetDatabaseProviderFactory</code> method to set the details of the default database from the configuration file.</p>
+<div class="fragment"><div class="line">DatabaseFactory.SetDatabaseProviderFactory(factory, <span class="keyword">false</span>);</div>
+<div class="line">defaultDB = DatabaseFactory.CreateDatabase(<span class="stringliteral">&quot;ExampleDatabase&quot;</span>);</div>
+<div class="line"><span class="comment">// Uses the default database from the configuration file.</span></div>
+<div class="line">sqlServerDB = DatabaseFactory.CreateDatabase() as SqlDatabase;</div>
+</div><!-- fragment --><p>In addition to using configuration to define the databases you will use, the Data Access block allows you to create instances of concrete types that inherit from the Database class directly in your code, as shown here.</p>
+<div class="fragment"><div class="line">SqlDatabase sqlDatabase = <span class="keyword">new</span> SqlDatabase(myConnectionString);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

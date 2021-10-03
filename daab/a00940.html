@@ -94,7 +94,10 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 <li class="level2"><a href="#autotoc_md3">Configuration</a><ul><li class="level3"><a href="#autotoc_md4">Oracle Configuration</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md5">Code Examples</a></li>
+<li class="level2"><a href="#autotoc_md5">Code Examples</a><ul><li class="level3"><a href="#autotoc_md6">Creating Database Instances</a></li>
+<li class="level3"><a href="#autotoc_md7">Reading Rows Using a Query with No Parameters</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </div>
@@ -186,6 +189,8 @@ Oracle Configuration</h3>
 </ol>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Code Examples</h2>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Creating Database Instances</h3>
 <p>The simplest approach for creating a <code>Database</code> object or one of its descendants is calling the <code>CreateDefault</code> or <code>Create</code> method of the <code>DatabaseProviderFactory</code> class, as shown here, and storing these instances in application-wide variables so that they can be accessed from anywhere in the code. </p><div class="fragment"><div class="line"><span class="comment">// Configure the DatabaseFactory to read its configuration from the .config file</span></div>
 <div class="line">DatabaseProviderFactory factory = <span class="keyword">new</span> DatabaseProviderFactory();</div>
 <div class="line"> </div>
@@ -204,6 +209,33 @@ Code Examples</h2>
 <div class="line">sqlServerDB = DatabaseFactory.CreateDatabase() as SqlDatabase;</div>
 </div><!-- fragment --><p>In addition to using configuration to define the databases you will use, the Data Access block allows you to create instances of concrete types that inherit from the Database class directly in your code, as shown here.</p>
 <div class="fragment"><div class="line">SqlDatabase sqlDatabase = <span class="keyword">new</span> SqlDatabase(myConnectionString);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
+Reading Rows Using a Query with No Parameters</h3>
+<p>To read rows using a stored procedure with no parameters, retrieve an <code>IDataReader</code> and read values from it: </p><div class="fragment"><div class="line"><span class="comment">// Call the ExecuteReader method by specifying just the stored procedure name.</span></div>
+<div class="line"><span class="keyword">using</span> (IDataReader reader = namedDB.ExecuteReader(<span class="stringliteral">&quot;MyStoredProcName&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Use the values in the rows as required.</span></div>
+<div class="line">    DisplayRowValues(reader);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> <code>ExecuteReader</code> also accept a <code>CommandType</code>, but the default value is <code>CommandType.StoredProcedure</code>.</p>
+<p>To use an inline SQL statement, specify a <code>CommandType.Text</code>: </p><div class="fragment"><div class="line"><span class="comment">// Call the ExecuteReader method by specifying the command type</span></div>
+<div class="line"><span class="comment">// as a SQL statement, and passing in the SQL statement.</span></div>
+<div class="line"><span class="keyword">using</span> (IDataReader reader = namedDB.ExecuteReader(CommandType.Text, <span class="stringliteral">&quot;SELECT TOP 1 * FROM OrderList&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Use the values in the rows as required - here we are just displaying them.</span></div>
+<div class="line">    DisplayRowValues(reader);</div>
+<div class="line">}</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> DisplayRowValues(IDataReader reader)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">while</span> (reader.Read())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; reader.FieldCount; i++)</div>
+<div class="line">        {</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;{0} = {1}&quot;</span>, reader.GetName(i), reader[i].ToString());</div>
+<div class="line">        }</div>
+<div class="line">        Console.WriteLine();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

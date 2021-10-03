@@ -5,7 +5,10 @@ var annotated_dup =
     [ "Configuration", "a00940.html#autotoc_md3", [
       [ "Oracle Configuration", "a00940.html#autotoc_md4", null ]
     ] ],
-    [ "Code Examples", "a00940.html#autotoc_md5", null ],
+    [ "Code Examples", "a00940.html#autotoc_md5", [
+      [ "Creating Database Instances", "a00940.html#autotoc_md6", null ],
+      [ "Reading Rows Using a Query with No Parameters", "a00940.html#autotoc_md7", null ]
+    ] ],
     [ "Microsoft", "a00233.html", [
       [ "Practices", "a00234.html", [
         [ "EnterpriseLibrary", "a00235.html", [

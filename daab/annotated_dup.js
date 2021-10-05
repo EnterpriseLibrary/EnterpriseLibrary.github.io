@@ -7,7 +7,8 @@ var annotated_dup =
     ] ],
     [ "Code Examples", "a00940.html#autotoc_md5", [
       [ "Creating Database Instances", "a00940.html#autotoc_md6", null ],
-      [ "Reading Rows Using a Query with No Parameters", "a00940.html#autotoc_md7", null ]
+      [ "Reading Rows Using a Query with No Parameters", "a00940.html#autotoc_md7", null ],
+      [ "Reading Rows Using a Query with unnamed Parameters", "a00940.html#autotoc_md8", null ]
     ] ],
     [ "Microsoft", "a00233.html", [
       [ "Practices", "a00234.html", [

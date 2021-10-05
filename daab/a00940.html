@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 </li>
 <li class="level2"><a href="#autotoc_md5">Code Examples</a><ul><li class="level3"><a href="#autotoc_md6">Creating Database Instances</a></li>
 <li class="level3"><a href="#autotoc_md7">Reading Rows Using a Query with No Parameters</a></li>
+<li class="level3"><a href="#autotoc_md8">Reading Rows Using a Query with unnamed Parameters</a></li>
 </ul>
 </li>
 </ul>
@@ -225,7 +226,7 @@ Reading Rows Using a Query with No Parameters</h3>
 <div class="line">    <span class="comment">// Use the values in the rows as required - here we are just displaying them.</span></div>
 <div class="line">    DisplayRowValues(reader);</div>
 <div class="line">}</div>
-</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> DisplayRowValues(IDataReader reader)</div>
+</div><!-- fragment --><p>You read the values from the <code>IDataReader</code> normally: </p><div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> DisplayRowValues(IDataReader reader)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">while</span> (reader.Read())</div>
 <div class="line">    {</div>
@@ -235,6 +236,15 @@ Reading Rows Using a Query with No Parameters</h3>
 <div class="line">        }</div>
 <div class="line">        Console.WriteLine();</div>
 <div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md8"></a>
+Reading Rows Using a Query with unnamed Parameters</h3>
+<p>If you use only input parameters, you can pass their values to the stored procedure or SQL statement directly and let the <code>Database</code> class wrap them in the appropriate <code>DbParameter</code> objects. You must pass them in the same order as they are expected by the query, because you are not using names for these parameters. The following code executes a stored procedure that takes a single string parameter. </p><div class="fragment"><div class="line"><span class="comment">// Call the ExecuteReader method with the stored procedure</span></div>
+<div class="line"><span class="comment">// name and an Object array containing the parameter values.</span></div>
+<div class="line"><span class="keyword">using</span> (IDataReader reader = defaultDB.ExecuteReader(<span class="stringliteral">&quot;ListOrdersByState&quot;</span>, <span class="stringliteral">&quot;Colorado&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Use the values in the rows as required - here we are just displaying them.</span></div>
+<div class="line">    DisplayRowValues(reader);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

@@ -237,10 +237,11 @@ var NAVTREEINDEX4 =
 "a00940.html#autotoc_md6":[3,0],
 "a00940.html#autotoc_md7":[3,1],
 "a00940.html#autotoc_md8":[3,2],
+"a00940.html#autotoc_md9":[3,3],
 "annotated.html":[1,0],
 "classes.html":[1,1],
-"functions.html":[1,3,0],
 "functions.html":[1,3,0,0],
+"functions.html":[1,3,0],
 "functions_b.html":[1,3,0,1],
 "functions_c.html":[1,3,0,2],
 "functions_d.html":[1,3,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "functions_f.html":[1,3,0,5],
 "functions_func.html":[1,3,1,0],
 "functions_func.html":[1,3,1],
-"functions_func_b.html":[1,3,1,1],
-"functions_func_c.html":[1,3,1,2]
+"functions_func_b.html":[1,3,1,1]
 };

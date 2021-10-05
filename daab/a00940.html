@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 <li class="level2"><a href="#autotoc_md5">Code Examples</a><ul><li class="level3"><a href="#autotoc_md6">Creating Database Instances</a></li>
 <li class="level3"><a href="#autotoc_md7">Reading Rows Using a Query with No Parameters</a></li>
 <li class="level3"><a href="#autotoc_md8">Reading Rows Using a Query with unnamed Parameters</a></li>
+<li class="level3"><a href="#autotoc_md9">Reading Rows Using a Query with named Parameters</a></li>
 </ul>
 </li>
 </ul>
@@ -245,6 +246,38 @@ Reading Rows Using a Query with unnamed Parameters</h3>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Use the values in the rows as required - here we are just displaying them.</span></div>
 <div class="line">    DisplayRowValues(reader);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md9"></a>
+Reading Rows Using a Query with named Parameters</h3>
+<p>If you need to specify the data-types of the parameters, e.g. if it can't be inferred from the .NET data type, or you need to specify the parameter direction (input or output), you can access the provider independent <code>DbCommand</code> object for the query and add parameters using methods on the <code>Database</code> object. You can add parameters with a specific direction using the <code>AddInParameter</code> or <code>AddOutParameter</code> method, or by using the <code>AddParameter</code> method and providing a value for the <code>ParameterDirection</code> parameter. You can change the value of existing parameters already added to the command using the <code>GetParameterValue</code> and <code>SetParameterValue</code> methods. </p><div class="fragment"><div class="line"><span class="comment">// Read data with a SQL statement that accepts one parameter prefixed with @.</span></div>
+<div class="line"><span class="keywordtype">string</span> sqlStatement = <span class="stringliteral">&quot;SELECT TOP 1 * FROM OrderList WHERE State LIKE @state&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create a suitable command type and add the required parameter.</span></div>
+<div class="line"><span class="keyword">using</span> (DbCommand sqlCmd = defaultDB.GetSqlStringCommand(sqlStatement))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Any required prefix, such as &#39;@&#39; or &#39;:&#39; will be added automatically if missing.</span></div>
+<div class="line">    defaultDB.AddInParameter(sqlCmd, <span class="stringliteral">&quot;state&quot;</span>, DbType.String, <span class="stringliteral">&quot;New York&quot;</span>);</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// Call the ExecuteReader method with the command.</span></div>
+<div class="line">    <span class="keyword">using</span> (IDataReader sqlReader = defaultDB.ExecuteReader(sqlCmd))</div>
+<div class="line">    {</div>
+<div class="line">        DisplayRowValues(sqlReader);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Now read the same data with a stored procedure that accepts one parameter.</span></div>
+<div class="line"><span class="keywordtype">string</span> storedProcName = <span class="stringliteral">&quot;ListOrdersByState&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create a suitable command type and add the required parameter.</span></div>
+<div class="line"><span class="keyword">using</span> (DbCommand sprocCmd = defaultDB.GetStoredProcCommand(storedProcName))</div>
+<div class="line">{</div>
+<div class="line">    defaultDB.AddInParameter(sprocCmd, <span class="stringliteral">&quot;state&quot;</span>, DbType.String, <span class="stringliteral">&quot;New York&quot;</span>);</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// Call the ExecuteReader method with the command.</span></div>
+<div class="line">    <span class="keyword">using</span> (IDataReader sprocReader = defaultDB.ExecuteReader(sprocCmd))</div>
+<div class="line">    {</div>
+<div class="line">        DisplayRowValues(sprocReader);</div>
+<div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

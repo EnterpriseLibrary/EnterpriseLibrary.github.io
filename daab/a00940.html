@@ -98,6 +98,7 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 <li class="level3"><a href="#autotoc_md7">Reading Rows Using a Query with No Parameters</a></li>
 <li class="level3"><a href="#autotoc_md8">Reading Rows Using a Query with unnamed Parameters</a></li>
 <li class="level3"><a href="#autotoc_md9">Reading Rows Using a Query with named Parameters</a></li>
+<li class="level3"><a href="#autotoc_md10">Retrieving Data as Objects</a></li>
 </ul>
 </li>
 </ul>
@@ -278,6 +279,25 @@ Reading Rows Using a Query with named Parameters</h3>
 <div class="line">    {</div>
 <div class="line">        DisplayRowValues(sprocReader);</div>
 <div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md10"></a>
+Retrieving Data as Objects</h3>
+<p>DAAB allows you to extract data using a query, and have the data returned to you as a sequence of objects that implements the <code>IEnumerable</code> interface. This allows you to execute queries, or obtain lists or arrays of objects that represent the original data in the database.</p>
+<p>The block provides two core classes for performing this kind of query: the <code>SprocAccessor</code> and the <code>SqlStringAccessor</code>. You can create and execute these accessors in one operation using the <code>ExecuteSprocAccessor</code> and <code>ExecuteSqlAccessor</code> extension methods of the <code>Database</code> class, or create a new accessor directly and then call its <code>Execute</code> method.</p>
+<p>If you do not specify an output mapper, the block uses a default map builder class that maps the column names of the returned data to properties of the objects it creates. Alternatively, you can create a custom mapping to specify the relationship between columns in the row set and the properties of the objects. Inferring the details required to create the correct mappings means that the default output mappers <b>can have an effect on performance</b>. You may prefer to create your own custom mappers and retain a reference to them for reuse when possible to maximize performance of your data access processes when using accessors.</p>
+<p>The following code shows how you can use an accessor to execute a stored procedure. You must specify the object type that you want the data returned as—in this example it is a simple class named <code>Product</code> that has the three properties: <code>ID</code>, <code>Name</code>, and <code>Description</code>.</p>
+<p>The stored procedure takes a single parameter that is a search string, and returns details of all products in the database that contain this string. Therefore, the code calls the <code>ExecuteSprocAccessor</code> extension method passing the search string as the single parameter. It specifies the <code>Product</code> class as the type of object to return, and passes to the method the name of the stored procedure to execute and the array of parameter values.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create and execute a sproc accessor that uses the default</span></div>
+<div class="line"><span class="comment">// parameter and output mappings.</span></div>
+<div class="line">var productData = defaultDB.ExecuteSprocAccessor&lt;Product&gt;(<span class="stringliteral">&quot;GetProductList&quot;</span>, <span class="stringliteral">&quot;%bike%&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Display the results</span></div>
+<div class="line"><span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> results)</div>
+<div class="line">{</div>
+<div class="line">    Console.WriteLine(<span class="stringliteral">&quot;Product ID: {0}&quot;</span>, item.ID);</div>
+<div class="line">    Console.WriteLine(<span class="stringliteral">&quot;Product Name: {0}&quot;</span>, item.Name);</div>
+<div class="line">    Console.WriteLine(<span class="stringliteral">&quot;Description: {0}&quot;</span>, item.Description);</div>
+<div class="line">    Console.WriteLine();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

@@ -99,6 +99,8 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 <li class="level3"><a href="#autotoc_md8">Reading Rows Using a Query with unnamed Parameters</a></li>
 <li class="level3"><a href="#autotoc_md9">Reading Rows Using a Query with named Parameters</a></li>
 <li class="level3"><a href="#autotoc_md10">Retrieving Data as Objects</a></li>
+<li class="level3"><a href="#autotoc_md11">Creating and Using Mappers</a></li>
+<li class="level3"><a href="#autotoc_md12">Retrieving XML Data</a></li>
 </ul>
 </li>
 </ul>
@@ -299,7 +301,40 @@ Retrieving Data as Objects</h3>
 <div class="line">    Console.WriteLine(<span class="stringliteral">&quot;Description: {0}&quot;</span>, item.Description);</div>
 <div class="line">    Console.WriteLine();</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md11"></a>
+Creating and Using Mappers</h3>
+<p>In some cases, you may need to create a custom parameter mapper to pass your parameters to the query that the accessor will execute. This typically occurs when you need to execute a SQL statement to work with a database system that does not support parameter resolution, or when a default mapping cannot be inferred due to a mismatch in the number or types of the parameters. The parameter mapper class must implement the <code>IParameterMapper</code> interface and contain a method named <code>AssignParameters</code> that takes a reference to the current <code>Command</code> instance and the array of parameters. The method simply needs to add the required parameters to the <code>Command</code> object's <code>Parameters</code> collection.</p>
+<p>More often, you will need to create a custom output mapper. To help you do this, the block provides a class called <code>MapBuilder</code> that you can use to create the set of mappings you require between the columns of the data set returned by the query and the properties of the objects you need.</p>
+<p>By default, the accessor will expect to generate a simple sequence of a single type of object (in our earlier example, this was a sequence of the <code>Product</code> class). However, you can use an accessor to return a more complex graph of objects if you wish. For example, you might execute a query that returns a series of <code>Order</code> objects and the related <code>OrderLines</code> objects for all of the selected orders. Simple output mapping cannot cope with this scenario, and neither can the <code>MapBuilder</code> class. In this case, you would create a result set mapper by implementing the <code>IResultSetMapper</code> interface. Your custom row set mapper must contain a method named <code>MapSet</code> that receives a reference to an object that implements the <code>IDataReader</code> interface. The method should read all of the data available through the data reader, processes it to create the sequence of objects you require, and return this sequence.</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+Retrieving XML Data</h3>
+<p>SQL Server allows you to extract data as a series of XML elements, by executing specially formatted SQL queries. The Data Access block provides the <code>ExecuteXmlReader</code> method for querying data as XML. It takes a SQL statement that contains the <code>FOR XML</code> statement and executes it against the database, returning the result as an <code>XmlReader</code>. You can iterate through the resulting XML elements or work with them in any of the ways supported by the XML classes in the .NET Framework. However, as the implementations of this type of query differ in other database systems, it is only available when you specifically use the <code>SqlDatabase</code> class (rather than the <code>Database</code> class).</p>
+<p>The following code shows how you can obtain a <code>SqlDatabase</code> instance, specify a suitable XML query, and execute it using the <code>ExecuteXmlReader</code> method.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create a SqlDatabase object from configuration using the default database.</span></div>
+<div class="line">SqlDatabase sqlServerDB = DatabaseFactory.CreateDatabase() as SqlDatabase;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Specify a SQL query that returns XML data.</span></div>
+<div class="line"><span class="keywordtype">string</span> xmlQuery = <span class="stringliteral">&quot;SELECT * FROM OrderList WHERE State = @state FOR XML AUTO&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create a suitable command type and add the required parameter</span></div>
+<div class="line"><span class="comment">// NB: ExecuteXmlReader is only available for SQL Server databases</span></div>
+<div class="line"><span class="keyword">using</span> (DbCommand xmlCmd = sqlServerDB.GetSqlStringCommand(xmlQuery))</div>
+<div class="line">{</div>
+<div class="line">    xmlCmd.Parameters.Add(<span class="keyword">new</span> SqlParameter(<span class="stringliteral">&quot;state&quot;</span>, <span class="stringliteral">&quot;Colorado&quot;</span>));</div>
+<div class="line">    <span class="keyword">using</span> (XmlReader reader = sqlServerDB.ExecuteXmlReader(xmlCmd))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Iterate through the elements in the XmlReader</span></div>
+<div class="line">        <span class="keywordflow">while</span> (!reader.EOF)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (reader.IsStartElement())</div>
+<div class="line">            {</div>
+<div class="line">                Console.WriteLine(reader.ReadOuterXml());</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Note:</b> by default, the result is an XML fragment, and not a valid XML document. It is, effectively, a sequence of XML elements that represent each row in the results set. Therefore, at minimum, you must wrap the output with a single root element so that it is well-formed. See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8">XmlReader</a> for more details. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

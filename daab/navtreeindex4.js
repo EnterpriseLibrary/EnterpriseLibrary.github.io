@@ -231,6 +231,8 @@ var NAVTREEINDEX4 =
 "a00940.html":[0],
 "a00940.html#autotoc_md1":[0],
 "a00940.html#autotoc_md10":[3,4],
+"a00940.html#autotoc_md11":[3,5],
+"a00940.html#autotoc_md12":[3,6],
 "a00940.html#autotoc_md2":[1],
 "a00940.html#autotoc_md3":[2],
 "a00940.html#autotoc_md4":[2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "functions_c.html":[1,3,0,2],
 "functions_d.html":[1,3,0,3],
 "functions_e.html":[1,3,0,4],
-"functions_f.html":[1,3,0,5],
-"functions_func.html":[1,3,1,0],
-"functions_func.html":[1,3,1]
+"functions_f.html":[1,3,0,5]
 };

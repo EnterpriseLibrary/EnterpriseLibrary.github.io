@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 <li class="level3"><a href="#autotoc_md10">Retrieving Data as Objects</a></li>
 <li class="level3"><a href="#autotoc_md11">Creating and Using Mappers</a></li>
 <li class="level3"><a href="#autotoc_md12">Retrieving XML Data</a></li>
+<li class="level3"><a href="#autotoc_md13">Retrieving Single Scalar Values</a></li>
 </ul>
 </li>
 </ul>
@@ -333,8 +334,30 @@ Retrieving XML Data</h3>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p><b>Note:</b> by default, the result is an XML fragment, and not a valid XML document. It is, effectively, a sequence of XML elements that represent each row in the results set. Therefore, at minimum, you must wrap the output with a single root element so that it is well-formed. See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8">XmlReader</a> for more details. </p>
-</div></div><!-- contents -->
+</div><!-- fragment --><p><b>Note:</b> by default, the result is an XML fragment, and not a valid XML document. It is, effectively, a sequence of XML elements that represent each row in the results set. Therefore, at minimum, you must wrap the output with a single root element so that it is well-formed. See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8">XmlReader</a> for more details.</p>
+<h3><a class="anchor" id="autotoc_md13"></a>
+Retrieving Single Scalar Values</h3>
+<p>The Data Access block provides the <code>ExecuteScalar</code> method to extract a single scalar value based on a query that selects either a single row or a single value. It executes the query you specify, and then returns the value of the first column of the first row of the result set as an Object type.</p>
+<p>The <code>ExecuteScalar</code> method has a set of overloads similar to the <code>ExecuteReader</code> method we used earlier in this document. You can specify a <code>CommandType</code> (the default is <code>StoredProcedure</code>) and either a SQL statement or a stored procedure name. You can also pass in an array of <code>Object</code> instances that represent the parameters for the query. Alternatively, you can pass to the method a <code>Command</code> object that contains any parameters you require.</p>
+<p>The following code demonstrates passing a <code>Command</code> object to the method to execute both an inline SQL statement and a stored procedure. It obtains a suitable <code>Command</code> instance from the current Database instance using the <code>GetSqlStringCommand</code> and <code>GetStoredProcCommand</code> methods. You can add parameters to the command before calling the <code>ExecuteScalar</code> method if required. However, to demonstrate the way the method works, the code here simply extracts the complete row set. The result is a single <code>Object</code> that you must cast to the appropriate type before displaying or consuming it in your code.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create a suitable command type for a SQL statement.</span></div>
+<div class="line"><span class="comment">// NB: For efficiency, aim to return only a single value or a single row.</span></div>
+<div class="line"><span class="keyword">using</span> (DbCommand sqlCmd = defaultDB.GetSqlStringCommand(<span class="stringliteral">&quot;SELECT [Name] FROM States&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Call the ExecuteScalar method of the command.</span></div>
+<div class="line">    Console.WriteLine(<span class="stringliteral">&quot;Result using a SQL statement: {0}&quot;</span>, defaultDB.ExecuteScalar(sqlCmd).ToString());</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create a suitable command type for a stored procedure.</span></div>
+<div class="line"><span class="comment">// NB: For efficiency, aim to return only a single value or a single row.</span></div>
+<div class="line"><span class="keyword">using</span> (DbCommand sprocCmd = defaultDB.GetStoredProcCommand(<span class="stringliteral">&quot;GetStatesList&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Call the ExecuteScalar method of the command.</span></div>
+<div class="line">    Console.WriteLine(<span class="stringliteral">&quot;Result using a stored procedure: {0}&quot;</span>, defaultDB.ExecuteScalar(sprocCmd).ToString());</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> The result it produces is shown here. </p><div class="fragment"><div class="line">Result using a SQL statement: Alabama</div>
+<div class="line">Result using a stored procedure: Alabama</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

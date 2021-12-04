@@ -12,7 +12,8 @@ var annotated_dup =
       [ "Reading Rows Using a Query with named Parameters", "a00940.html#autotoc_md9", null ],
       [ "Retrieving Data as Objects", "a00940.html#autotoc_md10", null ],
       [ "Creating and Using Mappers", "a00940.html#autotoc_md11", null ],
-      [ "Retrieving XML Data", "a00940.html#autotoc_md12", null ]
+      [ "Retrieving XML Data", "a00940.html#autotoc_md12", null ],
+      [ "Retrieving Single Scalar Values", "a00940.html#autotoc_md13", null ]
     ] ],
     [ "Microsoft", "a00233.html", [
       [ "Practices", "a00234.html", [

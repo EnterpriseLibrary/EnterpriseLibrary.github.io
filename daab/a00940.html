@@ -102,6 +102,9 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 <li class="level3"><a href="#autotoc_md11">Creating and Using Mappers</a></li>
 <li class="level3"><a href="#autotoc_md12">Retrieving XML Data</a></li>
 <li class="level3"><a href="#autotoc_md13">Retrieving Single Scalar Values</a></li>
+<li class="level3"><a href="#autotoc_md14">Retrieving Data Asynchronously</a><ul><li class="level4"><a href="#autotoc_md15">Retrieving Row Set Data Asynchronously using BeginXXX and EndXXX Methods</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -357,6 +360,43 @@ Retrieving Single Scalar Values</h3>
 <div class="line">}</div>
 </div><!-- fragment --><p> The result it produces is shown here. </p><div class="fragment"><div class="line">Result using a SQL statement: Alabama</div>
 <div class="line">Result using a stored procedure: Alabama</div>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md14"></a>
+Retrieving Data Asynchronously</h3>
+<p>Databases are a major bottleneck in any enterprise application. One way that applications can minimize the performance hit from data access is to perform it asynchronously. This means that the application code can continue to execute, and the user interface can remain interactive during the process. It is also very useful in server applications where you can avoid blocking threads that could handle other requests, thus improving utilization. However, keep in mind that asynchronous data access has an effect on connection and data streaming performance over the wire. Don’t expect a query that returns ten rows to show any improvement using an asynchronous approach—it is more likely to take longer to return the results!</p>
+<p>The Data Access block provides asynchronous <code>Begin</code> and <code>End</code> versions of many of the standard data access methods, including <code>ExecuteReader</code>, <code>ExecuteScalar</code>, <code>ExecuteXmlReader</code>, and <code>ExecuteNonQuery</code>. It also provides asynchronous <code>Begin</code> and <code>End</code> versions of the <code>Execute</code> method for accessors that return data as a sequence of objects. This approach is known as the Asynchronous Programming Model (APM). A future version of the block will also support the <a href="https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-parallel-library-tpl">Task Parallel Library</a> (TPL). In the mean time, you can use <a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.taskfactory.fromasync">TaskFactory.FromAsync</a> to wrap a <code>Begin</code> and <code>End</code> method with a <code>Task</code>.</p>
+<p>Asynchronous processing in the Data Access block is only available for SQL Server databases. The <code>Database</code> class includes a property named <code>SupportsAsync</code> that you can query to see if the current Database instance supports asynchronous operations. The example for this chapter contains a simple check for this.</p>
+<p>The <code>BeginExecuteReader</code> method does not accept a <code>CommandBehavior</code> parameter. By default, the method will automatically set the <code>CommandBehavior</code> property on the underlying reader to <code>CloseConnection</code> unless you specify a transaction when you call the method. If you do specify a transaction, it does not set the <code>CommandBehavior</code> property.</p>
+<p>Always ensure you call the appropriate <code>EndExecute</code> method when you use asynchronous data access, even if you do not actually require access to the results, or call the Cancel method on the connection. Failing to do so can cause memory leaks and consume additional system resources.</p>
+<p>Using asynchronous data access with the Multiple Active Results Set (MARS) feature of ADO.NET may produce unexpected behavior, and should generally be avoided.</p>
+<h4><a class="anchor" id="autotoc_md15"></a>
+Retrieving Row Set Data Asynchronously using BeginXXX and EndXXX Methods</h4>
+<p>The following code creates a <code>DBCommand</code> instance and adds two parameters, and then calls the <code>BeginExecuteReader</code> method of the <code>Database</code> class to start the process. The code passes to this method a reference to the command to execute (with its parameters already added), a Lambda expression to execute when the data retrieval process completes, and a <b>null</b> value for the <code>AsyncState</code> parameter. The Lambda expression then calls the <code>EndExecuteReader</code> method to obtain the results of the query execution. At this point you can consume the row set in your application. Notice that the callback expression should handle any errors that may occur during the asynchronous operation.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create command to execute stored procedure and add parameters.</span></div>
+<div class="line">DbCommand cmd = asyncDB.GetStoredProcCommand(<span class="stringliteral">&quot;ListOrdersSlowly&quot;</span>);</div>
+<div class="line">asyncDB.AddInParameter(cmd, <span class="stringliteral">&quot;state&quot;</span>, DbType.String, <span class="stringliteral">&quot;Colorado&quot;</span>);</div>
+<div class="line">asyncDB.AddInParameter(cmd, <span class="stringliteral">&quot;status&quot;</span>, DbType.String, <span class="stringliteral">&quot;DRAFT&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Execute the query asynchronously specifying the command and the expression to execute when the data access</span></div>
+<div class="line"><span class="comment">// process completes.</span></div>
+<div class="line">asyncDB.BeginExecuteReader(cmd,</div>
+<div class="line">  asyncResult =&gt;</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">// Lambda expression executed when the data access completes.</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">using</span> (IDataReader reader = asyncDB.EndExecuteReader(asyncResult))</div>
+<div class="line">      {</div>
+<div class="line">        DisplayRowValues(reader);</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line">    {</div>
+<div class="line">      Console.WriteLine(<span class="stringliteral">&quot;Error after data access completed: {0}&quot;</span>, ex.Message);</div>
+<div class="line">    }</div>
+<div class="line">  }, <span class="keyword">null</span>);</div>
+</div><!-- fragment --><p>As mentioned above, you can wrap a BeginXXX and EndXXX methods with a Task. </p><div class="fragment"><div class="line">await Task&lt;IDataReader&gt;.Factory</div>
+<div class="line">        .FromAsync&lt;DbCommand&gt;(asyncDB.BeginExecuteReader, </div>
+<div class="line">        asyncDB.EndExecuteReader, cmd, <span class="keyword">null</span>);</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

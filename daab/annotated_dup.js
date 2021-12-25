@@ -13,7 +13,10 @@ var annotated_dup =
       [ "Retrieving Data as Objects", "a00940.html#autotoc_md10", null ],
       [ "Creating and Using Mappers", "a00940.html#autotoc_md11", null ],
       [ "Retrieving XML Data", "a00940.html#autotoc_md12", null ],
-      [ "Retrieving Single Scalar Values", "a00940.html#autotoc_md13", null ]
+      [ "Retrieving Single Scalar Values", "a00940.html#autotoc_md13", null ],
+      [ "Retrieving Data Asynchronously", "a00940.html#autotoc_md14", [
+        [ "Retrieving Row Set Data Asynchronously using BeginXXX and EndXXX Methods", "a00940.html#autotoc_md15", null ]
+      ] ]
     ] ],
     [ "Microsoft", "a00233.html", [
       [ "Practices", "a00234.html", [

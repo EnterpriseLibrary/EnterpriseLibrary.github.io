@@ -394,7 +394,8 @@ Retrieving Row Set Data Asynchronously using BeginXXX and EndXXX Methods</h4>
 <div class="line">      Console.WriteLine(<span class="stringliteral">&quot;Error after data access completed: {0}&quot;</span>, ex.Message);</div>
 <div class="line">    }</div>
 <div class="line">  }, <span class="keyword">null</span>);</div>
-</div><!-- fragment --><p>As mentioned above, you can wrap a BeginXXX and EndXXX methods with a Task. </p><div class="fragment"><div class="line">await Task&lt;IDataReader&gt;.Factory</div>
+</div><!-- fragment --><p>The <code>AsyncState</code> parameter can be used to pass any required state information into the callback. For example, when you use a callback method instead of a lambda expression, you would pass a reference to the current <code>Database</code> instance as the <code>AsyncState</code> parameter so that the callback code can call the <code>EndExecuteReader</code> (or other appropriate End method) to obtain the results. When you use a Lambda expression, the current Database instance is available within the expression and, therefore, you do not need to populate the <code>AsyncState</code> parameter.</p>
+<p>As mentioned above, you can wrap a BeginXXX and EndXXX methods with a Task. </p><div class="fragment"><div class="line">await Task&lt;IDataReader&gt;.Factory</div>
 <div class="line">        .FromAsync&lt;DbCommand&gt;(asyncDB.BeginExecuteReader, </div>
 <div class="line">        asyncDB.EndExecuteReader, cmd, <span class="keyword">null</span>);</div>
 </div><!-- fragment --> </div></div><!-- contents -->

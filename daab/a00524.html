@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Member List</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00527.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00524.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,31 +84,585 @@ $(document).ready(function(){initNavTree('a00527.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="a00521.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt; Member List</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00527.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00527.html#a5045e1cfce292ede2de83e80427819d3">BeginExecute</a>(AsyncCallback callback, object state, params object[] parameterValues)</td><td class="entry"><a class="el" href="a00527.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00295.html#a0f84abef7bf86eae0377e5aaf928d67f">Microsoft::Practices::EnterpriseLibrary::Data::CommandAccessor.BeginExecute</a>(DbCommand command, IParameterMapper parameterMapper, AsyncCallback callback, object state, object[] parameterValues)</td><td class="entry"><a class="el" href="a00295.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00295.html#a9953489e703640c45bb03132183282c7">CommandAccessor</a>(Database database, IRowMapper&lt; TResult &gt; rowMapper)</td><td class="entry"><a class="el" href="a00295.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00295.html#a96ea9d435d797e8a9e8c8540a1a23857">CommandAccessor</a>(Database database, IResultSetMapper&lt; TResult &gt; resultSetMapper)</td><td class="entry"><a class="el" href="a00295.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00295.html#a9e037b56538aa928482c69d4ff8044e5">Database</a></td><td class="entry"><a class="el" href="a00295.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00295.html#a00c4dfe207766604466424e65f8ca51c">EndExecute</a>(IAsyncResult asyncResult)</td><td class="entry"><a class="el" href="a00295.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00527.html#a1fac5b48184b00243b716c7467575b48">Execute</a>(params object[] parameterValues)</td><td class="entry"><a class="el" href="a00527.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00295.html#af7e06ccea7ae67c366467e6e6c7c1d1d">Microsoft::Practices::EnterpriseLibrary::Data::CommandAccessor.Execute</a>(DbCommand command)</td><td class="entry"><a class="el" href="a00295.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00295.html#abbd4d072c1b9d993e47ceeff44c952dc">GuardAsyncAllowed</a>()</td><td class="entry"><a class="el" href="a00295.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00527.html#a5d982a6ad065e16a95ba549ceff7347d">SprocAccessor</a>(Database database, string procedureName, IRowMapper&lt; TResult &gt; rowMapper)</td><td class="entry"><a class="el" href="a00527.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00527.html#a9ede8d13e39100055a63b95bbebeaa5a">SprocAccessor</a>(Database database, string procedureName, IResultSetMapper&lt; TResult &gt; resultSetMapper)</td><td class="entry"><a class="el" href="a00527.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00527.html#a0a890af1a5de8c9b4e23f145b1150ad4">SprocAccessor</a>(Database database, string procedureName, IParameterMapper parameterMapper, IRowMapper&lt; TResult &gt; rowMapper)</td><td class="entry"><a class="el" href="a00527.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00527.html#a28a5117cf321b01008f55e2f6250d83e">SprocAccessor</a>(Database database, string procedureName, IParameterMapper parameterMapper, IResultSetMapper&lt; TResult &gt; resultSetMapper)</td><td class="entry"><a class="el" href="a00527.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>Represents a stored procedure call to the database that will return an enumerable of <em>TResult</em> .  
+ <a href="a00524.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="a00524.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor_3C_20TResult_20_3E_map" alt=""/>
+  <map id="Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor_3C_20TResult_20_3E_map" name="Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor_3C_20TResult_20_3E_map">
+<area href="a00292.html" title="Base class for Data Accessors that execute a DbCommand." alt="Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;" shape="rect" coords="0,56,441,80"/>
+<area href="a00424.html" title="An abstract class representing an object that wraps a database operation. An Accessor is executed,..." alt="Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;" shape="rect" coords="0,0,441,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5d982a6ad065e16a95ba549ceff7347d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d">SprocAccessor</a> (<a class="el" href="a00428.html">Database</a> database, string procedureName, <a class="el" href="a00472.html">IRowMapper</a>&lt; TResult &gt; rowMapper)</td></tr>
+<tr class="memdesc:a5d982a6ad065e16a95ba549ceff7347d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>rowMapper</em>  to convert the returned rows to clr type <em>TResult</em> .  <a href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d">More...</a><br /></td></tr>
+<tr class="separator:a5d982a6ad065e16a95ba549ceff7347d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ede8d13e39100055a63b95bbebeaa5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00524.html#a9ede8d13e39100055a63b95bbebeaa5a">SprocAccessor</a> (<a class="el" href="a00428.html">Database</a> database, string procedureName, <a class="el" href="a00468.html">IResultSetMapper</a>&lt; TResult &gt; resultSetMapper)</td></tr>
+<tr class="memdesc:a9ede8d13e39100055a63b95bbebeaa5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>resultSetMapper</em>  to convert the returned set to an enumerable of clr type <em>TResult</em> .  <a href="a00524.html#a9ede8d13e39100055a63b95bbebeaa5a">More...</a><br /></td></tr>
+<tr class="separator:a9ede8d13e39100055a63b95bbebeaa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a890af1a5de8c9b4e23f145b1150ad4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00524.html#a0a890af1a5de8c9b4e23f145b1150ad4">SprocAccessor</a> (<a class="el" href="a00428.html">Database</a> database, string procedureName, <a class="el" href="a00464.html">IParameterMapper</a> parameterMapper, <a class="el" href="a00472.html">IRowMapper</a>&lt; TResult &gt; rowMapper)</td></tr>
+<tr class="memdesc:a0a890af1a5de8c9b4e23f145b1150ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>rowMapper</em>  to convert the returned rows to clr type <em>TResult</em> . The <em>parameterMapper</em>  will be used to interpret the parameters passed to the Execute method.  <a href="a00524.html#a0a890af1a5de8c9b4e23f145b1150ad4">More...</a><br /></td></tr>
+<tr class="separator:a0a890af1a5de8c9b4e23f145b1150ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a5117cf321b01008f55e2f6250d83e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00524.html#a28a5117cf321b01008f55e2f6250d83e">SprocAccessor</a> (<a class="el" href="a00428.html">Database</a> database, string procedureName, <a class="el" href="a00464.html">IParameterMapper</a> parameterMapper, <a class="el" href="a00468.html">IResultSetMapper</a>&lt; TResult &gt; resultSetMapper)</td></tr>
+<tr class="memdesc:a28a5117cf321b01008f55e2f6250d83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>resultSetMapper</em>  to convert the returned set to an enumerable of clr type <em>TResult</em> . The <em>parameterMapper</em>  will be used to interpret the parameters passed to the Execute method.  <a href="a00524.html#a28a5117cf321b01008f55e2f6250d83e">More...</a><br /></td></tr>
+<tr class="separator:a28a5117cf321b01008f55e2f6250d83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fac5b48184b00243b716c7467575b48"><td class="memItemLeft" align="right" valign="top">override IEnumerable&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00524.html#a1fac5b48184b00243b716c7467575b48">Execute</a> (params object[] parameterValues)</td></tr>
+<tr class="memdesc:a1fac5b48184b00243b716c7467575b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the stored procedure and returns an enumerable of <em>TResult</em> . The enumerable returned by this method uses deferred loading to return the results.  <a href="a00524.html#a1fac5b48184b00243b716c7467575b48">More...</a><br /></td></tr>
+<tr class="separator:a1fac5b48184b00243b716c7467575b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5045e1cfce292ede2de83e80427819d3"><td class="memItemLeft" align="right" valign="top">override IAsyncResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00524.html#a5045e1cfce292ede2de83e80427819d3">BeginExecute</a> (AsyncCallback callback, object state, params object[] parameterValues)</td></tr>
+<tr class="memdesc:a5045e1cfce292ede2de83e80427819d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin executing the database object asynchronously, returning a IAsyncResult object that can be used to retrieve the result set after the operation completes.  <a href="a00524.html#a5045e1cfce292ede2de83e80427819d3">More...</a><br /></td></tr>
+<tr class="separator:a5045e1cfce292ede2de83e80427819d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c4dfe207766604466424e65f8ca51c"><td class="memItemLeft" align="right" valign="top">override IEnumerable&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00292.html#a00c4dfe207766604466424e65f8ca51c">EndExecute</a> (IAsyncResult asyncResult)</td></tr>
+<tr class="memdesc:a00c4dfe207766604466424e65f8ca51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete an operation started by <a class="el" href="a00424.html#a4970e059d6d67ddd47d7c8766838b524" title="Begin executing the database object asynchronously, returning a IAsyncResult object that can be used ...">DataAccessor&lt;TResult&gt;.BeginExecute</a>.  <a href="a00292.html#a00c4dfe207766604466424e65f8ca51c">More...</a><br /></td></tr>
+<tr class="separator:a00c4dfe207766604466424e65f8ca51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af7e06ccea7ae67c366467e6e6c7c1d1d"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00292.html#af7e06ccea7ae67c366467e6e6c7c1d1d">Execute</a> (DbCommand command)</td></tr>
+<tr class="memdesc:af7e06ccea7ae67c366467e6e6c7c1d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the <em>command</em>  and returns an enumerable of <em>TResult</em> . The enumerable returned by this method uses deferred loading to return the results.  <a href="a00292.html#af7e06ccea7ae67c366467e6e6c7c1d1d">More...</a><br /></td></tr>
+<tr class="separator:af7e06ccea7ae67c366467e6e6c7c1d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f84abef7bf86eae0377e5aaf928d67f"><td class="memItemLeft" align="right" valign="top">IAsyncResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00292.html#a0f84abef7bf86eae0377e5aaf928d67f">BeginExecute</a> (DbCommand command, <a class="el" href="a00464.html">IParameterMapper</a> parameterMapper, AsyncCallback callback, object state, object[] parameterValues)</td></tr>
+<tr class="memdesc:a0f84abef7bf86eae0377e5aaf928d67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method to kick off execution of an asynchronous database operation. This method handles the boilerplate of setting up the parameters and invoking the operation on the database with the right options.  <a href="a00292.html#a0f84abef7bf86eae0377e5aaf928d67f">More...</a><br /></td></tr>
+<tr class="separator:a0f84abef7bf86eae0377e5aaf928d67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd4d072c1b9d993e47ceeff44c952dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00292.html#abbd4d072c1b9d993e47ceeff44c952dc">GuardAsyncAllowed</a> ()</td></tr>
+<tr class="memdesc:abbd4d072c1b9d993e47ceeff44c952dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the current <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> object supports asynchronous operations, and throws InvalidOperationException if not.  <a href="a00292.html#abbd4d072c1b9d993e47ceeff44c952dc">More...</a><br /></td></tr>
+<tr class="separator:abbd4d072c1b9d993e47ceeff44c952dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a9e037b56538aa928482c69d4ff8044e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00428.html">Database</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00292.html#a9e037b56538aa928482c69d4ff8044e5">Database</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9e037b56538aa928482c69d4ff8044e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The database object this accessor is wrapped around.  <a href="a00292.html#a9e037b56538aa928482c69d4ff8044e5">More...</a><br /></td></tr>
+<tr class="separator:a9e037b56538aa928482c69d4ff8044e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a stored procedure call to the database that will return an enumerable of <em>TResult</em> . </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TResult</td><td>The element type that will be used to consume the result set.</td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5d982a6ad065e16a95ba549ceff7347d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d982a6ad065e16a95ba549ceff7347d">&#9670;&nbsp;</a></span>SprocAccessor() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00524.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor</a>&lt; TResult &gt;.<a class="el" href="a00524.html">SprocAccessor</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00428.html">Database</a>&#160;</td>
+          <td class="paramname"><em>database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>procedureName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00472.html">IRowMapper</a>&lt; TResult &gt;&#160;</td>
+          <td class="paramname"><em>rowMapper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>rowMapper</em>  to convert the returned rows to clr type <em>TResult</em> . </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">database</td><td>The <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> used to execute the Transact-SQL.</td></tr>
+    <tr><td class="paramname">procedureName</td><td>The stored procedure that will be executed.</td></tr>
+    <tr><td class="paramname">rowMapper</td><td>The IRowMapper&lt;TResult&gt; that will be used to convert the returned data to clr type <em>TResult</em> .</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ede8d13e39100055a63b95bbebeaa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ede8d13e39100055a63b95bbebeaa5a">&#9670;&nbsp;</a></span>SprocAccessor() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00524.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor</a>&lt; TResult &gt;.<a class="el" href="a00524.html">SprocAccessor</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00428.html">Database</a>&#160;</td>
+          <td class="paramname"><em>database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>procedureName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00468.html">IResultSetMapper</a>&lt; TResult &gt;&#160;</td>
+          <td class="paramname"><em>resultSetMapper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>resultSetMapper</em>  to convert the returned set to an enumerable of clr type <em>TResult</em> . </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">database</td><td>The <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> used to execute the Transact-SQL.</td></tr>
+    <tr><td class="paramname">procedureName</td><td>The stored procedure that will be executed.</td></tr>
+    <tr><td class="paramname">resultSetMapper</td><td>The IResultSetMapper&lt;TResult&gt; that will be used to convert the returned set to an enumerable of clr type <em>TResult</em> .</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a890af1a5de8c9b4e23f145b1150ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a890af1a5de8c9b4e23f145b1150ad4">&#9670;&nbsp;</a></span>SprocAccessor() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00524.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor</a>&lt; TResult &gt;.<a class="el" href="a00524.html">SprocAccessor</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00428.html">Database</a>&#160;</td>
+          <td class="paramname"><em>database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>procedureName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00464.html">IParameterMapper</a>&#160;</td>
+          <td class="paramname"><em>parameterMapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00472.html">IRowMapper</a>&lt; TResult &gt;&#160;</td>
+          <td class="paramname"><em>rowMapper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>rowMapper</em>  to convert the returned rows to clr type <em>TResult</em> . The <em>parameterMapper</em>  will be used to interpret the parameters passed to the Execute method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">database</td><td>The <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> used to execute the Transact-SQL.</td></tr>
+    <tr><td class="paramname">procedureName</td><td>The stored procedure that will be executed.</td></tr>
+    <tr><td class="paramname">parameterMapper</td><td>The <a class="el" href="a00464.html" title="Interface used to interpret parameters passed to an DataAccessor&lt;TResult&gt;.Execute(object[]) method an...">IParameterMapper</a> that will be used to interpret the parameters passed to the Execute method.</td></tr>
+    <tr><td class="paramname">rowMapper</td><td>The IRowMapper&lt;TResult&gt; that will be used to convert the returned data to CLR type <em>TResult</em> .</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td><em>procedureName</em>  is <b>null</b> or empty.</td></tr>
+    <tr><td class="paramname">ArgumentNullException</td><td><em>parameterMapper</em>  is <b>null</b>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28a5117cf321b01008f55e2f6250d83e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a5117cf321b01008f55e2f6250d83e">&#9670;&nbsp;</a></span>SprocAccessor() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00524.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor</a>&lt; TResult &gt;.<a class="el" href="a00524.html">SprocAccessor</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00428.html">Database</a>&#160;</td>
+          <td class="paramname"><em>database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>procedureName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00464.html">IParameterMapper</a>&#160;</td>
+          <td class="paramname"><em>parameterMapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00468.html">IResultSetMapper</a>&lt; TResult &gt;&#160;</td>
+          <td class="paramname"><em>resultSetMapper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new instance of <a class="el" href="a00524.html#a5d982a6ad065e16a95ba549ceff7347d" title="Creates a new instance of SprocAccessor&lt;TResult&gt; that works for a specific database  and uses rowMapp...">SprocAccessor&lt;TResult&gt;</a> that works for a specific <em>database</em>  and uses <em>resultSetMapper</em>  to convert the returned set to an enumerable of clr type <em>TResult</em> . The <em>parameterMapper</em>  will be used to interpret the parameters passed to the Execute method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">database</td><td>The <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> used to execute the Transact-SQL.</td></tr>
+    <tr><td class="paramname">procedureName</td><td>The stored procedure that will be executed.</td></tr>
+    <tr><td class="paramname">parameterMapper</td><td>The <a class="el" href="a00464.html" title="Interface used to interpret parameters passed to an DataAccessor&lt;TResult&gt;.Execute(object[]) method an...">IParameterMapper</a> that will be used to interpret the parameters passed to the Execute method.</td></tr>
+    <tr><td class="paramname">resultSetMapper</td><td>The IResultSetMapper&lt;TResult&gt; that will be used to convert the returned set to an enumerable of clr type <em>TResult</em> .</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td><em>procedureName</em>  is <b>null</b> or empty.</td></tr>
+    <tr><td class="paramname">ArgumentNullException</td><td><em>parameterMapper</em>  is <b>null</b>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5045e1cfce292ede2de83e80427819d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5045e1cfce292ede2de83e80427819d3">&#9670;&nbsp;</a></span>BeginExecute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IAsyncResult <a class="el" href="a00524.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor</a>&lt; TResult &gt;.BeginExecute </td>
+          <td>(</td>
+          <td class="paramtype">AsyncCallback&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>parameterValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Begin executing the database object asynchronously, returning a IAsyncResult object that can be used to retrieve the result set after the operation completes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>Callback to execute when the operation's results are available. May be null if you don't wish to use a callback.</td></tr>
+    <tr><td class="paramname">state</td><td>Extra information that will be passed to the callback. May be null.</td></tr>
+    <tr><td class="paramname">parameterValues</td><td>Parameters to pass to the database.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This operation will throw if the underlying <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> object does not support asynchronous operation.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>The underlying database does not support asynchronous operation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The IAsyncResult representing this operation.</dd></dl>
+
+<p>Implements <a class="el" href="a00424.html#a4970e059d6d67ddd47d7c8766838b524">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a0f84abef7bf86eae0377e5aaf928d67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f84abef7bf86eae0377e5aaf928d67f">&#9670;&nbsp;</a></span>BeginExecute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IAsyncResult <a class="el" href="a00292.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor</a>&lt; TResult &gt;.BeginExecute </td>
+          <td>(</td>
+          <td class="paramtype">DbCommand&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00464.html">IParameterMapper</a>&#160;</td>
+          <td class="paramname"><em>parameterMapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AsyncCallback&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object[]&#160;</td>
+          <td class="paramname"><em>parameterValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper method to kick off execution of an asynchronous database operation. This method handles the boilerplate of setting up the parameters and invoking the operation on the database with the right options. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>The DbCommand to execute.</td></tr>
+    <tr><td class="paramname">parameterMapper</td><td>The <a class="el" href="a00464.html" title="Interface used to interpret parameters passed to an DataAccessor&lt;TResult&gt;.Execute(object[]) method an...">IParameterMapper</a> to use to set the parameter values.</td></tr>
+    <tr><td class="paramname">callback</td><td>Callback to execute when the operation's result is available.</td></tr>
+    <tr><td class="paramname">state</td><td>State to pass to the callback.</td></tr>
+    <tr><td class="paramname">parameterValues</td><td>Input parameter values.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An IAsyncResult object representing the outstanding async request.</dd></dl>
+
+</div>
+</div>
+<a id="a00c4dfe207766604466424e65f8ca51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c4dfe207766604466424e65f8ca51c">&#9670;&nbsp;</a></span>EndExecute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IEnumerable&lt;TResult&gt; <a class="el" href="a00292.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor</a>&lt; TResult &gt;.EndExecute </td>
+          <td>(</td>
+          <td class="paramtype">IAsyncResult&#160;</td>
+          <td class="paramname"><em>asyncResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Complete an operation started by <a class="el" href="a00424.html#a4970e059d6d67ddd47d7c8766838b524" title="Begin executing the database object asynchronously, returning a IAsyncResult object that can be used ...">DataAccessor&lt;TResult&gt;.BeginExecute</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The result sequence.</dd></dl>
+
+<p>Implements <a class="el" href="a00424.html#aa816841757008880d8c8f4c04ac6fb32">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;</a>.</p>
+
+</div>
+</div>
+<a id="af7e06ccea7ae67c366467e6e6c7c1d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e06ccea7ae67c366467e6e6c7c1d1d">&#9670;&nbsp;</a></span>Execute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt;TResult&gt; <a class="el" href="a00292.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor</a>&lt; TResult &gt;.Execute </td>
+          <td>(</td>
+          <td class="paramtype">DbCommand&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes the <em>command</em>  and returns an enumerable of <em>TResult</em> . The enumerable returned by this method uses deferred loading to return the results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>The command that will be executed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An enumerable of <em>TResult</em> .</dd></dl>
+
+</div>
+</div>
+<a id="a1fac5b48184b00243b716c7467575b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fac5b48184b00243b716c7467575b48">&#9670;&nbsp;</a></span>Execute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IEnumerable&lt;TResult&gt; <a class="el" href="a00524.html">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor</a>&lt; TResult &gt;.Execute </td>
+          <td>(</td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>parameterValues</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes the stored procedure and returns an enumerable of <em>TResult</em> . The enumerable returned by this method uses deferred loading to return the results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameterValues</td><td>Values that will be interpret by an <a class="el" href="a00464.html" title="Interface used to interpret parameters passed to an DataAccessor&lt;TResult&gt;.Execute(object[]) method an...">IParameterMapper</a> and function as parameters to the stored procedure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An enumerable of <em>TResult</em> .</dd></dl>
+
+<p>Implements <a class="el" href="a00424.html#a8b6d7d77c85f574e380a113e7c1f22c1">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;</a>.</p>
+
+</div>
+</div>
+<a id="abbd4d072c1b9d993e47ceeff44c952dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd4d072c1b9d993e47ceeff44c952dc">&#9670;&nbsp;</a></span>GuardAsyncAllowed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00292.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor</a>&lt; TResult &gt;.GuardAsyncAllowed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the current <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> object supports asynchronous operations, and throws InvalidOperationException if not. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>The database does not support asynchronous operations.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a9e037b56538aa928482c69d4ff8044e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e037b56538aa928482c69d4ff8044e5">&#9670;&nbsp;</a></span>Database</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00428.html">Database</a> <a class="el" href="a00292.html">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor</a>&lt; TResult &gt;.<a class="el" href="a00428.html">Database</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The database object this accessor is wrapped around. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>SprocAccessor.cs</li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00524.html">SprocAccessor</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

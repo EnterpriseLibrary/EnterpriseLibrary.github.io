@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt; Class Template Reference</title>
+<title>Enterprise Library Data Access Application Block: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00427.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00430.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,182 +84,21 @@ $(document).ready(function(){initNavTree('a00427.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="a00424.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>An abstract class representing an object that wraps a database operation. An Accessor is executed, at which point it will go out to the database and return a IEnumerable&lt;TResult&gt; of whatever type <em>TResult</em>  is.  
- <a href="a00427.html#details">More...</a></p>
-<div class="dynheader">
-Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="a00427.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor_3C_20TResult_20_3E_map" alt=""/>
-  <map id="Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor_3C_20TResult_20_3E_map" name="Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor_3C_20TResult_20_3E_map">
-<area href="a00295.html" title="Base class for Data Accessors that execute a DbCommand." alt="Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;" shape="rect" coords="221,56,654,80"/>
-<area href="a00527.html" title="Represents a stored procedure call to the database that will return an enumerable of TResult ." alt="Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;" shape="rect" coords="0,112,433,136"/>
-<area href="a00535.html" title="Represents a call to the database using SQL that will return an enumerable of TResult ." alt="Microsoft.Practices.EnterpriseLibrary.Data.SqlStringAccessor&lt; TResult &gt;" shape="rect" coords="443,112,876,136"/>
-  </map>
-</div></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a8b6d7d77c85f574e380a113e7c1f22c1"><td class="memItemLeft" align="right" valign="top">abstract IEnumerable&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00427.html#a8b6d7d77c85f574e380a113e7c1f22c1">Execute</a> (params object[] parameterValues)</td></tr>
-<tr class="memdesc:a8b6d7d77c85f574e380a113e7c1f22c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the database operation synchronously, returning the IEnumerable&lt;TResult&gt; sequence containing the resulting objects.  <a href="a00427.html#a8b6d7d77c85f574e380a113e7c1f22c1">More...</a><br /></td></tr>
-<tr class="separator:a8b6d7d77c85f574e380a113e7c1f22c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4970e059d6d67ddd47d7c8766838b524"><td class="memItemLeft" align="right" valign="top">abstract IAsyncResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00427.html#a4970e059d6d67ddd47d7c8766838b524">BeginExecute</a> (AsyncCallback callback, object state, params object[] parameterValues)</td></tr>
-<tr class="memdesc:a4970e059d6d67ddd47d7c8766838b524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin executing the database object asynchronously, returning a IAsyncResult object that can be used to retrieve the result set after the operation completes.  <a href="a00427.html#a4970e059d6d67ddd47d7c8766838b524">More...</a><br /></td></tr>
-<tr class="separator:a4970e059d6d67ddd47d7c8766838b524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa816841757008880d8c8f4c04ac6fb32"><td class="memItemLeft" align="right" valign="top">abstract IEnumerable&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00427.html#aa816841757008880d8c8f4c04ac6fb32">EndExecute</a> (IAsyncResult asyncResult)</td></tr>
-<tr class="memdesc:aa816841757008880d8c8f4c04ac6fb32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete an operation started by <a class="el" href="a00427.html#a4970e059d6d67ddd47d7c8766838b524" title="Begin executing the database object asynchronously, returning a IAsyncResult object that can be used ...">BeginExecute</a>.  <a href="a00427.html#aa816841757008880d8c8f4c04ac6fb32">More...</a><br /></td></tr>
-<tr class="separator:aa816841757008880d8c8f4c04ac6fb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An abstract class representing an object that wraps a database operation. An Accessor is executed, at which point it will go out to the database and return a IEnumerable&lt;TResult&gt; of whatever type <em>TResult</em>  is. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4970e059d6d67ddd47d7c8766838b524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4970e059d6d67ddd47d7c8766838b524">&#9670;&nbsp;</a></span>BeginExecute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">abstract IAsyncResult <a class="el" href="a00427.html">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor</a>&lt; TResult &gt;.BeginExecute </td>
-          <td>(</td>
-          <td class="paramtype">AsyncCallback&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">params object[]&#160;</td>
-          <td class="paramname"><em>parameterValues</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Begin executing the database object asynchronously, returning a IAsyncResult object that can be used to retrieve the result set after the operation completes. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">callback</td><td>Callback to execute when the operation's results are available. May be null if you don't wish to use a callback.</td></tr>
-    <tr><td class="paramname">state</td><td>Extra information that will be passed to the callback. May be null.</td></tr>
-    <tr><td class="paramname">parameterValues</td><td>Parameters to pass to the database.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This operation will throw if the underlying <a class="el" href="a00431.html" title="Represents an abstract database that commands can be run against.">Database</a> object does not support asynchronous operation.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">InvalidOperationException</td><td>The underlying database does not support asynchronous operation.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The IAsyncResult representing this operation.</dd></dl>
-
-<p>Implemented in <a class="el" href="a00535.html#a224fa9ccfa5d5b8ff3dd848f641c13e6">Microsoft.Practices.EnterpriseLibrary.Data.SqlStringAccessor&lt; TResult &gt;</a>, and <a class="el" href="a00527.html#a5045e1cfce292ede2de83e80427819d3">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a>.</p>
-
-</div>
-</div>
-<a id="aa816841757008880d8c8f4c04ac6fb32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa816841757008880d8c8f4c04ac6fb32">&#9670;&nbsp;</a></span>EndExecute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">abstract IEnumerable&lt;TResult&gt; <a class="el" href="a00427.html">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor</a>&lt; TResult &gt;.EndExecute </td>
-          <td>(</td>
-          <td class="paramtype">IAsyncResult&#160;</td>
-          <td class="paramname"><em>asyncResult</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Complete an operation started by <a class="el" href="a00427.html#a4970e059d6d67ddd47d7c8766838b524" title="Begin executing the database object asynchronously, returning a IAsyncResult object that can be used ...">BeginExecute</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>The result sequence.</dd></dl>
-
-<p>Implemented in <a class="el" href="a00295.html#a00c4dfe207766604466424e65f8ca51c">Microsoft.Practices.EnterpriseLibrary.Data.CommandAccessor&lt; TResult &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a8b6d7d77c85f574e380a113e7c1f22c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b6d7d77c85f574e380a113e7c1f22c1">&#9670;&nbsp;</a></span>Execute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">abstract IEnumerable&lt;TResult&gt; <a class="el" href="a00427.html">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor</a>&lt; TResult &gt;.Execute </td>
-          <td>(</td>
-          <td class="paramtype">params object[]&#160;</td>
-          <td class="paramname"><em>parameterValues</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Execute the database operation synchronously, returning the IEnumerable&lt;TResult&gt; sequence containing the resulting objects. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">parameterValues</td><td>Parameters to pass to the database.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The sequence of result objects.</dd></dl>
-
-<p>Implemented in <a class="el" href="a00535.html#abf8c38901664f6cb65fc1f349ae34c7d">Microsoft.Practices.EnterpriseLibrary.Data.SqlStringAccessor&lt; TResult &gt;</a>, and <a class="el" href="a00527.html#a1fac5b48184b00243b716c7467575b48">Microsoft.Practices.EnterpriseLibrary.Data.SprocAccessor&lt; TResult &gt;</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>DataAccessor.cs</li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="a00430.html">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00430.html#a4970e059d6d67ddd47d7c8766838b524">BeginExecute</a>(AsyncCallback callback, object state, params object[] parameterValues)</td><td class="entry"><a class="el" href="a00430.html">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00430.html#aa816841757008880d8c8f4c04ac6fb32">EndExecute</a>(IAsyncResult asyncResult)</td><td class="entry"><a class="el" href="a00430.html">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00430.html#a8b6d7d77c85f574e380a113e7c1f22c1">Execute</a>(params object[] parameterValues)</td><td class="entry"><a class="el" href="a00430.html">Microsoft.Practices.EnterpriseLibrary.Data.DataAccessor&lt; TResult &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00233.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00234.html">Practices</a></li><li class="navelem"><a class="el" href="a00235.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00236.html">Data</a></li><li class="navelem"><a class="el" href="a00427.html">DataAccessor</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

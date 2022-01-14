@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['sprocaccessor_351',['SprocAccessor',['../a00527.html',1,'Microsoft::Practices::EnterpriseLibrary::Data']]],
-  ['sqlceconnectionpool_352',['SqlCeConnectionPool',['../a00715.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::SqlCe']]],
-  ['sqlcedatabase_353',['SqlCeDatabase',['../a00719.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::SqlCe']]],
-  ['sqlcedatabasedata_354',['SqlCeDatabaseData',['../a00711.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::SqlCe::Configuration']]],
-  ['sqldatabase_355',['SqlDatabase',['../a00695.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::Sql']]],
-  ['sqldatabasedata_356',['SqlDatabaseData',['../a00687.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::Sql::Configuration']]],
-  ['sqlstringaccessor_357',['SqlStringAccessor',['../a00535.html',1,'Microsoft::Practices::EnterpriseLibrary::Data']]]
+  ['sprocaccessor_353',['SprocAccessor',['../a00533.html',1,'Microsoft::Practices::EnterpriseLibrary::Data']]],
+  ['sqlceconnectionpool_354',['SqlCeConnectionPool',['../a00721.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::SqlCe']]],
+  ['sqlcedatabase_355',['SqlCeDatabase',['../a00725.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::SqlCe']]],
+  ['sqlcedatabasedata_356',['SqlCeDatabaseData',['../a00717.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::SqlCe::Configuration']]],
+  ['sqldatabase_357',['SqlDatabase',['../a00701.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::Sql']]],
+  ['sqldatabasedata_358',['SqlDatabaseData',['../a00693.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::Sql::Configuration']]],
+  ['sqlstringaccessor_359',['SqlStringAccessor',['../a00541.html',1,'Microsoft::Practices::EnterpriseLibrary::Data']]]
 ];

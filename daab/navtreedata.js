@@ -25,7 +25,9 @@
 var NAVTREE =
 [
   [ "Enterprise Library Data Access Application Block", "index.html", [
-    [ "Data Access Application Block User Guide", "a00940.html", null ],
+    [ "Data Access Application Block Documentation", "index.html", null ],
+    [ "Data Access Application Block User Guide", "a00946.html", null ],
+    [ "Upgrading from version 6 to version 7", "a00947.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -42,11 +44,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"a00295.html",
-"a00443.html#aa9bce6e676ea72784897465c48e1ac7a",
-"a00523.html#a9f8ee827a130d35f3cd1ae2b28eb0310",
-"a00615.html#aec4e078b46f775b90d01038bab518c57",
-"a00695.html#a27469f9c1ac7f0c4d1c86fdfc3000b0e",
+"a00301.html",
+"a00449.html#aa9bce6e676ea72784897465c48e1ac7a",
+"a00529.html#a9f8ee827a130d35f3cd1ae2b28eb0310",
+"a00621.html#aec4e078b46f775b90d01038bab518c57",
+"a00701.html#a27469f9c1ac7f0c4d1c86fdfc3000b0e",
 "functions_d.html"
 ];
 

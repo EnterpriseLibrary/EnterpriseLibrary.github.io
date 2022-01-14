@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['genericdatabase_309',['GenericDatabase',['../a00463.html',1,'Microsoft::Practices::EnterpriseLibrary::Data']]],
-  ['genericdatabasedata_310',['GenericDatabaseData',['../a00415.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::Configuration']]]
+  ['genericdatabase_311',['GenericDatabase',['../a00469.html',1,'Microsoft::Practices::EnterpriseLibrary::Data']]],
+  ['genericdatabasedata_312',['GenericDatabaseData',['../a00421.html',1,'Microsoft::Practices::EnterpriseLibrary::Data::Configuration']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data Namespace Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Common Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,148 +85,17 @@ $(document).ready(function(){initNavTree('a00236.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data Namespace Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Common Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>CachingMechanism</b></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CachingMechanism provides caching support for stored procedure parameter discovery and caching <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html">CommandAccessor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for Data Accessors that execute a DbCommand.  <a href="a00295.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00419.html">ConnectionString</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ConnectionString class constructs a connection string by inserting a username and password into a template.  <a href="a00419.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00423.html">DaabAsyncResult</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents an asynchronous operation invoked from the <a class="el" href="a00431.html" title="Represents an abstract database that commands can be run against.">Database</a> class methods.  <a href="a00423.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00427.html">DataAccessor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract class representing an object that wraps a database operation. An Accessor is executed, at which point it will go out to the database and return a IEnumerable&lt;TResult&gt; of whatever type <em>TResult</em>  is.  <a href="a00427.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html">Database</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an abstract database that commands can be run against.  <a href="a00431.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html">DatabaseConnectionWrapper</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a small helper class used to manage closing a connection in the presence of transaction pooling. We can't actually close the connection until everyone using it is done, thus, we need reference counting.  <a href="a00439.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00443.html">DatabaseExtensions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that contains extension methods that apply on <a class="el" href="a00431.html" title="Represents an abstract database that commands can be run against.">Database</a>.  <a href="a00443.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00447.html">DatabaseFactory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains factory methods for creating <a class="el" href="a00431.html" title="Represents an abstract database that commands can be run against.">Database</a> objects.  <a href="a00447.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00451.html">DatabaseProviderFactory</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00459.html">DataReaderWrapper</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper class that implements a pass through version of IDataReader. Useful for various places where we need to wrap data readers for connection management.  <a href="a00459.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html">GenericDatabase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="a00463.html" title="The GenericDatabase is used when no specific behavior is required or known for a database.">GenericDatabase</a> is used when no specific behavior is required or known for a database.  <a href="a00463.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html">IParameterMapper</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface used to interpret parameters passed to an DataAccessor&lt;TResult&gt;.Execute(object[]) method and assign them to the DbCommand that will be executed.  <a href="a00467.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00471.html">IResultSetMapper</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the operation of mapping a IDataReader to an enumerable of <em>TResult</em> .  <a href="a00471.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00475.html">IRowMapper</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the operation of mapping a IDataRecord to <em>TResult</em> .  <a href="a00475.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00479.html">MapBuilder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static entry point for the IMapBuilderContext&lt;TResult&gt; interface, which allows to build reflection-based IRowMapper&lt;TResult&gt;s.  <a href="a00479.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00491.html">IMapBuilderContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A fluent interface that can be used to construct a IRowMapper&lt;TResult&gt;.  <a href="a00491.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00495.html">IMapBuilderContextMap</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A fluent interface that can be used to construct a IRowMapper&lt;TResult&gt;.  <a href="a00495.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00499.html">IMapBuilderContextTest</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.  <a href="a00499.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00503.html">ParameterCache</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides parameter caching services for dynamic parameter discovery of stored procedures. Eliminates the round-trip to the database to derive the parameters and types when a command is executed more than once.  <a href="a00503.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00507.html">RefCountingDataReader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of IDataReader which also properly cleans up the reference count on the given inner <a class="el" href="a00439.html" title="This is a small helper class used to manage closing a connection in the presence of transaction pooli...">DatabaseConnectionWrapper</a> when the reader is closed or disposed.  <a href="a00507.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00511.html">ReflectionRowMapper</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of IRowMapper&lt;TResult&gt; that uses reflection to convert data rows to <em>TResult</em> . Instances of this class can be build using the MapBuilder&lt;TResult&gt; API.  <a href="a00511.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00515.html">PropertyMapping</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for mapping values to properties by the ReflectionRowMapper&lt;TResult&gt;.  <a href="a00515.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00519.html">ColumnNameMapping</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the mapping from a database column to a PropertyInfo.  <a href="a00519.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00523.html">FuncMapping</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a property that will be assigned the value of a user specified function when mapping.  <a href="a00523.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00527.html">SprocAccessor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a stored procedure call to the database that will return an enumerable of <em>TResult</em> .  <a href="a00527.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00535.html">SqlStringAccessor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a call to the database using SQL that will return an enumerable of <em>TResult</em> .  <a href="a00535.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00575.html">TransactionScopeConnections</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class manages the connections that will be used when transactions are active as a result of instantiating a TransactionScope. When a transaction is active, all database access must be through this single connection unless you want to use a distributed transaction, which is an expensive operation.  <a href="a00575.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ae5a4ed3e9684a7321ace50e03543a92a"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00236.html#ae5a4ed3e9684a7321ace50e03543a92a">UpdateBehavior</a> { <a class="el" href="a00236.html#ae5a4ed3e9684a7321ace50e03543a92aaeb6d8ae6f20283755b339c0dc273988b">Standard</a>
-, <a class="el" href="a00236.html#ae5a4ed3e9684a7321ace50e03543a92aaa0bfb8e59e6c13fc8d990781f77694fe">Continue</a>
-, <a class="el" href="a00236.html#ae5a4ed3e9684a7321ace50e03543a92aad7140284ac92d169d24484726d8a2f10">Transactional</a>
- }</td></tr>
-<tr class="memdesc:ae5a4ed3e9684a7321ace50e03543a92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used with the Database.UpdateDataSet method. Provides control over behavior when the Data Adapter's update command encounters an error.  <a href="a00236.html#ae5a4ed3e9684a7321ace50e03543a92a">More...</a><br /></td></tr>
-<tr class="separator:ae5a4ed3e9684a7321ace50e03543a92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ae5a4ed3e9684a7321ace50e03543a92a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5a4ed3e9684a7321ace50e03543a92a">&#9670;&nbsp;</a></span>UpdateBehavior</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="a00236.html#ae5a4ed3e9684a7321ace50e03543a92a">Microsoft.Practices.EnterpriseLibrary.Data.UpdateBehavior</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Used with the Database.UpdateDataSet method. Provides control over behavior when the Data Adapter's update command encounters an error. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae5a4ed3e9684a7321ace50e03543a92aaeb6d8ae6f20283755b339c0dc273988b"></a>Standard&#160;</td><td class="fielddoc"><p>No interference with the DataAdapter's Update command. If Update encounters an error, the update stops. Additional rows in the Datatable are unaffected. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ae5a4ed3e9684a7321ace50e03543a92aaa0bfb8e59e6c13fc8d990781f77694fe"></a>Continue&#160;</td><td class="fielddoc"><p>If the DataAdapter's Update command encounters an error, the update will continue. The Update command will try to update the remaining rows. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ae5a4ed3e9684a7321ace50e03543a92aad7140284ac92d169d24484726d8a2f10"></a>Transactional&#160;</td><td class="fielddoc"><p>If the DataAdapter encounters an error, all updated rows will be rolled back. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00233.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00234.html">Practices</a></li><li class="navelem"><a class="el" href="a00235.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00236.html">Data</a></li>
+    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00236.html">Common</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

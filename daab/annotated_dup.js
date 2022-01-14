@@ -1,146 +1,144 @@
 var annotated_dup =
 [
-    [ "What is the Data Access Application Block", "a00940.html#autotoc_md1", null ],
-    [ "NuGet Packages", "a00940.html#autotoc_md2", null ],
-    [ "Configuration", "a00940.html#autotoc_md3", [
-      [ "Oracle Configuration", "a00940.html#autotoc_md4", null ]
+    [ "What is the Data Access Application Block", "a00946.html#autotoc_md0", null ],
+    [ "NuGet Packages", "a00946.html#autotoc_md1", null ],
+    [ "Configuration", "a00946.html#Configuration", [
+      [ "Oracle Configuration", "a00946.html#autotoc_md2", null ]
     ] ],
-    [ "Code Examples", "a00940.html#autotoc_md5", [
-      [ "Creating Database Instances", "a00940.html#autotoc_md6", null ],
-      [ "Reading Rows Using a Query with No Parameters", "a00940.html#autotoc_md7", null ],
-      [ "Reading Rows Using a Query with unnamed Parameters", "a00940.html#autotoc_md8", null ],
-      [ "Reading Rows Using a Query with named Parameters", "a00940.html#autotoc_md9", null ],
-      [ "Retrieving Data as Objects", "a00940.html#autotoc_md10", null ],
-      [ "Creating and Using Mappers", "a00940.html#autotoc_md11", null ],
-      [ "Retrieving XML Data", "a00940.html#autotoc_md12", null ],
-      [ "Retrieving Single Scalar Values", "a00940.html#autotoc_md13", null ],
-      [ "Retrieving Data Asynchronously", "a00940.html#autotoc_md14", [
-        [ "Retrieving Row Set Data Asynchronously using BeginXXX and EndXXX Methods", "a00940.html#autotoc_md15", null ]
-      ] ]
+    [ "Code Examples", "a00946.html#autotoc_md3", [
+      [ "Creating Database Instances", "a00946.html#autotoc_md4", null ],
+      [ "Reading Rows Using a Query with No Parameters", "a00946.html#autotoc_md5", null ],
+      [ "Reading Rows Using a Query with unnamed Parameters", "a00946.html#autotoc_md6", null ],
+      [ "Reading Rows Using a Query with named Parameters", "a00946.html#autotoc_md7", null ],
+      [ "Retrieving Data as Objects", "a00946.html#autotoc_md8", null ],
+      [ "Creating and Using Mappers", "a00946.html#autotoc_md9", null ],
+      [ "Retrieving XML Data", "a00946.html#autotoc_md10", null ],
+      [ "Retrieving Single Scalar Values", "a00946.html#autotoc_md11", null ],
+      [ "Retrieving Data Asynchronously", "a00946.html#autotoc_md12", null ]
     ] ],
-    [ "Microsoft", "a00233.html", [
-      [ "Practices", "a00234.html", [
-        [ "EnterpriseLibrary", "a00235.html", [
-          [ "Common", "a00239.html", [
-            [ "Configuration", "a00240.html", [
-              [ "DatabaseProviderExtensions", "a00371.html", "a00371" ],
-              [ "DataConfigurationSourceBuilderExtensions", "a00375.html", "a00375" ]
+    [ "Microsoft", "a00239.html", [
+      [ "Practices", "a00240.html", [
+        [ "EnterpriseLibrary", "a00241.html", [
+          [ "Common", "a00245.html", [
+            [ "Configuration", "a00246.html", [
+              [ "DatabaseProviderExtensions", "a00377.html", "a00377" ],
+              [ "DataConfigurationSourceBuilderExtensions", "a00381.html", "a00381" ]
             ] ]
           ] ],
-          [ "Data", "a00236.html", [
-            [ "Configuration", "a00237.html", [
-              [ "Fluent", "a00238.html", [
-                [ "IDatabaseAnotherDatabaseConfiguration", "a00359.html", "a00359" ],
-                [ "DatabaseConfigurationExtension", "a00367.html", "a00367" ],
-                [ "IDatabaseConfiguration", "a00383.html", "a00383" ],
-                [ "IDatabaseConfigurationProperties", "a00387.html", "a00387" ],
-                [ "IDatabaseConfigurationProviderEntry", "a00391.html", "a00391" ],
-                [ "IDatabaseConfigurationProviders", "a00395.html", null ],
-                [ "IDatabaseDefaultConnectionString", "a00399.html", "a00399" ],
-                [ "IDatabaseProviderExtensionContext", "a00403.html", "a00403" ],
-                [ "IDataConfiguration", "a00407.html", "a00407" ],
-                [ "IDatabaseProviderConfiguration", "a00411.html", "a00411" ]
+          [ "Data", "a00242.html", [
+            [ "Configuration", "a00243.html", [
+              [ "Fluent", "a00244.html", [
+                [ "IDatabaseAnotherDatabaseConfiguration", "a00365.html", "a00365" ],
+                [ "DatabaseConfigurationExtension", "a00373.html", "a00373" ],
+                [ "IDatabaseConfiguration", "a00389.html", "a00389" ],
+                [ "IDatabaseConfigurationProperties", "a00393.html", "a00393" ],
+                [ "IDatabaseConfigurationProviderEntry", "a00397.html", "a00397" ],
+                [ "IDatabaseConfigurationProviders", "a00401.html", null ],
+                [ "IDatabaseDefaultConnectionString", "a00405.html", "a00405" ],
+                [ "IDatabaseProviderExtensionContext", "a00409.html", "a00409" ],
+                [ "IDataConfiguration", "a00413.html", "a00413" ],
+                [ "IDatabaseProviderConfiguration", "a00417.html", "a00417" ]
               ] ],
-              [ "DataAccessDesignTime", "a00303.html", "a00303" ],
-              [ "DatabaseData", "a00339.html", "a00339" ],
-              [ "DatabaseSettings", "a00343.html", "a00343" ],
-              [ "DatabaseSyntheticConfigSettings", "a00347.html", "a00347" ],
-              [ "DbProviderMapping", "a00351.html", "a00351" ],
-              [ "GenericDatabaseData", "a00415.html", "a00415" ]
+              [ "DataAccessDesignTime", "a00309.html", "a00309" ],
+              [ "DatabaseData", "a00345.html", "a00345" ],
+              [ "DatabaseSettings", "a00349.html", "a00349" ],
+              [ "DatabaseSyntheticConfigSettings", "a00353.html", "a00353" ],
+              [ "DbProviderMapping", "a00357.html", "a00357" ],
+              [ "GenericDatabaseData", "a00421.html", "a00421" ]
             ] ],
-            [ "Odbc", "a00245.html", [
-              [ "Configuration", "a00246.html", [
-                [ "Fluent", "a00247.html", [
-                  [ "DatabaseProviderExtensions", "a00579.html", "a00579" ],
-                  [ "IOdbcDatabaseConfiguration", "a00583.html", "a00583" ]
-                ] ],
-                [ "OdbcDatabaseData", "a00591.html", "a00591" ]
-              ] ],
-              [ "OdbcDatabase", "a00595.html", "a00595" ]
-            ] ],
-            [ "OleDb", "a00248.html", [
-              [ "Configuration", "a00249.html", [
-                [ "Fluent", "a00250.html", [
-                  [ "DatabaseProviderExtensions", "a00599.html", "a00599" ],
-                  [ "IOleDbDatabaseConfiguration", "a00603.html", "a00603" ]
-                ] ],
-                [ "OleDbDatabaseData", "a00611.html", "a00611" ]
-              ] ],
-              [ "OleDbDatabase", "a00615.html", "a00615" ]
-            ] ],
-            [ "Oracle", "a00251.html", [
+            [ "Odbc", "a00251.html", [
               [ "Configuration", "a00252.html", [
                 [ "Fluent", "a00253.html", [
-                  [ "DatabaseProviderExtensions", "a00623.html", "a00623" ],
-                  [ "IDatabaseOracleConfiguration", "a00627.html", "a00627" ],
-                  [ "IDatabaseOraclePackageConfiguration", "a00631.html", "a00631" ]
+                  [ "DatabaseProviderExtensions", "a00585.html", "a00585" ],
+                  [ "IOdbcDatabaseConfiguration", "a00589.html", "a00589" ]
                 ] ],
-                [ "OracleConnectionData", "a00639.html", "a00639" ],
-                [ "OracleConnectionSettings", "a00643.html", "a00643" ],
-                [ "OracleDatabaseData", "a00647.html", "a00647" ],
-                [ "OraclePackageData", "a00651.html", "a00651" ]
+                [ "OdbcDatabaseData", "a00597.html", "a00597" ]
               ] ],
-              [ "IOraclePackage", "a00655.html", "a00655" ],
-              [ "OracleDatabase", "a00659.html", "a00659" ],
-              [ "OracleDataReaderWrapper", "a00667.html", "a00667" ],
-              [ "RefCountingOracleDataReaderWrapper", "a00671.html", "a00671" ]
+              [ "OdbcDatabase", "a00601.html", "a00601" ]
             ] ],
-            [ "Sql", "a00254.html", [
+            [ "OleDb", "a00254.html", [
               [ "Configuration", "a00255.html", [
                 [ "Fluent", "a00256.html", [
-                  [ "DatabaseProviderExtensions", "a00675.html", "a00675" ],
-                  [ "IDatabaseSqlDatabaseConfiguration", "a00679.html", "a00679" ]
+                  [ "DatabaseProviderExtensions", "a00605.html", "a00605" ],
+                  [ "IOleDbDatabaseConfiguration", "a00609.html", "a00609" ]
                 ] ],
-                [ "SqlDatabaseData", "a00687.html", "a00687" ]
+                [ "OleDbDatabaseData", "a00617.html", "a00617" ]
               ] ],
-              [ "SqlDatabase", "a00695.html", "a00695" ]
+              [ "OleDbDatabase", "a00621.html", "a00621" ]
             ] ],
-            [ "SqlCe", "a00257.html", [
+            [ "Oracle", "a00257.html", [
               [ "Configuration", "a00258.html", [
                 [ "Fluent", "a00259.html", [
-                  [ "DatabaseProviderExtensions", "a00699.html", "a00699" ],
-                  [ "IDatabaseSqlCeDatabaseConfiguration", "a00703.html", "a00703" ]
+                  [ "DatabaseProviderExtensions", "a00629.html", "a00629" ],
+                  [ "IDatabaseOracleConfiguration", "a00633.html", "a00633" ],
+                  [ "IDatabaseOraclePackageConfiguration", "a00637.html", "a00637" ]
                 ] ],
-                [ "SqlCeDatabaseData", "a00711.html", "a00711" ]
+                [ "OracleConnectionData", "a00645.html", "a00645" ],
+                [ "OracleConnectionSettings", "a00649.html", "a00649" ],
+                [ "OracleDatabaseData", "a00653.html", "a00653" ],
+                [ "OraclePackageData", "a00657.html", "a00657" ]
               ] ],
-              [ "SqlCeConnectionPool", "a00715.html", "a00715" ],
-              [ "SqlCeDatabase", "a00719.html", "a00719" ]
+              [ "IOraclePackage", "a00661.html", "a00661" ],
+              [ "OracleDatabase", "a00665.html", "a00665" ],
+              [ "OracleDataReaderWrapper", "a00673.html", "a00673" ],
+              [ "RefCountingOracleDataReaderWrapper", "a00677.html", "a00677" ]
             ] ],
-            [ "CommandAccessor", "a00295.html", "a00295" ],
-            [ "ConnectionString", "a00419.html", "a00419" ],
-            [ "DaabAsyncResult", "a00423.html", "a00423" ],
-            [ "DataAccessor", "a00427.html", "a00427" ],
-            [ "Database", "a00431.html", "a00431" ],
-            [ "DatabaseConnectionWrapper", "a00439.html", "a00439" ],
-            [ "DatabaseExtensions", "a00443.html", "a00443" ],
-            [ "DatabaseFactory", "a00447.html", "a00447" ],
-            [ "DatabaseProviderFactory", "a00451.html", "a00451" ],
-            [ "DataReaderWrapper", "a00459.html", "a00459" ],
-            [ "GenericDatabase", "a00463.html", "a00463" ],
-            [ "IParameterMapper", "a00467.html", "a00467" ],
-            [ "IResultSetMapper", "a00471.html", "a00471" ],
-            [ "IRowMapper", "a00475.html", "a00475" ],
-            [ "MapBuilder", "a00479.html", "a00479" ],
-            [ "IMapBuilderContext", "a00491.html", "a00491" ],
-            [ "IMapBuilderContextMap", "a00495.html", "a00495" ],
-            [ "IMapBuilderContextTest", "a00499.html", "a00499" ],
-            [ "ParameterCache", "a00503.html", "a00503" ],
-            [ "RefCountingDataReader", "a00507.html", "a00507" ],
-            [ "ReflectionRowMapper", "a00511.html", "a00511" ],
-            [ "PropertyMapping", "a00515.html", "a00515" ],
-            [ "ColumnNameMapping", "a00519.html", "a00519" ],
-            [ "FuncMapping", "a00523.html", "a00523" ],
-            [ "SprocAccessor", "a00527.html", "a00527" ],
-            [ "SqlStringAccessor", "a00535.html", "a00535" ],
-            [ "TransactionScopeConnections", "a00575.html", "a00575" ]
+            [ "Sql", "a00260.html", [
+              [ "Configuration", "a00261.html", [
+                [ "Fluent", "a00262.html", [
+                  [ "DatabaseProviderExtensions", "a00681.html", "a00681" ],
+                  [ "IDatabaseSqlDatabaseConfiguration", "a00685.html", "a00685" ]
+                ] ],
+                [ "SqlDatabaseData", "a00693.html", "a00693" ]
+              ] ],
+              [ "SqlDatabase", "a00701.html", "a00701" ]
+            ] ],
+            [ "SqlCe", "a00263.html", [
+              [ "Configuration", "a00264.html", [
+                [ "Fluent", "a00265.html", [
+                  [ "DatabaseProviderExtensions", "a00705.html", "a00705" ],
+                  [ "IDatabaseSqlCeDatabaseConfiguration", "a00709.html", "a00709" ]
+                ] ],
+                [ "SqlCeDatabaseData", "a00717.html", "a00717" ]
+              ] ],
+              [ "SqlCeConnectionPool", "a00721.html", "a00721" ],
+              [ "SqlCeDatabase", "a00725.html", "a00725" ]
+            ] ],
+            [ "CommandAccessor", "a00301.html", "a00301" ],
+            [ "ConnectionString", "a00425.html", "a00425" ],
+            [ "DaabAsyncResult", "a00429.html", "a00429" ],
+            [ "DataAccessor", "a00433.html", "a00433" ],
+            [ "Database", "a00437.html", "a00437" ],
+            [ "DatabaseConnectionWrapper", "a00445.html", "a00445" ],
+            [ "DatabaseExtensions", "a00449.html", "a00449" ],
+            [ "DatabaseFactory", "a00453.html", "a00453" ],
+            [ "DatabaseProviderFactory", "a00457.html", "a00457" ],
+            [ "DataReaderWrapper", "a00465.html", "a00465" ],
+            [ "GenericDatabase", "a00469.html", "a00469" ],
+            [ "IParameterMapper", "a00473.html", "a00473" ],
+            [ "IResultSetMapper", "a00477.html", "a00477" ],
+            [ "IRowMapper", "a00481.html", "a00481" ],
+            [ "MapBuilder", "a00485.html", "a00485" ],
+            [ "IMapBuilderContext", "a00497.html", "a00497" ],
+            [ "IMapBuilderContextMap", "a00501.html", "a00501" ],
+            [ "IMapBuilderContextTest", "a00505.html", "a00505" ],
+            [ "ParameterCache", "a00509.html", "a00509" ],
+            [ "RefCountingDataReader", "a00513.html", "a00513" ],
+            [ "ReflectionRowMapper", "a00517.html", "a00517" ],
+            [ "PropertyMapping", "a00521.html", "a00521" ],
+            [ "ColumnNameMapping", "a00525.html", "a00525" ],
+            [ "FuncMapping", "a00529.html", "a00529" ],
+            [ "SprocAccessor", "a00533.html", "a00533" ],
+            [ "SqlStringAccessor", "a00541.html", "a00541" ],
+            [ "TransactionScopeConnections", "a00581.html", "a00581" ]
           ] ]
         ] ]
       ] ]
     ] ],
-    [ "System", "a00241.html", [
-      [ "Data", "a00242.html", [
-        [ "Common", "a00243.html", [
-          [ "DbProviderFactories", "a00547.html", "a00547" ]
+    [ "System", "a00247.html", [
+      [ "Data", "a00248.html", [
+        [ "Common", "a00249.html", [
+          [ "DbProviderFactories", "a00553.html", "a00553" ]
         ] ]
       ] ]
     ] ]

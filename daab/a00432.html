@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Member List</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00435.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00432.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,21 +84,133 @@ $(document).ready(function(){initNavTree('a00435.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="a00429.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper Member List</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00435.html">Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00435.html#a4c4d5ad60b031acc0d39fd3ac3fd4a5b">Connection</a></td><td class="entry"><a class="el" href="a00435.html">Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00435.html#a29765305045c5913d494d563f9ec5ec0">Dispose</a>()</td><td class="entry"><a class="el" href="a00435.html">Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00435.html#a776ab50c3e3c1be1882a9c197dc6dcd1">OldConnectionWrapper</a>(DbConnection connection, bool disposeConnection)</td><td class="entry"><a class="el" href="a00435.html">Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>This is a helper class that is used to manage the lifetime of a connection for various Execute methods. We needed this class to support implicit transactions created with the TransactionScope class. In this case, the various Execute methods need to use a shared connection instead of a new connection for each request in order to prevent a distributed transaction.  
+ <a href="a00432.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="a00432.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a776ab50c3e3c1be1882a9c197dc6dcd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00432.html#a776ab50c3e3c1be1882a9c197dc6dcd1">OldConnectionWrapper</a> (DbConnection connection, bool disposeConnection)</td></tr>
+<tr class="memdesc:a776ab50c3e3c1be1882a9c197dc6dcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new "lifetime" container for a DbConnection instance.  <a href="a00432.html#a776ab50c3e3c1be1882a9c197dc6dcd1">More...</a><br /></td></tr>
+<tr class="separator:a776ab50c3e3c1be1882a9c197dc6dcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29765305045c5913d494d563f9ec5ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00432.html#a29765305045c5913d494d563f9ec5ec0">Dispose</a> ()</td></tr>
+<tr class="memdesc:a29765305045c5913d494d563f9ec5ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose the wrapped connection, if appropriate.  <a href="a00432.html#a29765305045c5913d494d563f9ec5ec0">More...</a><br /></td></tr>
+<tr class="separator:a29765305045c5913d494d563f9ec5ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a4c4d5ad60b031acc0d39fd3ac3fd4a5b"><td class="memItemLeft" align="right" valign="top">DbConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00432.html#a4c4d5ad60b031acc0d39fd3ac3fd4a5b">Connection</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4c4d5ad60b031acc0d39fd3ac3fd4a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the actual connection.  <a href="a00432.html#a4c4d5ad60b031acc0d39fd3ac3fd4a5b">More...</a><br /></td></tr>
+<tr class="separator:a4c4d5ad60b031acc0d39fd3ac3fd4a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is a helper class that is used to manage the lifetime of a connection for various Execute methods. We needed this class to support implicit transactions created with the TransactionScope class. In this case, the various Execute methods need to use a shared connection instead of a new connection for each request in order to prevent a distributed transaction. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a776ab50c3e3c1be1882a9c197dc6dcd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776ab50c3e3c1be1882a9c197dc6dcd1">&#9670;&nbsp;</a></span>OldConnectionWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper.OldConnectionWrapper </td>
+          <td>(</td>
+          <td class="paramtype">DbConnection&#160;</td>
+          <td class="paramname"><em>connection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disposeConnection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new "lifetime" container for a DbConnection instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connection</td><td>The connection</td></tr>
+    <tr><td class="paramname">disposeConnection</td><td>Whether or not to dispose of the connection when this class is disposed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a29765305045c5913d494d563f9ec5ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29765305045c5913d494d563f9ec5ec0">&#9670;&nbsp;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispose the wrapped connection, if appropriate. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a4c4d5ad60b031acc0d39fd3ac3fd4a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4d5ad60b031acc0d39fd3ac3fd4a5b">&#9670;&nbsp;</a></span>Connection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DbConnection Microsoft.Practices.EnterpriseLibrary.Data.Database.OldConnectionWrapper.Connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the actual connection. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>Database.cs</li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00428.html">Database</a></li><li class="navelem"><a class="el" href="a00432.html">OldConnectionWrapper</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

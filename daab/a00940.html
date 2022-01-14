@@ -102,9 +102,7 @@ $(document).ready(function(){initNavTree('a00940.html',''); initResizable(); });
 <li class="level3"><a href="#autotoc_md11">Creating and Using Mappers</a></li>
 <li class="level3"><a href="#autotoc_md12">Retrieving XML Data</a></li>
 <li class="level3"><a href="#autotoc_md13">Retrieving Single Scalar Values</a></li>
-<li class="level3"><a href="#autotoc_md14">Retrieving Data Asynchronously</a><ul><li class="level4"><a href="#autotoc_md15">Retrieving Row Set Data Asynchronously using BeginXXX and EndXXX Methods</a></li>
-</ul>
-</li>
+<li class="level3"><a href="#autotoc_md14">Retrieving Data Asynchronously</a></li>
 </ul>
 </li>
 </ul>
@@ -368,8 +366,6 @@ Retrieving Data Asynchronously</h3>
 <p>The <code>BeginExecuteReader</code> method does not accept a <code>CommandBehavior</code> parameter. By default, the method will automatically set the <code>CommandBehavior</code> property on the underlying reader to <code>CloseConnection</code> unless you specify a transaction when you call the method. If you do specify a transaction, it does not set the <code>CommandBehavior</code> property.</p>
 <p>Always ensure you call the appropriate <code>EndExecute</code> method when you use asynchronous data access, even if you do not actually require access to the results, or call the Cancel method on the connection. Failing to do so can cause memory leaks and consume additional system resources.</p>
 <p>Using asynchronous data access with the Multiple Active Results Set (MARS) feature of ADO.NET may produce unexpected behavior, and should generally be avoided.</p>
-<h4><a class="anchor" id="autotoc_md15"></a>
-Retrieving Row Set Data Asynchronously using BeginXXX and EndXXX Methods</h4>
 <p>The following code creates a <code>DBCommand</code> instance and adds two parameters, and then calls the <code>BeginExecuteReader</code> method of the <code>Database</code> class to start the process. The code passes to this method a reference to the command to execute (with its parameters already added), a Lambda expression to execute when the data retrieval process completes, and a <b>null</b> value for the <code>AsyncState</code> parameter. The Lambda expression then calls the <code>EndExecuteReader</code> method to obtain the results of the query execution. At this point you can consume the row set in your application. Notice that the callback expression should handle any errors that may occur during the asynchronous operation.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create command to execute stored procedure and add parameters.</span></div>
 <div class="line">DbCommand cmd = asyncDB.GetStoredProcCommand(<span class="stringliteral">&quot;ListOrdersSlowly&quot;</span>);</div>

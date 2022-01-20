@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.OleDbDatabaseData Class Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.Fluent.DatabaseProviderExtensions Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,192 +85,63 @@ $(document).ready(function(){initNavTree('a00608.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#properties">Properties</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a00605.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.OleDbDatabaseData Class Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.Fluent.DatabaseProviderExtensions Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.OleDbDatabaseData:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="a00608.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.OleDbDatabaseData_map" alt=""/>
-  <map id="Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.OleDbDatabaseData_map" name="Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.OleDbDatabaseData_map">
-<area href="a00336.html" title="Describes a Database instance, aggregating information from a ConnectionStringSettings and potentiall..." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseData" shape="rect" coords="0,0,494,24"/>
-  </map>
-</div></div>
+
+<p>Provides extensions for OLE DB database provider. /summary&gt;  
+ <a href="a00608.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a4039cedad96e20c4e38b37c2b55ca3eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00608.html#a4039cedad96e20c4e38b37c2b55ca3eb">OleDbDatabaseData</a> (<a class="el" href="a00336.html#aa418afa7d94945447cc462aacef3079a">ConnectionStringSettings</a> connectionStringSettings, Func&lt; string, ConfigurationSection &gt; configurationSource)</td></tr>
-<tr class="memdesc:a4039cedad96e20c4e38b37c2b55ca3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="a00608.html">OleDbDatabaseData</a> class  <a href="a00608.html#a4039cedad96e20c4e38b37c2b55ca3eb">More...</a><br /></td></tr>
-<tr class="separator:a4039cedad96e20c4e38b37c2b55ca3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06e4480f03b2ecc81945c8836de39b52"><td class="memItemLeft" align="right" valign="top"><a id="a06e4480f03b2ecc81945c8836de39b52"></a>
-override <a class="el" href="a00428.html">Database</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00608.html#a06e4480f03b2ecc81945c8836de39b52">BuildDatabase</a> ()</td></tr>
-<tr class="memdesc:a06e4480f03b2ecc81945c8836de39b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> represented by this configuration object. <br /></td></tr>
-<tr class="separator:a06e4480f03b2ecc81945c8836de39b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:aa418afa7d94945447cc462aacef3079a"><td class="memItemLeft" align="right" valign="top">ConnectionStringSettings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#aa418afa7d94945447cc462aacef3079a">ConnectionStringSettings</a><code> [get]</code></td></tr>
-<tr class="memdesc:aa418afa7d94945447cc462aacef3079a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="a00336.html#aa418afa7d94945447cc462aacef3079a" title="Gets the ConnectionStringSettings for the database data.">ConnectionStringSettings</a> for the database data.  <a href="a00336.html#aa418afa7d94945447cc462aacef3079a">More...</a><br /></td></tr>
-<tr class="separator:aa418afa7d94945447cc462aacef3079a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade9e8583b237f275571382001b7c7fe0"><td class="memItemLeft" align="right" valign="top">Func&lt; string, ConfigurationSection &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#ade9e8583b237f275571382001b7c7fe0">ConfigurationSource</a><code> [get]</code></td></tr>
-<tr class="memdesc:ade9e8583b237f275571382001b7c7fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the function to access configuration information.  <a href="a00336.html#ade9e8583b237f275571382001b7c7fe0">More...</a><br /></td></tr>
-<tr class="separator:ade9e8583b237f275571382001b7c7fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aceb7938a713aa7c50ce2e9dccc1dd613"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#aceb7938a713aa7c50ce2e9dccc1dd613">Name</a><code> [get]</code></td></tr>
-<tr class="memdesc:aceb7938a713aa7c50ce2e9dccc1dd613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name for the represented database.  <a href="a00336.html#aceb7938a713aa7c50ce2e9dccc1dd613">More...</a><br /></td></tr>
-<tr class="separator:aceb7938a713aa7c50ce2e9dccc1dd613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1cc9dfc113d023a47fe9fbef61cca93"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#ab1cc9dfc113d023a47fe9fbef61cca93">ConnectionString</a><code> [get]</code></td></tr>
-<tr class="memdesc:ab1cc9dfc113d023a47fe9fbef61cca93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the connection string for the represented database.  <a href="a00336.html#ab1cc9dfc113d023a47fe9fbef61cca93">More...</a><br /></td></tr>
-<tr class="separator:ab1cc9dfc113d023a47fe9fbef61cca93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:acfdcf58a53dc2a01e21855c0a27c9acd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00612.html">IOleDbDatabaseConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00608.html#acfdcf58a53dc2a01e21855c0a27c9acd">AnOleDbDatabase</a> (this <a class="el" href="a00404.html">IDatabaseConfigurationProviders</a> context)</td></tr>
+<tr class="memdesc:acfdcf58a53dc2a01e21855c0a27c9acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">An OleDb database for use with the System.Data.OleDb namespace.  <a href="a00608.html#acfdcf58a53dc2a01e21855c0a27c9acd">More...</a><br /></td></tr>
+<tr class="separator:acfdcf58a53dc2a01e21855c0a27c9acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4039cedad96e20c4e38b37c2b55ca3eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4039cedad96e20c4e38b37c2b55ca3eb">&#9670;&nbsp;</a></span>OleDbDatabaseData()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides extensions for OLE DB database provider. /summary&gt; </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="acfdcf58a53dc2a01e21855c0a27c9acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdcf58a53dc2a01e21855c0a27c9acd">&#9670;&nbsp;</a></span>AnOleDbDatabase()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.OleDbDatabaseData.OleDbDatabaseData </td>
+          <td class="memname">static <a class="el" href="a00612.html">IOleDbDatabaseConfiguration</a> Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.Fluent.DatabaseProviderExtensions.AnOleDbDatabase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00336.html#aa418afa7d94945447cc462aacef3079a">ConnectionStringSettings</a>&#160;</td>
-          <td class="paramname"><em>connectionStringSettings</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">this <a class="el" href="a00404.html">IDatabaseConfigurationProviders</a>&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">Func&lt; string, ConfigurationSection &gt;&#160;</td>
-          <td class="paramname"><em>configurationSource</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes a new instance of the <a class="el" href="a00608.html">OleDbDatabaseData</a> class </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">connectionStringSettings</td><td>The connection string settings</td></tr>
-    <tr><td class="paramname">configurationSource</td><td>A delegate to retrieve the configuration section</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="ade9e8583b237f275571382001b7c7fe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade9e8583b237f275571382001b7c7fe0">&#9670;&nbsp;</a></span>ConfigurationSource</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Func&lt;string, ConfigurationSection&gt; Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseData.ConfigurationSource</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the function to access configuration information. </p>
-
-</div>
-</div>
-<a id="ab1cc9dfc113d023a47fe9fbef61cca93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1cc9dfc113d023a47fe9fbef61cca93">&#9670;&nbsp;</a></span>ConnectionString</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseData.ConnectionString</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the connection string for the represented database. </p>
-
-</div>
-</div>
-<a id="aa418afa7d94945447cc462aacef3079a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa418afa7d94945447cc462aacef3079a">&#9670;&nbsp;</a></span>ConnectionStringSettings</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ConnectionStringSettings Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseData.ConnectionStringSettings</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the <a class="el" href="a00336.html#aa418afa7d94945447cc462aacef3079a" title="Gets the ConnectionStringSettings for the database data.">ConnectionStringSettings</a> for the database data. </p>
-
-</div>
-</div>
-<a id="aceb7938a713aa7c50ce2e9dccc1dd613"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aceb7938a713aa7c50ce2e9dccc1dd613">&#9670;&nbsp;</a></span>Name</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseData.Name</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the name for the represented database. </p>
+<p>An OleDb database for use with the System.Data.OleDb namespace. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>OleDbDatabaseData.cs</li>
+<li>Data.OleDb/Configuration/Fluent/DatabaseProviderExtensions.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00245.html">OleDb</a></li><li class="navelem"><a class="el" href="a00246.html">Configuration</a></li><li class="navelem"><a class="el" href="a00608.html">OleDbDatabaseData</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00257.html">OleDb</a></li><li class="navelem"><a class="el" href="a00258.html">Configuration</a></li><li class="navelem"><a class="el" href="a00259.html">Fluent</a></li><li class="navelem"><a class="el" href="a00608.html">DatabaseProviderExtensions</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

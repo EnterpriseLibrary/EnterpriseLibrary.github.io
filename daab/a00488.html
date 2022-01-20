@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext&lt; TResult &gt; Interface Template Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder&lt; TResult &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,241 +85,134 @@ $(document).ready(function(){initNavTree('a00488.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a00485.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext&lt; TResult &gt; Interface Template Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder&lt; TResult &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A fluent interface that can be used to construct a IRowMapper&lt;TResult&gt;.  
+<p>Static entry point for the IMapBuilderContext&lt;TResult&gt; interface, which allows to build reflection-based IRowMapper&lt;TResult&gt;s.  
  <a href="a00488.html#details">More...</a></p>
-<div class="dynheader">
-Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext&lt; TResult &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="a00488.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext_3C_20TResult_20_3E_map" alt=""/>
-  <map id="Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext_3C_20TResult_20_3E_map" name="Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext_3C_20TResult_20_3E_map">
-<area href="a00496.html" title="This type supports the Enterprise Library infrastructure and is not intended to be used directly from..." alt="Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContextTest&lt; TResult &gt;" shape="rect" coords="0,112,457,136"/>
-  </map>
-</div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a3795acda8af3aec5741046d227999d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#a3795acda8af3aec5741046d227999d9c">MapByName</a> (PropertyInfo property)</td></tr>
-<tr class="memdesc:a3795acda8af3aec5741046d227999d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a property mapping to the context for <em>property</em>  that specifies this property will be mapped to a column with a matching name.  <a href="a00488.html#a3795acda8af3aec5741046d227999d9c">More...</a><br /></td></tr>
-<tr class="separator:a3795acda8af3aec5741046d227999d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb7b76f8d23f3dd231c2c7608158d369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#afb7b76f8d23f3dd231c2c7608158d369">MapByName&lt; TMember &gt;</a> (Expression&lt; Func&lt; TResult, TMember &gt;&gt; propertySelector)</td></tr>
-<tr class="memdesc:afb7b76f8d23f3dd231c2c7608158d369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a property mapping to the context for <em>propertySelector</em>  that specifies this property will be mapped to a column with a matching name.  <a href="a00488.html#afb7b76f8d23f3dd231c2c7608158d369">More...</a><br /></td></tr>
-<tr class="separator:afb7b76f8d23f3dd231c2c7608158d369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3bd0c7dbd46162895ba7a51a2b1211"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#a2a3bd0c7dbd46162895ba7a51a2b1211">DoNotMap</a> (PropertyInfo property)</td></tr>
-<tr class="memdesc:a2a3bd0c7dbd46162895ba7a51a2b1211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a property mapping to the context for <em>property</em>  that specifies this property will be ignored while mapping.  <a href="a00488.html#a2a3bd0c7dbd46162895ba7a51a2b1211">More...</a><br /></td></tr>
-<tr class="separator:a2a3bd0c7dbd46162895ba7a51a2b1211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d6dd399f0630d70b451dfe88671c1bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#a2d6dd399f0630d70b451dfe88671c1bf">DoNotMap&lt; TMember &gt;</a> (Expression&lt; Func&lt; TResult, TMember &gt;&gt; propertySelector)</td></tr>
-<tr class="memdesc:a2d6dd399f0630d70b451dfe88671c1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a property mapping to the context for <em>propertySelector</em>  that specifies this property will be ignored while mapping.  <a href="a00488.html#a2d6dd399f0630d70b451dfe88671c1bf">More...</a><br /></td></tr>
-<tr class="separator:a2d6dd399f0630d70b451dfe88671c1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe26025d067b624ea0a560c6f266cd41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00492.html">IMapBuilderContextMap</a>&lt; TResult, TMember &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#afe26025d067b624ea0a560c6f266cd41">Map&lt; TMember &gt;</a> (Expression&lt; Func&lt; TResult, TMember &gt;&gt; propertySelector)</td></tr>
-<tr class="memdesc:afe26025d067b624ea0a560c6f266cd41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a property mapping to the context for <em>propertySelector</em> .  <a href="a00488.html#afe26025d067b624ea0a560c6f266cd41">More...</a><br /></td></tr>
-<tr class="separator:afe26025d067b624ea0a560c6f266cd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1299d4fc0a5d0a3fc0f98008a919d94a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00492.html">IMapBuilderContextMap</a>&lt; TResult, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#a1299d4fc0a5d0a3fc0f98008a919d94a">Map</a> (PropertyInfo property)</td></tr>
-<tr class="memdesc:a1299d4fc0a5d0a3fc0f98008a919d94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a property mapping to the context for <em>property</em> .  <a href="a00488.html#a1299d4fc0a5d0a3fc0f98008a919d94a">More...</a><br /></td></tr>
-<tr class="separator:a1299d4fc0a5d0a3fc0f98008a919d94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae59c960cd357d3835939f26fee9d41a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00472.html">IRowMapper</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#ae59c960cd357d3835939f26fee9d41a9">Build</a> ()</td></tr>
-<tr class="memdesc:ae59c960cd357d3835939f26fee9d41a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the IRowMapper&lt;TResult&gt; that can be used to map data structures to clr types.  <a href="a00488.html#ae59c960cd357d3835939f26fee9d41a9">More...</a><br /></td></tr>
-<tr class="separator:ae59c960cd357d3835939f26fee9d41a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab818daacb284593701963720817e8ba4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00484.html">IRowMapper</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#ab818daacb284593701963720817e8ba4">BuildAllProperties</a> ()</td></tr>
+<tr class="memdesc:ab818daacb284593701963720817e8ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a IRowMapper&lt;TResult&gt; that maps all properties for <em>TResult</em>  based on name.  <a href="a00488.html#ab818daacb284593701963720817e8ba4">More...</a><br /></td></tr>
+<tr class="separator:ab818daacb284593701963720817e8ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c950285b5745ee0a79ebf02c0063f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00500.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#af1c950285b5745ee0a79ebf02c0063f9">MapAllProperties</a> ()</td></tr>
+<tr class="memdesc:af1c950285b5745ee0a79ebf02c0063f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has a mapping set up for all properties of <em>TResult</em>  based on name.  <a href="a00488.html#af1c950285b5745ee0a79ebf02c0063f9">More...</a><br /></td></tr>
+<tr class="separator:af1c950285b5745ee0a79ebf02c0063f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b08608e2a0c061960ba0cdef93590d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00500.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html#aa9b08608e2a0c061960ba0cdef93590d">MapNoProperties</a> ()</td></tr>
+<tr class="memdesc:aa9b08608e2a0c061960ba0cdef93590d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has no mappings to start out with.  <a href="a00488.html#aa9b08608e2a0c061960ba0cdef93590d">More...</a><br /></td></tr>
+<tr class="separator:aa9b08608e2a0c061960ba0cdef93590d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A fluent interface that can be used to construct a IRowMapper&lt;TResult&gt;. </p>
+<div class="textblock"><p>Static entry point for the IMapBuilderContext&lt;TResult&gt; interface, which allows to build reflection-based IRowMapper&lt;TResult&gt;s. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">TResult</td><td>The type for which a IRowMapper&lt;TResult&gt; should be build.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd>IMapBuilderContext&lt;TResult&gt;, IRowMapper&lt;TResult&gt;</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TResult</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae59c960cd357d3835939f26fee9d41a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae59c960cd357d3835939f26fee9d41a9">&#9670;&nbsp;</a></span>Build()</h2>
+<a id="ab818daacb284593701963720817e8ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab818daacb284593701963720817e8ba4">&#9670;&nbsp;</a></span>BuildAllProperties()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00472.html">IRowMapper</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext</a>&lt; TResult &gt;.Build </td>
+          <td class="memname">static <a class="el" href="a00484.html">IRowMapper</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder</a>&lt; TResult &gt;.BuildAllProperties </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Builds the IRowMapper&lt;TResult&gt; that can be used to map data structures to clr types. </p>
-<dl class="section return"><dt>Returns</dt><dd>An instance of IRowMapper&lt;TResult&gt;.</dd></dl>
+<p>Returns a IRowMapper&lt;TResult&gt; that maps all properties for <em>TResult</em>  based on name. </p>
+<dl class="section return"><dt>Returns</dt><dd>A new instance of IRowMapper&lt;TResult&gt;.</dd></dl>
 
 </div>
 </div>
-<a id="a2a3bd0c7dbd46162895ba7a51a2b1211"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3bd0c7dbd46162895ba7a51a2b1211">&#9670;&nbsp;</a></span>DoNotMap()</h2>
+<a id="af1c950285b5745ee0a79ebf02c0063f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c950285b5745ee0a79ebf02c0063f9">&#9670;&nbsp;</a></span>MapAllProperties()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext</a>&lt; TResult &gt;.DoNotMap </td>
+          <td class="memname">static <a class="el" href="a00500.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder</a>&lt; TResult &gt;.MapAllProperties </td>
           <td>(</td>
-          <td class="paramtype">PropertyInfo&#160;</td>
-          <td class="paramname"><em>property</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Adds a property mapping to the context for <em>property</em>  that specifies this property will be ignored while mapping. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">property</td><td>The property of <em>TResult</em>  that should be mapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The fluent interface that can be used further specify mappings.</dd></dl>
+<p>Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has a mapping set up for all properties of <em>TResult</em>  based on name. </p>
+<dl class="section see"><dt>See also</dt><dd>IMapBuilderContext&lt;TResult&gt;, IRowMapper&lt;TResult&gt;</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new instance of IMapBuilderContext&lt;TResult&gt;.</dd></dl>
 
 </div>
 </div>
-<a id="a2d6dd399f0630d70b451dfe88671c1bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d6dd399f0630d70b451dfe88671c1bf">&#9670;&nbsp;</a></span>DoNotMap&lt; TMember &gt;()</h2>
+<a id="aa9b08608e2a0c061960ba0cdef93590d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b08608e2a0c061960ba0cdef93590d">&#9670;&nbsp;</a></span>MapNoProperties()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext</a>&lt; TResult &gt;.<a class="el" href="a00488.html#a2a3bd0c7dbd46162895ba7a51a2b1211">DoNotMap</a>&lt; TMember &gt; </td>
+          <td class="memname">static <a class="el" href="a00500.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder</a>&lt; TResult &gt;.MapNoProperties </td>
           <td>(</td>
-          <td class="paramtype">Expression&lt; Func&lt; TResult, TMember &gt;&gt;&#160;</td>
-          <td class="paramname"><em>propertySelector</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Adds a property mapping to the context for <em>propertySelector</em>  that specifies this property will be ignored while mapping. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">propertySelector</td><td>A lambda function that returns the property that should be mapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The fluent interface that can be used further specify mappings.</dd></dl>
+<p>Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has no mappings to start out with. </p>
+<dl class="section see"><dt>See also</dt><dd>IMapBuilderContext&lt;TResult&gt;, IRowMapper&lt;TResult&gt;</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new instance of IMapBuilderContext&lt;TResult&gt;.</dd></dl>
 
 </div>
 </div>
-<a id="a1299d4fc0a5d0a3fc0f98008a919d94a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1299d4fc0a5d0a3fc0f98008a919d94a">&#9670;&nbsp;</a></span>Map()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00492.html">IMapBuilderContextMap</a>&lt;TResult, object&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext</a>&lt; TResult &gt;.Map </td>
-          <td>(</td>
-          <td class="paramtype">PropertyInfo&#160;</td>
-          <td class="paramname"><em>property</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a property mapping to the context for <em>property</em> . </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">property</td><td>The property of <em>TResult</em>  that should be mapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The fluent interface that can be used to specify how to map this property.</dd></dl>
-
-</div>
-</div>
-<a id="afe26025d067b624ea0a560c6f266cd41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe26025d067b624ea0a560c6f266cd41">&#9670;&nbsp;</a></span>Map&lt; TMember &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00492.html">IMapBuilderContextMap</a>&lt;TResult, TMember&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext</a>&lt; TResult &gt;.<a class="el" href="a00488.html#a1299d4fc0a5d0a3fc0f98008a919d94a">Map</a>&lt; TMember &gt; </td>
-          <td>(</td>
-          <td class="paramtype">Expression&lt; Func&lt; TResult, TMember &gt;&gt;&#160;</td>
-          <td class="paramname"><em>propertySelector</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a property mapping to the context for <em>propertySelector</em> . </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">propertySelector</td><td>A lambda function that returns the property that should be mapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The fluent interface that can be used to specify how to map this property.</dd></dl>
-
-</div>
-</div>
-<a id="a3795acda8af3aec5741046d227999d9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3795acda8af3aec5741046d227999d9c">&#9670;&nbsp;</a></span>MapByName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext</a>&lt; TResult &gt;.MapByName </td>
-          <td>(</td>
-          <td class="paramtype">PropertyInfo&#160;</td>
-          <td class="paramname"><em>property</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a property mapping to the context for <em>property</em>  that specifies this property will be mapped to a column with a matching name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">property</td><td>The property of <em>TResult</em>  that should be mapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The fluent interface that can be used further specify mappings.</dd></dl>
-
-</div>
-</div>
-<a id="afb7b76f8d23f3dd231c2c7608158d369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb7b76f8d23f3dd231c2c7608158d369">&#9670;&nbsp;</a></span>MapByName&lt; TMember &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00488.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00488.html">Microsoft.Practices.EnterpriseLibrary.Data.IMapBuilderContext</a>&lt; TResult &gt;.<a class="el" href="a00488.html#a3795acda8af3aec5741046d227999d9c">MapByName</a>&lt; TMember &gt; </td>
-          <td>(</td>
-          <td class="paramtype">Expression&lt; Func&lt; TResult, TMember &gt;&gt;&#160;</td>
-          <td class="paramname"><em>propertySelector</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a property mapping to the context for <em>propertySelector</em>  that specifies this property will be mapped to a column with a matching name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">propertySelector</td><td>A lambda function that returns the property that should be mapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The fluent interface that can be used further specify mappings.</dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this interface was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>MapBuilder.cs</li>
 </ul>
 </div><!-- contents -->
@@ -327,7 +220,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00488.html">IMapBuilderContext</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00488.html">MapBuilder</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

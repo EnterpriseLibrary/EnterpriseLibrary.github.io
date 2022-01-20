@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool Class Reference</title>
+<title>Enterprise Library Data Access Application Block: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00721.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00724.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,218 +84,23 @@ $(document).ready(function(){initNavTree('a00721.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
-<a href="a00718.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool Class Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This class provides a primitive connection pool for <a class="el" href="a00725.html" title="Provides helper methods to make working with a Sql Server Compact Edition database easier.">SqlCeDatabase</a>.  
- <a href="a00721.html#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d3e89b6495f497b70d7657ec11f8220"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00721.html#a7d3e89b6495f497b70d7657ec11f8220">CloseSharedConnection</a> (<a class="el" href="a00437.html">Database</a> database)</td></tr>
-<tr class="memdesc:a7d3e89b6495f497b70d7657ec11f8220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the "keep alive" connection that is used by all databases with the same connection string as the one you provide.  <a href="a00721.html#a7d3e89b6495f497b70d7657ec11f8220">More...</a><br /></td></tr>
-<tr class="separator:a7d3e89b6495f497b70d7657ec11f8220"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e09b80ce2b7d60805ef18bb106ddd0d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00721.html#a5e09b80ce2b7d60805ef18bb106ddd0d">CloseSharedConnections</a> ()</td></tr>
-<tr class="memdesc:a5e09b80ce2b7d60805ef18bb106ddd0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes all "keep alive" connections for all database instanced.  <a href="a00721.html#a5e09b80ce2b7d60805ef18bb106ddd0d">More...</a><br /></td></tr>
-<tr class="separator:a5e09b80ce2b7d60805ef18bb106ddd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4db981769e10a72b0553fa1fee5a6c4f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00445.html">DatabaseConnectionWrapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00721.html#a4db981769e10a72b0553fa1fee5a6c4f">CreateConnection</a> (<a class="el" href="a00725.html">SqlCeDatabase</a> db, bool usePooledConnection)</td></tr>
-<tr class="memdesc:a4db981769e10a72b0553fa1fee5a6c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new connection. If this is the first connection, it also creates an extra "Keep Alive" connection to keep the database open. If <em>usePooledConnection</em>  is true, than if this connection has been opened before, the connection from the pool will be returned rather than creating a new one.  <a href="a00721.html#a4db981769e10a72b0553fa1fee5a6c4f">More...</a><br /></td></tr>
-<tr class="separator:a4db981769e10a72b0553fa1fee5a6c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b0010ca276bee7d364c6cfdf1954351"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00445.html">DatabaseConnectionWrapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00721.html#a0b0010ca276bee7d364c6cfdf1954351">CreateConnection</a> (<a class="el" href="a00725.html">SqlCeDatabase</a> db)</td></tr>
-<tr class="memdesc:a0b0010ca276bee7d364c6cfdf1954351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new connection. If this is the first connection, it also creates an extra "Keep Alive" connection to keep the database open. Always returns a new SqlCeConnection object, not a pooled one.  <a href="a00721.html#a0b0010ca276bee7d364c6cfdf1954351">More...</a><br /></td></tr>
-<tr class="separator:a0b0010ca276bee7d364c6cfdf1954351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:aa70b92e5152c1b40f1d202043724ecae"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, <a class="el" href="a00445.html">DatabaseConnectionWrapper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00721.html#aa70b92e5152c1b40f1d202043724ecae">connections</a> = new Dictionary&lt;string, <a class="el" href="a00445.html">DatabaseConnectionWrapper</a>&gt;()</td></tr>
-<tr class="memdesc:aa70b92e5152c1b40f1d202043724ecae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps a list of "keep alive" connections.  <a href="a00721.html#aa70b92e5152c1b40f1d202043724ecae">More...</a><br /></td></tr>
-<tr class="separator:aa70b92e5152c1b40f1d202043724ecae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class provides a primitive connection pool for <a class="el" href="a00725.html" title="Provides helper methods to make working with a Sql Server Compact Edition database easier.">SqlCeDatabase</a>. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7d3e89b6495f497b70d7657ec11f8220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d3e89b6495f497b70d7657ec11f8220">&#9670;&nbsp;</a></span>CloseSharedConnection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool.CloseSharedConnection </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00437.html">Database</a>&#160;</td>
-          <td class="paramname"><em>database</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Closes the "keep alive" connection that is used by all databases with the same connection string as the one you provide. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">database</td><td>The database with the connection string that defines which connections should be closed.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5e09b80ce2b7d60805ef18bb106ddd0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e09b80ce2b7d60805ef18bb106ddd0d">&#9670;&nbsp;</a></span>CloseSharedConnections()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool.CloseSharedConnections </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Closes all "keep alive" connections for all database instanced. </p>
-
-</div>
-</div>
-<a id="a0b0010ca276bee7d364c6cfdf1954351"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b0010ca276bee7d364c6cfdf1954351">&#9670;&nbsp;</a></span>CreateConnection() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00445.html">DatabaseConnectionWrapper</a> Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool.CreateConnection </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00725.html">SqlCeDatabase</a>&#160;</td>
-          <td class="paramname"><em>db</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates a new connection. If this is the first connection, it also creates an extra "Keep Alive" connection to keep the database open. Always returns a new SqlCeConnection object, not a pooled one. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>The database instance that will be used to create a connection.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A new connection.</dd></dl>
-
-</div>
-</div>
-<a id="a4db981769e10a72b0553fa1fee5a6c4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4db981769e10a72b0553fa1fee5a6c4f">&#9670;&nbsp;</a></span>CreateConnection() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00445.html">DatabaseConnectionWrapper</a> Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool.CreateConnection </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00725.html">SqlCeDatabase</a>&#160;</td>
-          <td class="paramname"><em>db</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>usePooledConnection</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates a new connection. If this is the first connection, it also creates an extra "Keep Alive" connection to keep the database open. If <em>usePooledConnection</em>  is true, than if this connection has been opened before, the connection from the pool will be returned rather than creating a new one. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>The database instance that will be used to create a connection.</td></tr>
-    <tr><td class="paramname">usePooledConnection</td><td>If true, return an already created connection for this object. If false, always create a new one.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A new connection.</dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa70b92e5152c1b40f1d202043724ecae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa70b92e5152c1b40f1d202043724ecae">&#9670;&nbsp;</a></span>connections</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Dictionary&lt;string, <a class="el" href="a00445.html">DatabaseConnectionWrapper</a>&gt; Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool.connections = new Dictionary&lt;string, <a class="el" href="a00445.html">DatabaseConnectionWrapper</a>&gt;()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Keeps a list of "keep alive" connections. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>SqlCeConnectionPool.cs</li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="a00724.html">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00724.html#a7d3e89b6495f497b70d7657ec11f8220">CloseSharedConnection</a>(Database database)</td><td class="entry"><a class="el" href="a00724.html">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00724.html#a5e09b80ce2b7d60805ef18bb106ddd0d">CloseSharedConnections</a>()</td><td class="entry"><a class="el" href="a00724.html">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00724.html#aa70b92e5152c1b40f1d202043724ecae">connections</a></td><td class="entry"><a class="el" href="a00724.html">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00724.html#a4db981769e10a72b0553fa1fee5a6c4f">CreateConnection</a>(SqlCeDatabase db, bool usePooledConnection)</td><td class="entry"><a class="el" href="a00724.html">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00724.html#a0b0010ca276bee7d364c6cfdf1954351">CreateConnection</a>(SqlCeDatabase db)</td><td class="entry"><a class="el" href="a00724.html">Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.SqlCeConnectionPool</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00239.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00240.html">Practices</a></li><li class="navelem"><a class="el" href="a00241.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00242.html">Data</a></li><li class="navelem"><a class="el" href="a00263.html">SqlCe</a></li><li class="navelem"><a class="el" href="a00721.html">SqlCeConnectionPool</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

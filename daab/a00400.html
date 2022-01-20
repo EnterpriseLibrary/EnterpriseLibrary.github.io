@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderExtensionContext Interface Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviderEntry Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,27 +88,40 @@ $(document).ready(function(){initNavTree('a00400.html',''); initResizable(); });
 <a href="#properties">Properties</a> &#124;
 <a href="a00397.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderExtensionContext Interface Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviderEntry Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides extension context for database provider extensions.  
+<p>This interface support the database configuration fluent interface.  
  <a href="a00400.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviderEntry:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="a00400.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviderEntry_map" alt=""/>
+  <map id="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviderEntry_map" name="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviderEntry_map">
+<area href="a00396.html" title="Database configuration properties that apply to all databases." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProperties" shape="rect" coords="1929,112,2562,136"/>
+<area href="a00376.html" title="Base class to help build database-specific configurations extensions for DataConfigurationSourceBuild..." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.DatabaseConfigurationExtension" shape="rect" coords="0,168,633,192"/>
+<area href="a00368.html" title="Configuration extensions for database types specified via the DatabaseProviderExtensions...." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseAnotherDatabaseConfiguration" shape="rect" coords="643,168,1276,192"/>
+<area href="a00592.html" title="Odbc database configuration options." alt="Microsoft.Practices.EnterpriseLibrary.Data.Odbc.Configuration.Fluent.IOdbcDatabaseConfiguration" shape="rect" coords="1286,168,1919,192"/>
+<area href="a00612.html" title="OleDb database configuration options." alt="Microsoft.Practices.EnterpriseLibrary.Data.OleDb.Configuration.Fluent.IOleDbDatabaseConfiguration" shape="rect" coords="1929,168,2562,192"/>
+<area href="a00636.html" title="Oracle configuration options" alt="Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.Fluent.IDatabaseOracleConfiguration" shape="rect" coords="2572,168,3205,192"/>
+<area href="a00688.html" title="Sql Server Database configuration options." alt="Microsoft.Practices.EnterpriseLibrary.Data.Sql.Configuration.Fluent.IDatabaseSqlDatabaseConfiguration" shape="rect" coords="3215,168,3848,192"/>
+<area href="a00712.html" title="SqlCe database configuration options." alt="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.Configuration.Fluent.IDatabaseSqlCeDatabaseConfiguration" shape="rect" coords="3858,168,4491,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a72f3afa658188862013b41d283c9113b"><td class="memItemLeft" align="right" valign="top">ConnectionStringSettings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00400.html#a72f3afa658188862013b41d283c9113b">ConnectionString</a><code> [get]</code></td></tr>
-<tr class="memdesc:a72f3afa658188862013b41d283c9113b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current connection string under construction in the fluent interface.  <a href="a00400.html#a72f3afa658188862013b41d283c9113b">More...</a><br /></td></tr>
-<tr class="separator:a72f3afa658188862013b41d283c9113b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae475662e921ba56a0ddab4415ccac8f3"><td class="memItemLeft" align="right" valign="top">IConfigurationSourceBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00400.html#ae475662e921ba56a0ddab4415ccac8f3">Builder</a><code> [get]</code></td></tr>
-<tr class="memdesc:ae475662e921ba56a0ddab4415ccac8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context of the current builder for the extension  <a href="a00400.html#ae475662e921ba56a0ddab4415ccac8f3">More...</a><br /></td></tr>
-<tr class="separator:ae475662e921ba56a0ddab4415ccac8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8be3ba4f66deac5e4af2c2c11e9ea48e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00404.html">IDatabaseConfigurationProviders</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00400.html#a8be3ba4f66deac5e4af2c2c11e9ea48e">ThatIs</a><code> [get]</code></td></tr>
+<tr class="memdesc:a8be3ba4f66deac5e4af2c2c11e9ea48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the type of database.  <a href="a00400.html#a8be3ba4f66deac5e4af2c2c11e9ea48e">More...</a><br /></td></tr>
+<tr class="separator:a8be3ba4f66deac5e4af2c2c11e9ea48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides extension context for database provider extensions. </p>
+<div class="textblock"><p>This interface support the database configuration fluent interface. </p>
 </div><h2 class="groupheader">Property Documentation</h2>
-<a id="ae475662e921ba56a0ddab4415ccac8f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae475662e921ba56a0ddab4415ccac8f3">&#9670;&nbsp;</a></span>Builder</h2>
+<a id="a8be3ba4f66deac5e4af2c2c11e9ea48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8be3ba4f66deac5e4af2c2c11e9ea48e">&#9670;&nbsp;</a></span>ThatIs</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,7 +130,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IConfigurationSourceBuilder Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderExtensionContext.Builder</td>
+          <td class="memname"><a class="el" href="a00404.html">IDatabaseConfigurationProviders</a> Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviderEntry.ThatIs</td>
         </tr>
       </table>
   </td>
@@ -127,43 +140,19 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Context of the current builder for the extension </p>
-
-</div>
-</div>
-<a id="a72f3afa658188862013b41d283c9113b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72f3afa658188862013b41d283c9113b">&#9670;&nbsp;</a></span>ConnectionString</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ConnectionStringSettings Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderExtensionContext.ConnectionString</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The current connection string under construction in the fluent interface. </p>
+<p>Specify the type of database. </p>
 
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>IDatabaseProviderExtensionContext.cs</li>
+<li>IDatabaseConfigurationProviderEntry.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00234.html">Configuration</a></li><li class="navelem"><a class="el" href="a00235.html">Fluent</a></li><li class="navelem"><a class="el" href="a00400.html">IDatabaseProviderExtensionContext</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00246.html">Configuration</a></li><li class="navelem"><a class="el" href="a00247.html">Fluent</a></li><li class="navelem"><a class="el" href="a00400.html">IDatabaseConfigurationProviderEntry</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

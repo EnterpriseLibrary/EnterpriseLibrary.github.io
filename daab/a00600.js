@@ -1,8 +1,9 @@
 var a00600 =
 [
-    [ "AsDefault", "a00600.html#aad8a0fdca8158435dcc8254624b33b74", null ],
-    [ "ForDatabaseNamed", "a00600.html#a3ee5c23e73468e144ed928ee69982b9e", null ],
-    [ "WithConnectionString", "a00600.html#accbb6c305b1ab175fd1e2fe6cfc94d91", null ],
-    [ "WithConnectionString", "a00600.html#a9be621891b616a05042ada9a97069d0c", null ],
-    [ "ThatIs", "a00600.html#a8be3ba4f66deac5e4af2c2c11e9ea48e", null ]
+    [ "OdbcDatabaseData", "a00600.html#a9364b770e8c77e1dac47b30cd2c97810", null ],
+    [ "BuildDatabase", "a00600.html#a79804aca656f71807120430f2530ecd9", null ],
+    [ "ConfigurationSource", "a00600.html#ade9e8583b237f275571382001b7c7fe0", null ],
+    [ "ConnectionString", "a00600.html#ab1cc9dfc113d023a47fe9fbef61cca93", null ],
+    [ "ConnectionStringSettings", "a00600.html#aa418afa7d94945447cc462aacef3079a", null ],
+    [ "Name", "a00600.html#aceb7938a713aa7c50ce2e9dccc1dd613", null ]
 ];

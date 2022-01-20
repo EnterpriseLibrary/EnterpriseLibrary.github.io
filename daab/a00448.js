@@ -1,8 +1,9 @@
 var a00448 =
 [
-    [ "DatabaseProviderFactory", "a00448.html#ac8bcf9281b394ab76e715284e409573b", null ],
-    [ "DatabaseProviderFactory", "a00448.html#a73a3afad654e367a7d54d7b46b733110", null ],
-    [ "DatabaseProviderFactory", "a00448.html#a84277a0ad3eee7a71053b614ea1f0811", null ],
-    [ "Create", "a00448.html#af8acd1b5cc365c596ce4c28f758bbbe1", null ],
-    [ "CreateDefault", "a00448.html#a86f25a642857f4c96195bfd6256ad185", null ]
+    [ "DatabaseConnectionWrapper", "a00448.html#aa764e323d4b8c2e6bc22942c1fe49d79", null ],
+    [ "AddRef", "a00448.html#afea72f34858e042be6bd405deb45fb61", null ],
+    [ "Dispose", "a00448.html#ad4162640d43ae3cceeaab6d7206607b6", null ],
+    [ "Dispose", "a00448.html#a3ad23b1470353bea96760a4f75984fbe", null ],
+    [ "Connection", "a00448.html#a00cf46cc1f3bda2d1eb85e6ebf903b32", null ],
+    [ "IsDisposed", "a00448.html#a8f1d2e93cdf19ff730b1a495c8793642", null ]
 ];

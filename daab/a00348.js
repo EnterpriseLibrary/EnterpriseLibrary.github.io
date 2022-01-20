@@ -1,12 +1,9 @@
 var a00348 =
 [
-    [ "DbProviderMapping", "a00348.html#aa802a16e4a5fbb42de2d4e61e3ee5c6f", null ],
-    [ "DbProviderMapping", "a00348.html#afffd238e979152a2b7cafd7f64994dd3", null ],
-    [ "DbProviderMapping", "a00348.html#a06cf089b16bc777086cc6f1915e8d7ed", null ],
-    [ "DefaultOracleProviderName", "a00348.html#aa5f466e0b8738d629dbf1bb6bcc691d9", null ],
-    [ "DefaultSqlProviderName", "a00348.html#a4bd9fcdeff1459cf09c40f87e06d3a0a", null ],
-    [ "DatabaseType", "a00348.html#a2bce1035e9612450b782a19944a5ab59", null ],
-    [ "DatabaseTypeName", "a00348.html#a83e745b37b67bd5c9d0cf489602bd08c", null ],
-    [ "DbProviderName", "a00348.html#a9a3d203dc808e6af226ae54c001d5499", null ],
-    [ "Name", "a00348.html#a52800d9627575b992afddf5fdcaf6ed1", null ]
+    [ "DatabaseData", "a00348.html#a528b6a92349e889fa23ad0e8fddaf142", null ],
+    [ "BuildDatabase", "a00348.html#a9115c014937b51ab8eef68e81e085af9", null ],
+    [ "ConfigurationSource", "a00348.html#ade9e8583b237f275571382001b7c7fe0", null ],
+    [ "ConnectionString", "a00348.html#ab1cc9dfc113d023a47fe9fbef61cca93", null ],
+    [ "ConnectionStringSettings", "a00348.html#aa418afa7d94945447cc462aacef3079a", null ],
+    [ "Name", "a00348.html#aceb7938a713aa7c50ce2e9dccc1dd613", null ]
 ];

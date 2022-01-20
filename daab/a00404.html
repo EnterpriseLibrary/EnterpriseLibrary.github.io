@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration Interface Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviders Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,114 +84,31 @@ $(document).ready(function(){initNavTree('a00404.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="a00401.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration Interface Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviders Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Starting point for data configuration.  
+<p>Extension point for database providers to connect to the data configuration fluent-api.  
  <a href="a00404.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration:</div>
+Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfigurationProviders:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="a00404.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration_map" alt=""/>
-  <map id="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration_map" name="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration_map">
-<area href="a00380.html" title="Supports configuring the data connections via fluent-style interface." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfiguration" shape="rect" coords="0,56,559,80"/>
-<area href="a00408.html" title="Defines the mapping options for providers." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration" shape="rect" coords="0,168,559,192"/>
-  </map>
-</div></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a9b2cb780b344cb9ab671b983d653761c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00408.html">IDatabaseProviderConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00404.html#a9b2cb780b344cb9ab671b983d653761c">WithProviderNamed</a> (string providerName)</td></tr>
-<tr class="memdesc:a9b2cb780b344cb9ab671b983d653761c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a custom provider name or alias to use. This must map to the name of the invariant name specified by DbProviderFactories  <a href="a00404.html#a9b2cb780b344cb9ab671b983d653761c">More...</a><br /></td></tr>
-<tr class="separator:a9b2cb780b344cb9ab671b983d653761c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ee5c23e73468e144ed928ee69982b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00384.html">IDatabaseConfigurationProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#a3ee5c23e73468e144ed928ee69982b9e">ForDatabaseNamed</a> (string databaseName)</td></tr>
-<tr class="memdesc:a3ee5c23e73468e144ed928ee69982b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a named database.  <a href="a00380.html#a3ee5c23e73468e144ed928ee69982b9e">More...</a><br /></td></tr>
-<tr class="separator:a3ee5c23e73468e144ed928ee69982b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+  <img src="a00404.png" alt=""/>
+ </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Starting point for data configuration. </p>
-<dl class="section see"><dt>See also</dt><dd>DataConfigurationSourceBuilderExtensions</dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3ee5c23e73468e144ed928ee69982b9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ee5c23e73468e144ed928ee69982b9e">&#9670;&nbsp;</a></span>ForDatabaseNamed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00384.html">IDatabaseConfigurationProperties</a> Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfiguration.ForDatabaseNamed </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>databaseName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Configure a named database. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">databaseName</td><td>Name of database to configure</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p>Implemented in <a class="el" href="a00364.html#afa000fedbe65cd480ed5fa271275a046">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.DatabaseConfigurationExtension</a>.</p>
-
-</div>
-</div>
-<a id="a9b2cb780b344cb9ab671b983d653761c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b2cb780b344cb9ab671b983d653761c">&#9670;&nbsp;</a></span>WithProviderNamed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00408.html">IDatabaseProviderConfiguration</a> Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration.WithProviderNamed </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>providerName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Specify a custom provider name or alias to use. This must map to the name of the invariant name specified by DbProviderFactories </p>
-<p>If the provider is not mapped to a specific Enterprise Library <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> class, then the <a class="el" href="a00460.html" title="The GenericDatabase is used when no specific behavior is required or known for a database.">GenericDatabase</a> will be used.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">providerName</td><td>The name of the database provider's invariant.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this interface was generated from the following file:<ul>
-<li>IDataConfiguration.cs</li>
+<div class="textblock"><p>Extension point for database providers to connect to the data configuration fluent-api. </p>
+<dl class="section see"><dt>See also</dt><dd>DataConfigurationSourceBuilderExtensions, DatabaseConfigurationExtension</dd></dl>
+</div><hr/>The documentation for this interface was generated from the following file:<ul>
+<li>IDatabaseConfigurationProviders.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00234.html">Configuration</a></li><li class="navelem"><a class="el" href="a00235.html">Fluent</a></li><li class="navelem"><a class="el" href="a00404.html">IDataConfiguration</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00246.html">Configuration</a></li><li class="navelem"><a class="el" href="a00247.html">Fluent</a></li><li class="navelem"><a class="el" href="a00404.html">IDatabaseConfigurationProviders</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

@@ -1,6 +1,9 @@
 var a00636 =
 [
-    [ "OracleConnectionData", "a00636.html#ae672a185c93ad743d7bb48c98f3a85c3", null ],
-    [ "Name", "a00636.html#ace90f40ab65a8e232fa0dd09df85e4a6", null ],
-    [ "Packages", "a00636.html#aa50c761cd5d6673b0df31f6f217dcc92", null ]
+    [ "AsDefault", "a00636.html#aad8a0fdca8158435dcc8254624b33b74", null ],
+    [ "ForDatabaseNamed", "a00636.html#a3ee5c23e73468e144ed928ee69982b9e", null ],
+    [ "WithConnectionString", "a00636.html#a4e9a7d68d2f8495b69fe0b26f8db2e0b", null ],
+    [ "WithConnectionString", "a00636.html#a7dbb2d6d023fd3b6c167551f2945ceb9", null ],
+    [ "WithPackageNamed", "a00636.html#acd4f13f7688dda753b70ed443d69b5cc", null ],
+    [ "ThatIs", "a00636.html#a8be3ba4f66deac5e4af2c2c11e9ea48e", null ]
 ];

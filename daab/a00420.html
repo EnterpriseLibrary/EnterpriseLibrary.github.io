@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult Class Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,125 +86,145 @@ $(document).ready(function(){initNavTree('a00420.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#properties">Properties</a> &#124;
 <a href="a00417.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult Class Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This class represents an asynchronous operation invoked from the <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> class methods.  
+<p>Defines the mapping options for providers.  
  <a href="a00420.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult:</div>
+Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="a00420.png" alt=""/>
- </div></div>
+  <img src="a00420.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration_map" alt=""/>
+  <map id="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration_map" name="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration_map">
+<area href="a00416.html" title="Starting point for data configuration." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration" shape="rect" coords="0,112,559,136"/>
+<area href="a00392.html" title="Supports configuring the data connections via fluent-style interface." alt="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfiguration" shape="rect" coords="0,56,559,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f7a576da9e70311505780f490501a02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a3f7a576da9e70311505780f490501a02">DaabAsyncResult</a> (IAsyncResult innerAsyncResult, DbCommand command, bool disposeCommand, bool closeConnection, DateTime startTime)</td></tr>
-<tr class="memdesc:a3f7a576da9e70311505780f490501a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="a00420.html" title="This class represents an asynchronous operation invoked from the Database class methods.">DaabAsyncResult</a> instance.  <a href="a00420.html#a3f7a576da9e70311505780f490501a02">More...</a><br /></td></tr>
-<tr class="separator:a3f7a576da9e70311505780f490501a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:a8932aa437900b01d1a67cdc76f27387a"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a8932aa437900b01d1a67cdc76f27387a">AsyncState</a><code> [get]</code></td></tr>
-<tr class="memdesc:a8932aa437900b01d1a67cdc76f27387a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The state object passed to the callback.  <a href="a00420.html#a8932aa437900b01d1a67cdc76f27387a">More...</a><br /></td></tr>
-<tr class="separator:a8932aa437900b01d1a67cdc76f27387a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52fe4af3b99353057a806792f2a74995"><td class="memItemLeft" align="right" valign="top">WaitHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a52fe4af3b99353057a806792f2a74995">AsyncWaitHandle</a><code> [get]</code></td></tr>
-<tr class="memdesc:a52fe4af3b99353057a806792f2a74995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait handle to use to wait synchronously for completion.  <a href="a00420.html#a52fe4af3b99353057a806792f2a74995">More...</a><br /></td></tr>
-<tr class="separator:a52fe4af3b99353057a806792f2a74995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c6c9ccd546b0a702893b910be72a353"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a0c6c9ccd546b0a702893b910be72a353">CompletedSynchronously</a><code> [get]</code></td></tr>
-<tr class="memdesc:a0c6c9ccd546b0a702893b910be72a353"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>true</b> if begin operation completed synchronously.  <a href="a00420.html#a0c6c9ccd546b0a702893b910be72a353">More...</a><br /></td></tr>
-<tr class="separator:a0c6c9ccd546b0a702893b910be72a353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05badbbb45e0ba1b7bfa0dc8e04466ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a05badbbb45e0ba1b7bfa0dc8e04466ec">IsCompleted</a><code> [get]</code></td></tr>
-<tr class="memdesc:a05badbbb45e0ba1b7bfa0dc8e04466ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the operation finished?  <a href="a00420.html#a05badbbb45e0ba1b7bfa0dc8e04466ec">More...</a><br /></td></tr>
-<tr class="separator:a05badbbb45e0ba1b7bfa0dc8e04466ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c80f48af5e3be99fb85720bf69cc619"><td class="memItemLeft" align="right" valign="top">IAsyncResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a2c80f48af5e3be99fb85720bf69cc619">InnerAsyncResult</a><code> [get]</code></td></tr>
-<tr class="memdesc:a2c80f48af5e3be99fb85720bf69cc619"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying IAsyncResult object.  <a href="a00420.html#a2c80f48af5e3be99fb85720bf69cc619">More...</a><br /></td></tr>
-<tr class="separator:a2c80f48af5e3be99fb85720bf69cc619"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19826acfb03e39012c605ac706170944"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a19826acfb03e39012c605ac706170944">DisposeCommand</a><code> [get]</code></td></tr>
-<tr class="memdesc:a19826acfb03e39012c605ac706170944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the command be disposed by the End method?  <a href="a00420.html#a19826acfb03e39012c605ac706170944">More...</a><br /></td></tr>
-<tr class="separator:a19826acfb03e39012c605ac706170944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7d34a28bc26b0cac7f421068f0fe4a0"><td class="memItemLeft" align="right" valign="top">DbCommand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#ac7d34a28bc26b0cac7f421068f0fe4a0">Command</a><code> [get]</code></td></tr>
-<tr class="memdesc:ac7d34a28bc26b0cac7f421068f0fe4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The command that was executed.  <a href="a00420.html#ac7d34a28bc26b0cac7f421068f0fe4a0">More...</a><br /></td></tr>
-<tr class="separator:ac7d34a28bc26b0cac7f421068f0fe4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e6c234397cfc719138a2b9512c37a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a09e6c234397cfc719138a2b9512c37a2">CloseConnection</a><code> [get]</code></td></tr>
-<tr class="memdesc:a09e6c234397cfc719138a2b9512c37a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the connection be closed by the End method?  <a href="a00420.html#a09e6c234397cfc719138a2b9512c37a2">More...</a><br /></td></tr>
-<tr class="separator:a09e6c234397cfc719138a2b9512c37a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42dfc0449466a29c067d8d9b7549f1f1"><td class="memItemLeft" align="right" valign="top">DbConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a42dfc0449466a29c067d8d9b7549f1f1">Connection</a><code> [get]</code></td></tr>
-<tr class="memdesc:a42dfc0449466a29c067d8d9b7549f1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connection the operation was invoked on.  <a href="a00420.html#a42dfc0449466a29c067d8d9b7549f1f1">More...</a><br /></td></tr>
-<tr class="separator:a42dfc0449466a29c067d8d9b7549f1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4b5d813f1704b4474eb07f249dabb06"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#ae4b5d813f1704b4474eb07f249dabb06">StartTime</a><code> [get]</code></td></tr>
-<tr class="memdesc:ae4b5d813f1704b4474eb07f249dabb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time the operation was started.  <a href="a00420.html#ae4b5d813f1704b4474eb07f249dabb06">More...</a><br /></td></tr>
-<tr class="separator:ae4b5d813f1704b4474eb07f249dabb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b528432a86ff9b938445d14f56716fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00416.html">IDataConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a4b528432a86ff9b938445d14f56716fd">MappedToDatabase</a> (Type databaseType)</td></tr>
+<tr class="memdesc:a4b528432a86ff9b938445d14f56716fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="a00440.html" title="Represents an abstract database that commands can be run against.">Database</a> to map the provider to.  <a href="a00420.html#a4b528432a86ff9b938445d14f56716fd">More...</a><br /></td></tr>
+<tr class="separator:a4b528432a86ff9b938445d14f56716fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b40aab98903a0fa4e5c748eaccf24b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00416.html">IDataConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html#a4b40aab98903a0fa4e5c748eaccf24b1">MappedToDatabase&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a4b40aab98903a0fa4e5c748eaccf24b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="a00440.html" title="Represents an abstract database that commands can be run against.">Database</a> to map the provider to.  <a href="a00420.html#a4b40aab98903a0fa4e5c748eaccf24b1">More...</a><br /></td></tr>
+<tr class="separator:a4b40aab98903a0fa4e5c748eaccf24b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2cb780b344cb9ab671b983d653761c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00420.html">IDatabaseProviderConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00416.html#a9b2cb780b344cb9ab671b983d653761c">WithProviderNamed</a> (string providerName)</td></tr>
+<tr class="memdesc:a9b2cb780b344cb9ab671b983d653761c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a custom provider name or alias to use. This must map to the name of the invariant name specified by DbProviderFactories  <a href="a00416.html#a9b2cb780b344cb9ab671b983d653761c">More...</a><br /></td></tr>
+<tr class="separator:a9b2cb780b344cb9ab671b983d653761c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee5c23e73468e144ed928ee69982b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00396.html">IDatabaseConfigurationProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a3ee5c23e73468e144ed928ee69982b9e">ForDatabaseNamed</a> (string databaseName)</td></tr>
+<tr class="memdesc:a3ee5c23e73468e144ed928ee69982b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a named database.  <a href="a00392.html#a3ee5c23e73468e144ed928ee69982b9e">More...</a><br /></td></tr>
+<tr class="separator:a3ee5c23e73468e144ed928ee69982b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class represents an asynchronous operation invoked from the <a class="el" href="a00428.html" title="Represents an abstract database that commands can be run against.">Database</a> class methods. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3f7a576da9e70311505780f490501a02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f7a576da9e70311505780f490501a02">&#9670;&nbsp;</a></span>DaabAsyncResult()</h2>
+<div class="textblock"><p>Defines the mapping options for providers. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3ee5c23e73468e144ed928ee69982b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee5c23e73468e144ed928ee69982b9e">&#9670;&nbsp;</a></span>ForDatabaseNamed()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.DaabAsyncResult </td>
+          <td class="memname"><a class="el" href="a00396.html">IDatabaseConfigurationProperties</a> Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseConfiguration.ForDatabaseNamed </td>
           <td>(</td>
-          <td class="paramtype">IAsyncResult&#160;</td>
-          <td class="paramname"><em>innerAsyncResult</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>databaseName</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">DbCommand&#160;</td>
-          <td class="paramname"><em>command</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>disposeCommand</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>closeConnection</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">DateTime&#160;</td>
-          <td class="paramname"><em>startTime</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="a00420.html" title="This class represents an asynchronous operation invoked from the Database class methods.">DaabAsyncResult</a> instance. </p>
+<p>Configure a named database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">innerAsyncResult</td><td>The IAsyncResult object returned from the underlying async operation.</td></tr>
-    <tr><td class="paramname">command</td><td>Command that was executed.</td></tr>
-    <tr><td class="paramname">disposeCommand</td><td>Should the command be disposed at EndInvoke time?</td></tr>
-    <tr><td class="paramname">closeConnection</td><td>Should this connection be closed at EndInvoke time?</td></tr>
-    <tr><td class="paramname">startTime</td><td>Time operation was invoked.</td></tr>
+    <tr><td class="paramname">databaseName</td><td>Name of database to configure</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="a00376.html#afa000fedbe65cd480ed5fa271275a046">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.DatabaseConfigurationExtension</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="a8932aa437900b01d1a67cdc76f27387a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8932aa437900b01d1a67cdc76f27387a">&#9670;&nbsp;</a></span>AsyncState</h2>
+<a id="a4b528432a86ff9b938445d14f56716fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b528432a86ff9b938445d14f56716fd">&#9670;&nbsp;</a></span>MappedToDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00416.html">IDataConfiguration</a> Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration.MappedToDatabase </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>databaseType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="a00440.html" title="Represents an abstract database that commands can be run against.">Database</a> to map the provider to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">databaseType</td><td>The <a class="el" href="a00440.html" title="Represents an abstract database that commands can be run against.">Database</a> type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section see"><dt>See also</dt><dd>GenericDatabase</dd></dl>
+
+</div>
+</div>
+<a id="a4b40aab98903a0fa4e5c748eaccf24b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b40aab98903a0fa4e5c748eaccf24b1">&#9670;&nbsp;</a></span>MappedToDatabase&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00416.html">IDataConfiguration</a> <a class="el" href="a00420.html#a4b528432a86ff9b938445d14f56716fd">Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDatabaseProviderConfiguration.MappedToDatabase</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="a00440.html" title="Represents an abstract database that commands can be run against.">Database</a> to map the provider to. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Database type to map to</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section see"><dt>See also</dt><dd>GenericDatabase</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>Database</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a9b2cb780b344cb9ab671b983d653761c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2cb780b344cb9ab671b983d653761c">&#9670;&nbsp;</a></span>WithProviderNamed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,245 +233,41 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">object Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.AsyncState</td>
+          <td class="memname"><a class="el" href="a00420.html">IDatabaseProviderConfiguration</a> Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Fluent.IDataConfiguration.WithProviderNamed </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>providerName</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>The state object passed to the callback. </p>
+<p>Specify a custom provider name or alias to use. This must map to the name of the invariant name specified by DbProviderFactories </p>
+<p>If the provider is not mapped to a specific Enterprise Library <a class="el" href="a00440.html" title="Represents an abstract database that commands can be run against.">Database</a> class, then the <a class="el" href="a00472.html" title="The GenericDatabase is used when no specific behavior is required or known for a database.">GenericDatabase</a> will be used.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">providerName</td><td>The name of the database provider's invariant.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
-<a id="a52fe4af3b99353057a806792f2a74995"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52fe4af3b99353057a806792f2a74995">&#9670;&nbsp;</a></span>AsyncWaitHandle</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">WaitHandle Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.AsyncWaitHandle</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Wait handle to use to wait synchronously for completion. </p>
-
-</div>
-</div>
-<a id="a09e6c234397cfc719138a2b9512c37a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09e6c234397cfc719138a2b9512c37a2">&#9670;&nbsp;</a></span>CloseConnection</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.CloseConnection</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Should the connection be closed by the End method? </p>
-
-</div>
-</div>
-<a id="ac7d34a28bc26b0cac7f421068f0fe4a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7d34a28bc26b0cac7f421068f0fe4a0">&#9670;&nbsp;</a></span>Command</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DbCommand Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.Command</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The command that was executed. </p>
-
-</div>
-</div>
-<a id="a0c6c9ccd546b0a702893b910be72a353"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c6c9ccd546b0a702893b910be72a353">&#9670;&nbsp;</a></span>CompletedSynchronously</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.CompletedSynchronously</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><b>true</b> if begin operation completed synchronously. </p>
-
-</div>
-</div>
-<a id="a42dfc0449466a29c067d8d9b7549f1f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42dfc0449466a29c067d8d9b7549f1f1">&#9670;&nbsp;</a></span>Connection</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DbConnection Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.Connection</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Connection the operation was invoked on. </p>
-
-</div>
-</div>
-<a id="a19826acfb03e39012c605ac706170944"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19826acfb03e39012c605ac706170944">&#9670;&nbsp;</a></span>DisposeCommand</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.DisposeCommand</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Should the command be disposed by the End method? </p>
-
-</div>
-</div>
-<a id="a2c80f48af5e3be99fb85720bf69cc619"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c80f48af5e3be99fb85720bf69cc619">&#9670;&nbsp;</a></span>InnerAsyncResult</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IAsyncResult Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.InnerAsyncResult</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The underlying IAsyncResult object. </p>
-
-</div>
-</div>
-<a id="a05badbbb45e0ba1b7bfa0dc8e04466ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05badbbb45e0ba1b7bfa0dc8e04466ec">&#9670;&nbsp;</a></span>IsCompleted</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.IsCompleted</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Has the operation finished? </p>
-
-</div>
-</div>
-<a id="ae4b5d813f1704b4474eb07f249dabb06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4b5d813f1704b4474eb07f249dabb06">&#9670;&nbsp;</a></span>StartTime</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DateTime Microsoft.Practices.EnterpriseLibrary.Data.DaabAsyncResult.StartTime</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Time the operation was started. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>DaabAsyncResult.cs</li>
+<hr/>The documentation for this interface was generated from the following file:<ul>
+<li>IDataConfiguration.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00420.html">DaabAsyncResult</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00246.html">Configuration</a></li><li class="navelem"><a class="el" href="a00247.html">Fluent</a></li><li class="navelem"><a class="el" href="a00420.html">IDatabaseProviderConfiguration</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

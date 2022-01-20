@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings Class Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.Fluent.IDatabaseOraclePackageConfiguration Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,19 +86,16 @@ $(document).ready(function(){initNavTree('a00640.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="#properties">Properties</a> &#124;
 <a href="a00637.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings Class Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.Fluent.IDatabaseOraclePackageConfiguration Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Oracle-specific configuration section.  
+<p>Oracle package configuration options.  
  <a href="a00640.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings:</div>
+Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.Fluent.IDatabaseOraclePackageConfiguration:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="a00640.png" alt=""/>
@@ -106,151 +103,49 @@ Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Config
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f69c193d406c9f58577e3b65f2fd135"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00640.html#a8f69c193d406c9f58577e3b65f2fd135">OracleConnectionSettings</a> ()</td></tr>
-<tr class="memdesc:a8f69c193d406c9f58577e3b65f2fd135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="a00640.html" title="Oracle-specific configuration section.">OracleConnectionSettings</a> class with default values.  <a href="a00640.html#a8f69c193d406c9f58577e3b65f2fd135">More...</a><br /></td></tr>
-<tr class="separator:a8f69c193d406c9f58577e3b65f2fd135"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e04f55bb9f4598215e79d9f5ef7e2b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00640.html">OracleConnectionSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00640.html#a5e04f55bb9f4598215e79d9f5ef7e2b6">GetSettings</a> (IConfigurationSource configurationSource)</td></tr>
-<tr class="memdesc:a5e04f55bb9f4598215e79d9f5ef7e2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the <a class="el" href="a00640.html" title="Oracle-specific configuration section.">OracleConnectionSettings</a> from the configuration source.  <a href="a00640.html#a5e04f55bb9f4598215e79d9f5ef7e2b6">More...</a><br /></td></tr>
-<tr class="separator:a5e04f55bb9f4598215e79d9f5ef7e2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:ac9eba5cf4288e80eff22a56ab257b9c2"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00640.html#ac9eba5cf4288e80eff22a56ab257b9c2">SectionName</a> = &quot;oracleConnectionSettings&quot;</td></tr>
-<tr class="memdesc:ac9eba5cf4288e80eff22a56ab257b9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The section name for the <a class="el" href="a00640.html" title="Oracle-specific configuration section.">OracleConnectionSettings</a>.  <a href="a00640.html#ac9eba5cf4288e80eff22a56ab257b9c2">More...</a><br /></td></tr>
-<tr class="separator:ac9eba5cf4288e80eff22a56ab257b9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:aeed01909a71aa729f9029140b6404607"><td class="memItemLeft" align="right" valign="top">NamedElementCollection&lt; <a class="el" href="a00636.html">OracleConnectionData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00640.html#aeed01909a71aa729f9029140b6404607">OracleConnectionsData</a><code> [get]</code></td></tr>
-<tr class="memdesc:aeed01909a71aa729f9029140b6404607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of Oracle-specific connection information.  <a href="a00640.html#aeed01909a71aa729f9029140b6404607">More...</a><br /></td></tr>
-<tr class="separator:aeed01909a71aa729f9029140b6404607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15038a55fc680c12e4dfc4bd3f69cba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00396.html">IDatabaseConfigurationProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00640.html#aa15038a55fc680c12e4dfc4bd3f69cba">AndPrefix</a> (string prefix)</td></tr>
+<tr class="memdesc:aa15038a55fc680c12e4dfc4bd3f69cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the prefix for the Oracle package.  <a href="a00640.html#aa15038a55fc680c12e4dfc4bd3f69cba">More...</a><br /></td></tr>
+<tr class="separator:aa15038a55fc680c12e4dfc4bd3f69cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Oracle-specific configuration section. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8f69c193d406c9f58577e3b65f2fd135"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f69c193d406c9f58577e3b65f2fd135">&#9670;&nbsp;</a></span>OracleConnectionSettings()</h2>
+<div class="textblock"><p>Oracle package configuration options. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa15038a55fc680c12e4dfc4bd3f69cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa15038a55fc680c12e4dfc4bd3f69cba">&#9670;&nbsp;</a></span>AndPrefix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings.OracleConnectionSettings </td>
+          <td class="memname"><a class="el" href="a00396.html">IDatabaseConfigurationProperties</a> Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.Fluent.IDatabaseOraclePackageConfiguration.AndPrefix </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes a new instance of the <a class="el" href="a00640.html" title="Oracle-specific configuration section.">OracleConnectionSettings</a> class with default values. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5e04f55bb9f4598215e79d9f5ef7e2b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e04f55bb9f4598215e79d9f5ef7e2b6">&#9670;&nbsp;</a></span>GetSettings()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00640.html">OracleConnectionSettings</a> Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings.GetSettings </td>
-          <td>(</td>
-          <td class="paramtype">IConfigurationSource&#160;</td>
-          <td class="paramname"><em>configurationSource</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieves the <a class="el" href="a00640.html" title="Oracle-specific configuration section.">OracleConnectionSettings</a> from the configuration source. </p>
+<p>Define the prefix for the Oracle package. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">configurationSource</td><td>The configuration source to retrieve the configuration from.</td></tr>
+    <tr><td class="paramname">prefix</td><td>The package prefix.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The configuration section, or <code>null</code> (<b>Nothing</b> in Visual Basic) if not present in the configuration source.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ArgumentNullException</td><td><em>configurationSource</em>  is <b>null</b>.</td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac9eba5cf4288e80eff22a56ab257b9c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9eba5cf4288e80eff22a56ab257b9c2">&#9670;&nbsp;</a></span>SectionName</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings.SectionName = &quot;oracleConnectionSettings&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The section name for the <a class="el" href="a00640.html" title="Oracle-specific configuration section.">OracleConnectionSettings</a>. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="aeed01909a71aa729f9029140b6404607"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeed01909a71aa729f9029140b6404607">&#9670;&nbsp;</a></span>OracleConnectionsData</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">NamedElementCollection&lt;<a class="el" href="a00636.html">OracleConnectionData</a>&gt; Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings.OracleConnectionsData</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Collection of Oracle-specific connection information. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>OracleConnectionSettings.cs</li>
+<hr/>The documentation for this interface was generated from the following file:<ul>
+<li>IDatabaseOraclePackageConfiguration.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00248.html">Oracle</a></li><li class="navelem"><a class="el" href="a00249.html">Configuration</a></li><li class="navelem"><a class="el" href="a00640.html">OracleConnectionSettings</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00260.html">Oracle</a></li><li class="navelem"><a class="el" href="a00261.html">Configuration</a></li><li class="navelem"><a class="el" href="a00262.html">Fluent</a></li><li class="navelem"><a class="el" href="a00640.html">IDatabaseOraclePackageConfiguration</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

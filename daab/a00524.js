@@ -1,14 +1,11 @@
 var a00524 =
 [
-    [ "SprocAccessor", "a00524.html#a5d982a6ad065e16a95ba549ceff7347d", null ],
-    [ "SprocAccessor", "a00524.html#a9ede8d13e39100055a63b95bbebeaa5a", null ],
-    [ "SprocAccessor", "a00524.html#a0a890af1a5de8c9b4e23f145b1150ad4", null ],
-    [ "SprocAccessor", "a00524.html#a28a5117cf321b01008f55e2f6250d83e", null ],
-    [ "BeginExecute", "a00524.html#a5045e1cfce292ede2de83e80427819d3", null ],
-    [ "BeginExecute", "a00524.html#a0f84abef7bf86eae0377e5aaf928d67f", null ],
-    [ "EndExecute", "a00524.html#a00c4dfe207766604466424e65f8ca51c", null ],
-    [ "Execute", "a00524.html#af7e06ccea7ae67c366467e6e6c7c1d1d", null ],
-    [ "Execute", "a00524.html#a1fac5b48184b00243b716c7467575b48", null ],
-    [ "GuardAsyncAllowed", "a00524.html#abbd4d072c1b9d993e47ceeff44c952dc", null ],
-    [ "Database", "a00524.html#a9e037b56538aa928482c69d4ff8044e5", null ]
+    [ "PropertyMapping", "a00524.html#ae4b0031d0b59dc1cee59b0b50c560d11", null ],
+    [ "ConvertNonNullableValue", "a00524.html#a868b1552010e6fccb379fa02db44f4d0", null ],
+    [ "ConvertNullableValue", "a00524.html#a088ead1e02bd8790055c9e09df666835", null ],
+    [ "ConvertValue", "a00524.html#a9f8ee827a130d35f3cd1ae2b28eb0310", null ],
+    [ "GetPropertyValue", "a00524.html#a636b88900c7d49363ff519c4f31d0aed", null ],
+    [ "Map", "a00524.html#a138c4a6f6545d38534bb91d2b4580de0", null ],
+    [ "SetValue", "a00524.html#aa6876c9f96d7c8f5a3ebe9a7ac04e480", null ],
+    [ "Property", "a00524.html#ad28ff1d4487707e92a3e1e40253af412", null ]
 ];

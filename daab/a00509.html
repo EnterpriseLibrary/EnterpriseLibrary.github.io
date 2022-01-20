@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache Class Reference</title>
+<title>Enterprise Library Data Access Application Block: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00509.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00512.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,130 +84,20 @@ $(document).ready(function(){initNavTree('a00509.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="a00506.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache Class Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides parameter caching services for dynamic parameter discovery of stored procedures. Eliminates the round-trip to the database to derive the parameters and types when a command is executed more than once.  
- <a href="a00509.html#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ae417f230d2a554da1aa2cf9de75d77ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00509.html#ae417f230d2a554da1aa2cf9de75d77ee">SetParameters</a> (DbCommand command, <a class="el" href="a00437.html">Database</a> database)</td></tr>
-<tr class="memdesc:ae417f230d2a554da1aa2cf9de75d77ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the parameter collection for a command wrapper from the cache or performs a round-trip to the database to query the parameters.  <a href="a00509.html#ae417f230d2a554da1aa2cf9de75d77ee">More...</a><br /></td></tr>
-<tr class="separator:ae417f230d2a554da1aa2cf9de75d77ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aaa5d3d1961cbee109e7f4ab633e8a7a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00509.html#aaa5d3d1961cbee109e7f4ab633e8a7a5">AddParametersFromCache</a> (DbCommand command, <a class="el" href="a00437.html">Database</a> database)</td></tr>
-<tr class="memdesc:aaa5d3d1961cbee109e7f4ab633e8a7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds parameters to a command using the cache.  <a href="a00509.html#aaa5d3d1961cbee109e7f4ab633e8a7a5">More...</a><br /></td></tr>
-<tr class="separator:aaa5d3d1961cbee109e7f4ab633e8a7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides parameter caching services for dynamic parameter discovery of stored procedures. Eliminates the round-trip to the database to derive the parameters and types when a command is executed more than once. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aaa5d3d1961cbee109e7f4ab633e8a7a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa5d3d1961cbee109e7f4ab633e8a7a5">&#9670;&nbsp;</a></span>AddParametersFromCache()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache.AddParametersFromCache </td>
-          <td>(</td>
-          <td class="paramtype">DbCommand&#160;</td>
-          <td class="paramname"><em>command</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00437.html">Database</a>&#160;</td>
-          <td class="paramname"><em>database</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds parameters to a command using the cache. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">command</td><td>The command to add the parameters.</td></tr>
-    <tr><td class="paramname">database</td><td>The database to use.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ae417f230d2a554da1aa2cf9de75d77ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae417f230d2a554da1aa2cf9de75d77ee">&#9670;&nbsp;</a></span>SetParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache.SetParameters </td>
-          <td>(</td>
-          <td class="paramtype">DbCommand&#160;</td>
-          <td class="paramname"><em>command</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00437.html">Database</a>&#160;</td>
-          <td class="paramname"><em>database</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Populates the parameter collection for a command wrapper from the cache or performs a round-trip to the database to query the parameters. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">command</td><td>The command to add the parameters.</td></tr>
-    <tr><td class="paramname">database</td><td>The database to use to set the parameters.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ArgumentNullException</td><td>One of the arguments is <b>null</b>.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>ParameterCache.cs</li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="a00512.html">Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00512.html#aaa5d3d1961cbee109e7f4ab633e8a7a5">AddParametersFromCache</a>(DbCommand command, Database database)</td><td class="entry"><a class="el" href="a00512.html">Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00512.html#ae417f230d2a554da1aa2cf9de75d77ee">SetParameters</a>(DbCommand command, Database database)</td><td class="entry"><a class="el" href="a00512.html">Microsoft.Practices.EnterpriseLibrary.Data.ParameterCache</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00239.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00240.html">Practices</a></li><li class="navelem"><a class="el" href="a00241.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00242.html">Data</a></li><li class="navelem"><a class="el" href="a00509.html">ParameterCache</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

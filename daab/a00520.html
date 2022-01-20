@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping Class Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper&lt; TResult &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,106 +86,77 @@ $(document).ready(function(){initNavTree('a00520.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
-<a href="#properties">Properties</a> &#124;
 <a href="a00517.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping Class Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper&lt; TResult &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a property that will be assigned the value of a user specified function when mapping.  
+<p>An implementation of IRowMapper&lt;TResult&gt; that uses reflection to convert data rows to <em>TResult</em> . Instances of this class can be build using the MapBuilder&lt;TResult&gt; API.  
  <a href="a00520.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping:</div>
+Inheritance diagram for Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper&lt; TResult &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="a00520.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping_map" alt=""/>
-  <map id="Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping_map" name="Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping_map">
-<area href="a00512.html" title="Base class for mapping values to properties by the ReflectionRowMapper&lt;TResult&gt;." alt="Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping" shape="rect" coords="0,0,357,24"/>
+  <img src="a00520.png" usemap="#Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper_3C_20TResult_20_3E_map" alt=""/>
+  <map id="Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper_3C_20TResult_20_3E_map" name="Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper_3C_20TResult_20_3E_map">
+<area href="a00484.html" title="Represents the operation of mapping a IDataRecord to TResult ." alt="Microsoft.Practices.EnterpriseLibrary.Data.IRowMapper&lt; TResult &gt;" shape="rect" coords="0,0,448,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2848ea6f50444292e4908c6278984e8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00520.html#a2848ea6f50444292e4908c6278984e8f">FuncMapping</a> (PropertyInfo property, <a class="el" href="a00520.html#af198d98b4e742089b5ea82b9f2a5a06b">Func</a>&lt; IDataRecord, object &gt; func)</td></tr>
-<tr class="memdesc:a2848ea6f50444292e4908c6278984e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of <a class="el" href="a00520.html" title="Represents a property that will be assigned the value of a user specified function when mapping.">FuncMapping</a>  <a href="a00520.html#a2848ea6f50444292e4908c6278984e8f">More...</a><br /></td></tr>
-<tr class="separator:a2848ea6f50444292e4908c6278984e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00753287754745575388cce068cc9c82"><td class="memItemLeft" align="right" valign="top">override object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00520.html#a00753287754745575388cce068cc9c82">GetPropertyValue</a> (IDataRecord row)</td></tr>
-<tr class="memdesc:a00753287754745575388cce068cc9c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value for the mapped property from the <em>row</em> .  <a href="a00520.html#a00753287754745575388cce068cc9c82">More...</a><br /></td></tr>
-<tr class="separator:a00753287754745575388cce068cc9c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138c4a6f6545d38534bb91d2b4580de0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#a138c4a6f6545d38534bb91d2b4580de0">Map</a> (object instance, IDataRecord row)</td></tr>
-<tr class="memdesc:a138c4a6f6545d38534bb91d2b4580de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the actual mapping from column to property.  <a href="a00512.html#a138c4a6f6545d38534bb91d2b4580de0">More...</a><br /></td></tr>
-<tr class="separator:a138c4a6f6545d38534bb91d2b4580de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa6876c9f96d7c8f5a3ebe9a7ac04e480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#aa6876c9f96d7c8f5a3ebe9a7ac04e480">SetValue</a> (object instance, object value)</td></tr>
-<tr class="memdesc:aa6876c9f96d7c8f5a3ebe9a7ac04e480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>value</em>  to <em>instance</em>  using <a class="el" href="a00512.html#ad28ff1d4487707e92a3e1e40253af412" title="Gets the property that will be mapped to.">PropertyMapping.Property</a>.  <a href="a00512.html#aa6876c9f96d7c8f5a3ebe9a7ac04e480">More...</a><br /></td></tr>
-<tr class="separator:aa6876c9f96d7c8f5a3ebe9a7ac04e480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9f8ee827a130d35f3cd1ae2b28eb0310"><td class="memItemLeft" align="right" valign="top">static object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#a9f8ee827a130d35f3cd1ae2b28eb0310">ConvertValue</a> (object value, Type conversionType)</td></tr>
-<tr class="memdesc:a9f8ee827a130d35f3cd1ae2b28eb0310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the database value <em>value</em>  to <em>conversionType</em> .  <a href="a00512.html#a9f8ee827a130d35f3cd1ae2b28eb0310">More...</a><br /></td></tr>
-<tr class="separator:a9f8ee827a130d35f3cd1ae2b28eb0310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a088ead1e02bd8790055c9e09df666835"><td class="memItemLeft" align="right" valign="top">static object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#a088ead1e02bd8790055c9e09df666835">ConvertNullableValue</a> (object value, Type conversionType)</td></tr>
-<tr class="memdesc:a088ead1e02bd8790055c9e09df666835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the database value <em>value</em>  to <em>conversionType</em> , where <em>conversionType</em>  is a nullable value.  <a href="a00512.html#a088ead1e02bd8790055c9e09df666835">More...</a><br /></td></tr>
-<tr class="separator:a088ead1e02bd8790055c9e09df666835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a868b1552010e6fccb379fa02db44f4d0"><td class="memItemLeft" align="right" valign="top">static object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#a868b1552010e6fccb379fa02db44f4d0">ConvertNonNullableValue</a> (object value, Type conversionType)</td></tr>
-<tr class="memdesc:a868b1552010e6fccb379fa02db44f4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the database value <em>value</em>  to <em>conversionType</em> . Will throw an exception if <em>conversionType</em>  is a nullable value.  <a href="a00512.html#a868b1552010e6fccb379fa02db44f4d0">More...</a><br /></td></tr>
-<tr class="separator:a868b1552010e6fccb379fa02db44f4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:af198d98b4e742089b5ea82b9f2a5a06b"><td class="memItemLeft" align="right" valign="top">Func&lt; IDataRecord, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00520.html#af198d98b4e742089b5ea82b9f2a5a06b">Func</a><code> [get]</code></td></tr>
-<tr class="memdesc:af198d98b4e742089b5ea82b9f2a5a06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the function that will be used to map the properties value.  <a href="a00520.html#af198d98b4e742089b5ea82b9f2a5a06b">More...</a><br /></td></tr>
-<tr class="separator:af198d98b4e742089b5ea82b9f2a5a06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad28ff1d4487707e92a3e1e40253af412"><td class="memItemLeft" align="right" valign="top">PropertyInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#ad28ff1d4487707e92a3e1e40253af412">Property</a><code> [get]</code></td></tr>
-<tr class="memdesc:ad28ff1d4487707e92a3e1e40253af412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the property that will be mapped to.  <a href="a00512.html#ad28ff1d4487707e92a3e1e40253af412">More...</a><br /></td></tr>
-<tr class="separator:ad28ff1d4487707e92a3e1e40253af412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af869e0c3f2a5c56d9e00acd3dc9d1e11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00520.html#af869e0c3f2a5c56d9e00acd3dc9d1e11">ReflectionRowMapper</a> (IDictionary&lt; PropertyInfo, <a class="el" href="a00524.html">PropertyMapping</a> &gt; propertyMappings)</td></tr>
+<tr class="memdesc:af869e0c3f2a5c56d9e00acd3dc9d1e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of <a class="el" href="a00520.html#af869e0c3f2a5c56d9e00acd3dc9d1e11" title="Creates a new instance of ReflectionRowMapper&lt;TResult&gt;.">ReflectionRowMapper&lt;TResult&gt;</a>.  <a href="a00520.html#af869e0c3f2a5c56d9e00acd3dc9d1e11">More...</a><br /></td></tr>
+<tr class="separator:af869e0c3f2a5c56d9e00acd3dc9d1e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44afd805752e3e05367f6ddc4fa424b"><td class="memItemLeft" align="right" valign="top">TResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00520.html#ac44afd805752e3e05367f6ddc4fa424b">MapRow</a> (IDataRecord row)</td></tr>
+<tr class="memdesc:ac44afd805752e3e05367f6ddc4fa424b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a record from a data reader, map the contents to a common language runtime object.  <a href="a00520.html#ac44afd805752e3e05367f6ddc4fa424b">More...</a><br /></td></tr>
+<tr class="separator:ac44afd805752e3e05367f6ddc4fa424b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a property that will be assigned the value of a user specified function when mapping. </p>
+<div class="textblock"><p>An implementation of IRowMapper&lt;TResult&gt; that uses reflection to convert data rows to <em>TResult</em> . Instances of this class can be build using the MapBuilder&lt;TResult&gt; API. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TResult</td><td>The type this IRowMapper&lt;TResult&gt; applies to</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>MapBuilder&lt;TResult&gt;</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TResult</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2848ea6f50444292e4908c6278984e8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2848ea6f50444292e4908c6278984e8f">&#9670;&nbsp;</a></span>FuncMapping()</h2>
+<a id="af869e0c3f2a5c56d9e00acd3dc9d1e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af869e0c3f2a5c56d9e00acd3dc9d1e11">&#9670;&nbsp;</a></span>ReflectionRowMapper()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping.FuncMapping </td>
+          <td class="memname"><a class="el" href="a00520.html">Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper</a>&lt; TResult &gt;.<a class="el" href="a00520.html">ReflectionRowMapper</a> </td>
           <td>(</td>
-          <td class="paramtype">PropertyInfo&#160;</td>
-          <td class="paramname"><em>property</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">IDictionary&lt; PropertyInfo, <a class="el" href="a00524.html">PropertyMapping</a> &gt;&#160;</td>
+          <td class="paramname"><em>propertyMappings</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00520.html#af198d98b4e742089b5ea82b9f2a5a06b">Func</a>&lt; IDataRecord, object &gt;&#160;</td>
-          <td class="paramname"><em>func</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a new instance of <a class="el" href="a00520.html" title="Represents a property that will be assigned the value of a user specified function when mapping.">FuncMapping</a> </p>
+<p>Creates a new instance of <a class="el" href="a00520.html#af869e0c3f2a5c56d9e00acd3dc9d1e11" title="Creates a new instance of ReflectionRowMapper&lt;TResult&gt;.">ReflectionRowMapper&lt;TResult&gt;</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">func</td><td>The func that will be used to map the property.</td></tr>
-    <tr><td class="paramname">property</td><td>The property that will be used to map to.</td></tr>
+    <tr><td class="paramname">propertyMappings</td><td>The <a class="el" href="a00524.html" title="Base class for mapping values to properties by the ReflectionRowMapper&lt;TResult&gt;.">PropertyMapping</a>'s that specify how each property should be mapped.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">ArgumentNullException</td><td><em>func</em>  is <b>null</b>.</td></tr>
+    <tr><td class="paramname">ArgumentNullException</td><td><em>propertyMappings</em>  is <b>null</b>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -193,309 +164,32 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a868b1552010e6fccb379fa02db44f4d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a868b1552010e6fccb379fa02db44f4d0">&#9670;&nbsp;</a></span>ConvertNonNullableValue()</h2>
+<a id="ac44afd805752e3e05367f6ddc4fa424b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44afd805752e3e05367f6ddc4fa424b">&#9670;&nbsp;</a></span>MapRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static object Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping.ConvertNonNullableValue </td>
-          <td>(</td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Type&#160;</td>
-          <td class="paramname"><em>conversionType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts the database value <em>value</em>  to <em>conversionType</em> . Will throw an exception if <em>conversionType</em>  is a nullable value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>Value from the database.</td></tr>
-    <tr><td class="paramname">conversionType</td><td>Type to convert to.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The converted value.</dd></dl>
-
-</div>
-</div>
-<a id="a088ead1e02bd8790055c9e09df666835"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a088ead1e02bd8790055c9e09df666835">&#9670;&nbsp;</a></span>ConvertNullableValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static object Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping.ConvertNullableValue </td>
-          <td>(</td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Type&#160;</td>
-          <td class="paramname"><em>conversionType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts the database value <em>value</em>  to <em>conversionType</em> , where <em>conversionType</em>  is a nullable value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>Value from the database.</td></tr>
-    <tr><td class="paramname">conversionType</td><td>Type to convert to.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The converted value.</dd></dl>
-
-</div>
-</div>
-<a id="a9f8ee827a130d35f3cd1ae2b28eb0310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f8ee827a130d35f3cd1ae2b28eb0310">&#9670;&nbsp;</a></span>ConvertValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static object Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping.ConvertValue </td>
-          <td>(</td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Type&#160;</td>
-          <td class="paramname"><em>conversionType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts the database value <em>value</em>  to <em>conversionType</em> . </p>
-
-</div>
-</div>
-<a id="a00753287754745575388cce068cc9c82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00753287754745575388cce068cc9c82">&#9670;&nbsp;</a></span>GetPropertyValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override object Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping.GetPropertyValue </td>
+          <td class="memname">TResult <a class="el" href="a00520.html">Microsoft.Practices.EnterpriseLibrary.Data.ReflectionRowMapper</a>&lt; TResult &gt;.MapRow </td>
           <td>(</td>
           <td class="paramtype">IDataRecord&#160;</td>
           <td class="paramname"><em>row</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Gets the value for the mapped property from the <em>row</em> . </p>
+<p>Given a record from a data reader, map the contents to a common language runtime object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">row</td><td>The data record.</td></tr>
+    <tr><td class="paramname">row</td><td>The input data from the database.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The value for the corresponding column converted to the type of the mapped property.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The mapped object.</dd></dl>
 
-<p>Implements <a class="el" href="a00512.html#a636b88900c7d49363ff519c4f31d0aed">Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping</a>.</p>
-
-</div>
-</div>
-<a id="a138c4a6f6545d38534bb91d2b4580de0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a138c4a6f6545d38534bb91d2b4580de0">&#9670;&nbsp;</a></span>Map()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping.Map </td>
-          <td>(</td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>instance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IDataRecord&#160;</td>
-          <td class="paramname"><em>row</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Performs the actual mapping from column to property. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">instance</td><td>The object that contains the <a class="el" href="a00512.html#ad28ff1d4487707e92a3e1e40253af412" title="Gets the property that will be mapped to.">PropertyMapping.Property</a>.</td></tr>
-    <tr><td class="paramname">row</td><td>The row that contains the <a class="el" href="a00516.html#aea34e6eb81caea001fd761c4faf3161a" title="Gets the name of the column that is used for mapping.">ColumnNameMapping.ColumnName</a>.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa6876c9f96d7c8f5a3ebe9a7ac04e480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6876c9f96d7c8f5a3ebe9a7ac04e480">&#9670;&nbsp;</a></span>SetValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping.SetValue </td>
-          <td>(</td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>instance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the <em>value</em>  to <em>instance</em>  using <a class="el" href="a00512.html#ad28ff1d4487707e92a3e1e40253af412" title="Gets the property that will be mapped to.">PropertyMapping.Property</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">instance</td><td>The object <em>value</em>  will be assigned to.</td></tr>
-    <tr><td class="paramname">value</td><td>The value that will be assigned to <em>instance</em> .</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="af198d98b4e742089b5ea82b9f2a5a06b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af198d98b4e742089b5ea82b9f2a5a06b">&#9670;&nbsp;</a></span>Func</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Func&lt;IDataRecord, object&gt; Microsoft.Practices.EnterpriseLibrary.Data.FuncMapping.Func</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the function that will be used to map the properties value. </p>
-
-</div>
-</div>
-<a id="ad28ff1d4487707e92a3e1e40253af412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad28ff1d4487707e92a3e1e40253af412">&#9670;&nbsp;</a></span>Property</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PropertyInfo Microsoft.Practices.EnterpriseLibrary.Data.PropertyMapping.Property</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the property that will be mapped to. </p>
+<p>Implements <a class="el" href="a00484.html#ac2bca60cb029740142753841c70bfb65">Microsoft.Practices.EnterpriseLibrary.Data.IRowMapper&lt; TResult &gt;</a>.</p>
 
 </div>
 </div>
@@ -507,7 +201,7 @@ Properties</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00520.html">FuncMapping</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00520.html">ReflectionRowMapper</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

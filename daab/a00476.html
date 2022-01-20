@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder&lt; TResult &gt; Class Template Reference</title>
+<title>Enterprise Library Data Access Application Block: Microsoft.Practices.EnterpriseLibrary.Data.IParameterMapper Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,142 +85,71 @@ $(document).ready(function(){initNavTree('a00476.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00473.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder&lt; TResult &gt; Class Template Reference</div>  </div>
+<div class="title">Microsoft.Practices.EnterpriseLibrary.Data.IParameterMapper Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Static entry point for the IMapBuilderContext&lt;TResult&gt; interface, which allows to build reflection-based IRowMapper&lt;TResult&gt;s.  
+<p>Interface used to interpret parameters passed to an DataAccessor&lt;TResult&gt;.Execute(object[]) method and assign them to the DbCommand that will be executed.  
  <a href="a00476.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab818daacb284593701963720817e8ba4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00472.html">IRowMapper</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html#ab818daacb284593701963720817e8ba4">BuildAllProperties</a> ()</td></tr>
-<tr class="memdesc:ab818daacb284593701963720817e8ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a IRowMapper&lt;TResult&gt; that maps all properties for <em>TResult</em>  based on name.  <a href="a00476.html#ab818daacb284593701963720817e8ba4">More...</a><br /></td></tr>
-<tr class="separator:ab818daacb284593701963720817e8ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1c950285b5745ee0a79ebf02c0063f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00488.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html#af1c950285b5745ee0a79ebf02c0063f9">MapAllProperties</a> ()</td></tr>
-<tr class="memdesc:af1c950285b5745ee0a79ebf02c0063f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has a mapping set up for all properties of <em>TResult</em>  based on name.  <a href="a00476.html#af1c950285b5745ee0a79ebf02c0063f9">More...</a><br /></td></tr>
-<tr class="separator:af1c950285b5745ee0a79ebf02c0063f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9b08608e2a0c061960ba0cdef93590d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00488.html">IMapBuilderContext</a>&lt; TResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html#aa9b08608e2a0c061960ba0cdef93590d">MapNoProperties</a> ()</td></tr>
-<tr class="memdesc:aa9b08608e2a0c061960ba0cdef93590d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has no mappings to start out with.  <a href="a00476.html#aa9b08608e2a0c061960ba0cdef93590d">More...</a><br /></td></tr>
-<tr class="separator:aa9b08608e2a0c061960ba0cdef93590d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a61f27812e5c4348fe2c648ca36615384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html#a61f27812e5c4348fe2c648ca36615384">AssignParameters</a> (DbCommand command, object[] parameterValues)</td></tr>
+<tr class="memdesc:a61f27812e5c4348fe2c648ca36615384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the values from <em>parameterValues</em>  to the <em>command</em> 's Parameters list.  <a href="a00476.html#a61f27812e5c4348fe2c648ca36615384">More...</a><br /></td></tr>
+<tr class="separator:a61f27812e5c4348fe2c648ca36615384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Static entry point for the IMapBuilderContext&lt;TResult&gt; interface, which allows to build reflection-based IRowMapper&lt;TResult&gt;s. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">TResult</td><td>The type for which a IRowMapper&lt;TResult&gt; should be build.</td></tr>
+<div class="textblock"><p>Interface used to interpret parameters passed to an DataAccessor&lt;TResult&gt;.Execute(object[]) method and assign them to the DbCommand that will be executed. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a61f27812e5c4348fe2c648ca36615384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61f27812e5c4348fe2c648ca36615384">&#9670;&nbsp;</a></span>AssignParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Microsoft.Practices.EnterpriseLibrary.Data.IParameterMapper.AssignParameters </td>
+          <td>(</td>
+          <td class="paramtype">DbCommand&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object[]&#160;</td>
+          <td class="paramname"><em>parameterValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assigns the values from <em>parameterValues</em>  to the <em>command</em> 's Parameters list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>The command the parameter values will be assigned to</td></tr>
+    <tr><td class="paramname">parameterValues</td><td>The parameter values that will be assigned to the command.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>IMapBuilderContext&lt;TResult&gt;, IRowMapper&lt;TResult&gt;</dd></dl>
-<div class="typeconstraint">
-<dl><dt><b>Type Constraints</b></dt><dd>
-<table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em>TResult</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
-</table>
-</dd>
-</dl>
-</div>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab818daacb284593701963720817e8ba4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab818daacb284593701963720817e8ba4">&#9670;&nbsp;</a></span>BuildAllProperties()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00472.html">IRowMapper</a>&lt;TResult&gt; <a class="el" href="a00476.html">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder</a>&lt; TResult &gt;.BuildAllProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a IRowMapper&lt;TResult&gt; that maps all properties for <em>TResult</em>  based on name. </p>
-<dl class="section return"><dt>Returns</dt><dd>A new instance of IRowMapper&lt;TResult&gt;.</dd></dl>
 
 </div>
 </div>
-<a id="af1c950285b5745ee0a79ebf02c0063f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1c950285b5745ee0a79ebf02c0063f9">&#9670;&nbsp;</a></span>MapAllProperties()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00488.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00476.html">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder</a>&lt; TResult &gt;.MapAllProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has a mapping set up for all properties of <em>TResult</em>  based on name. </p>
-<dl class="section see"><dt>See also</dt><dd>IMapBuilderContext&lt;TResult&gt;, IRowMapper&lt;TResult&gt;</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>A new instance of IMapBuilderContext&lt;TResult&gt;.</dd></dl>
-
-</div>
-</div>
-<a id="aa9b08608e2a0c061960ba0cdef93590d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9b08608e2a0c061960ba0cdef93590d">&#9670;&nbsp;</a></span>MapNoProperties()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00488.html">IMapBuilderContext</a>&lt;TResult&gt; <a class="el" href="a00476.html">Microsoft.Practices.EnterpriseLibrary.Data.MapBuilder</a>&lt; TResult &gt;.MapNoProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a IMapBuilderContext&lt;TResult&gt; that can be used to build a IRowMapper&lt;TResult&gt;. The IMapBuilderContext&lt;TResult&gt; has no mappings to start out with. </p>
-<dl class="section see"><dt>See also</dt><dd>IMapBuilderContext&lt;TResult&gt;, IRowMapper&lt;TResult&gt;</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>A new instance of IMapBuilderContext&lt;TResult&gt;.</dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>MapBuilder.cs</li>
+<hr/>The documentation for this interface was generated from the following file:<ul>
+<li>IParameterMapper.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00230.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00231.html">Practices</a></li><li class="navelem"><a class="el" href="a00232.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00233.html">Data</a></li><li class="navelem"><a class="el" href="a00476.html">MapBuilder</a></li>
+    <li class="navelem"><a class="el" href="a00242.html">Microsoft</a></li><li class="navelem"><a class="el" href="a00243.html">Practices</a></li><li class="navelem"><a class="el" href="a00244.html">EnterpriseLibrary</a></li><li class="navelem"><a class="el" href="a00245.html">Data</a></li><li class="navelem"><a class="el" href="a00476.html">IParameterMapper</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

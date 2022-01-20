@@ -1,7 +1,6 @@
 var a00648 =
 [
-    [ "OraclePackageData", "a00648.html#abb61d4258238034ef91044e580dd4848", null ],
-    [ "OraclePackageData", "a00648.html#ae4106c43f03be6cfa8d6082e1d999a76", null ],
-    [ "Name", "a00648.html#abbfd010702c4ea4e0bc424c7d456a817", null ],
-    [ "Prefix", "a00648.html#abd2e5f912f89b71731d10fa40db4ff30", null ]
+    [ "OracleConnectionData", "a00648.html#ae672a185c93ad743d7bb48c98f3a85c3", null ],
+    [ "Name", "a00648.html#ace90f40ab65a8e232fa0dd09df85e4a6", null ],
+    [ "Packages", "a00648.html#aa50c761cd5d6673b0df31f6f217dcc92", null ]
 ];

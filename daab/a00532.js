@@ -1,14 +1,12 @@
 var a00532 =
 [
-    [ "SqlStringAccessor", "a00532.html#afcfea2fc713c3ac35ba190616ba6c134", null ],
-    [ "SqlStringAccessor", "a00532.html#a1afcd249d6f85a78dcd067fc7eb13e44", null ],
-    [ "SqlStringAccessor", "a00532.html#ae8d14b2dbbf31f9b8d0291fc392b1aea", null ],
-    [ "SqlStringAccessor", "a00532.html#acacaccbcd175db95c495d280e9609327", null ],
-    [ "BeginExecute", "a00532.html#a224fa9ccfa5d5b8ff3dd848f641c13e6", null ],
-    [ "BeginExecute", "a00532.html#a0f84abef7bf86eae0377e5aaf928d67f", null ],
-    [ "EndExecute", "a00532.html#a00c4dfe207766604466424e65f8ca51c", null ],
-    [ "Execute", "a00532.html#af7e06ccea7ae67c366467e6e6c7c1d1d", null ],
-    [ "Execute", "a00532.html#abf8c38901664f6cb65fc1f349ae34c7d", null ],
-    [ "GuardAsyncAllowed", "a00532.html#abbd4d072c1b9d993e47ceeff44c952dc", null ],
-    [ "Database", "a00532.html#a9e037b56538aa928482c69d4ff8044e5", null ]
+    [ "FuncMapping", "a00532.html#a2848ea6f50444292e4908c6278984e8f", null ],
+    [ "ConvertNonNullableValue", "a00532.html#a868b1552010e6fccb379fa02db44f4d0", null ],
+    [ "ConvertNullableValue", "a00532.html#a088ead1e02bd8790055c9e09df666835", null ],
+    [ "ConvertValue", "a00532.html#a9f8ee827a130d35f3cd1ae2b28eb0310", null ],
+    [ "GetPropertyValue", "a00532.html#a00753287754745575388cce068cc9c82", null ],
+    [ "Map", "a00532.html#a138c4a6f6545d38534bb91d2b4580de0", null ],
+    [ "SetValue", "a00532.html#aa6876c9f96d7c8f5a3ebe9a7ac04e480", null ],
+    [ "Func", "a00532.html#af198d98b4e742089b5ea82b9f2a5a06b", null ],
+    [ "Property", "a00532.html#ad28ff1d4487707e92a3e1e40253af412", null ]
 ];

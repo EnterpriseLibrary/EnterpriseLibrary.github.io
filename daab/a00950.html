@@ -93,6 +93,12 @@ $(document).ready(function(){initNavTree('a00950.html',''); initResizable(); });
 Version 7.0 RC1</h1>
 <ul>
 <li>The block was split to several NuGet packages, one for each database provider. See <a class="el" href="a00951.html">Upgrade</a> and <a class="el" href="a00949.html">User Guide</a> for details.</li>
+<li>Support for some older .NET frameworks was dropped, in favor of Long Term Support versions:<ul>
+<li>Dropped support for .NET Framework 4.0, 4.5, .NET Core 2.0, 3.0.</li>
+<li>Added support for .NET Framework 4.5.2, .NET Core 2.1, 3.1</li>
+</ul>
+</li>
+<li>OLE DB and ODBC now have their own database providers, <a class="el" href="a00624.html">OleDbDatabase</a> and <a class="el" href="a00604.html">OdbcDatabase</a>, respectively, instead of the GenericDatabase used for these providers earlier.</li>
 <li>Fixed <a href="https://github.com/EnterpriseLibrary/data-access-application-block/issues/23">bug #23 Oracle RAW data type is not cast to byte[] correctly</a></li>
 <li>Fixed <a href="https://github.com/EnterpriseLibrary/data-access-application-block/issues/31">bug #31 SprocAccessor&lt;TResult&gt;.Execute(params object[]) throws ObjectDisposedException under Oracle</a></li>
 <li>Fixed <a href="https://github.com/EnterpriseLibrary/data-access-application-block/issues/32">bug #32 DatabaseProviderFactory.Create(String) fails for an ODBC provider under .NET Core</a></li>

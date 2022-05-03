@@ -28,7 +28,7 @@ var NAVTREE =
     [ "Data Access Application Block Documentation", "index.html", null ],
     [ "Data Access Application Block User Guide", "a00949.html", null ],
     [ "Data Access Application Block Release Notes", "a00950.html", [
-      [ "Version 7.0 RC1", "a00950.html#autotoc_md13", null ]
+      [ "Version 7.0 RC1", "a00950.html#autotoc_md17", null ]
     ] ],
     [ "Upgrading from version 6 to version 7", "a00951.html", null ],
     [ "Classes", "annotated.html", [
@@ -52,7 +52,7 @@ var NAVTREEINDEX =
 "a00532.html#a9f8ee827a130d35f3cd1ae2b28eb0310",
 "a00624.html#aec4e078b46f775b90d01038bab518c57",
 "a00704.html#a27469f9c1ac7f0c4d1c86fdfc3000b0e",
-"functions_b.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

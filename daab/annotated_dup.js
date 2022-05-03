@@ -14,7 +14,12 @@ var annotated_dup =
       [ "Creating and Using Mappers", "a00949.html#autotoc_md9", null ],
       [ "Retrieving XML Data", "a00949.html#autotoc_md10", null ],
       [ "Retrieving Single Scalar Values", "a00949.html#autotoc_md11", null ],
-      [ "Retrieving Data Asynchronously", "a00949.html#autotoc_md12", null ]
+      [ "Retrieving Data Asynchronously", "a00949.html#autotoc_md12", null ],
+      [ "Updating Data", "a00949.html#autotoc_md13", null ],
+      [ "Working with DataSets", "a00949.html#autotoc_md14", [
+        [ "Retrieving data as DataSet", "a00949.html#autotoc_md15", null ],
+        [ "Updating the Database from a DataSet", "a00949.html#autotoc_md16", null ]
+      ] ]
     ] ],
     [ "Microsoft", "a00242.html", [
       [ "Practices", "a00243.html", [

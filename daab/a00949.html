@@ -103,6 +103,11 @@ $(document).ready(function(){initNavTree('a00949.html',''); initResizable(); });
 <li class="level3"><a href="#autotoc_md10">Retrieving XML Data</a></li>
 <li class="level3"><a href="#autotoc_md11">Retrieving Single Scalar Values</a></li>
 <li class="level3"><a href="#autotoc_md12">Retrieving Data Asynchronously</a></li>
+<li class="level3"><a href="#autotoc_md13">Updating Data</a></li>
+<li class="level3"><a href="#autotoc_md14">Working with DataSets</a><ul><li class="level4"><a href="#autotoc_md15">Retrieving data as DataSet</a></li>
+<li class="level4"><a href="#autotoc_md16">Updating the Database from a DataSet</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -306,7 +311,7 @@ Retrieving Data as Objects</h3>
 <div class="line">}</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md9"></a>
 Creating and Using Mappers</h3>
-<p>In some cases, you may need to create a custom parameter mapper to pass your parameters to the query that the accessor will execute. This typically occurs when you need to execute a SQL statement to work with a database system that does not support parameter resolution, or when a default mapping cannot be inferred due to a mismatch in the number or types of the parameters. The parameter mapper class must implement the <code>IParameterMapper</code> interface and contain a method named <code>AssignParameters</code> that takes a reference to the current <code>Command</code> instance and the array of parameters. The method simply needs to add the required parameters to the <code>Command</code> object's <code>Parameters</code> collection.</p>
+<p>In some cases, you may need to create a custom parameter mapper to pass your parameters to the query that the accessor will execute. This typically occurs when you need to execute a SQL statement to work with a database system that does not support parameter resolution, or when a default mapping cannot be inferred due to a mismatch in the number or types of the parameters. The parameter mapper class must implement the <code>IParameterMapper</code> interface and contain a method named <code>AssignParameters</code> that takes a reference to the current <code>DbCommand</code> instance and the array of parameters. The method simply needs to add the required parameters to the <code>DbCommand</code> object's <code>Parameters</code> collection.</p>
 <p>More often, you will need to create a custom output mapper. To help you do this, the block provides a class called <code>MapBuilder</code> that you can use to create the set of mappings you require between the columns of the data set returned by the query and the properties of the objects you need.</p>
 <p>By default, the accessor will expect to generate a simple sequence of a single type of object (in our earlier example, this was a sequence of the <code>Product</code> class). However, you can use an accessor to return a more complex graph of objects if you wish. For example, you might execute a query that returns a series of <code>Order</code> objects and the related <code>OrderLines</code> objects for all of the selected orders. Simple output mapping cannot cope with this scenario, and neither can the <code>MapBuilder</code> class. In this case, you would create a result set mapper by implementing the <code>IResultSetMapper</code> interface. Your custom row set mapper must contain a method named <code>MapSet</code> that receives a reference to an object that implements the <code>IDataReader</code> interface. The method should read all of the data available through the data reader, processes it to create the sequence of objects you require, and return this sequence.</p>
 <h3><a class="anchor" id="autotoc_md10"></a>
@@ -340,8 +345,8 @@ Retrieving XML Data</h3>
 <h3><a class="anchor" id="autotoc_md11"></a>
 Retrieving Single Scalar Values</h3>
 <p>The Data Access block provides the <code>ExecuteScalar</code> method to extract a single scalar value based on a query that selects either a single row or a single value. It executes the query you specify, and then returns the value of the first column of the first row of the result set as an Object type.</p>
-<p>The <code>ExecuteScalar</code> method has a set of overloads similar to the <code>ExecuteReader</code> method we used earlier in this document. You can specify a <code>CommandType</code> (the default is <code>StoredProcedure</code>) and either a SQL statement or a stored procedure name. You can also pass in an array of <code>Object</code> instances that represent the parameters for the query. Alternatively, you can pass to the method a <code>Command</code> object that contains any parameters you require.</p>
-<p>The following code demonstrates passing a <code>Command</code> object to the method to execute both an inline SQL statement and a stored procedure. It obtains a suitable <code>Command</code> instance from the current Database instance using the <code>GetSqlStringCommand</code> and <code>GetStoredProcCommand</code> methods. You can add parameters to the command before calling the <code>ExecuteScalar</code> method if required. However, to demonstrate the way the method works, the code here simply extracts the complete row set. The result is a single <code>Object</code> that you must cast to the appropriate type before displaying or consuming it in your code.</p>
+<p>The <code>ExecuteScalar</code> method has a set of overloads similar to the <code>ExecuteReader</code> method we used earlier in this document. You can specify a <code>CommandType</code> (the default is <code>StoredProcedure</code>) and either a SQL statement or a stored procedure name. You can also pass in an array of <code>Object</code> instances that represent the parameters for the query. Alternatively, you can pass to the method a <code>DbCommand</code> object that contains any parameters you require.</p>
+<p>The following code demonstrates passing a <code>DbCommand</code> object to the method to execute both an inline SQL statement and a stored procedure. It obtains a suitable <code>DbCommand</code> instance from the current Database instance using the <code>GetSqlStringCommand</code> and <code>GetStoredProcCommand</code> methods. You can add parameters to the command before calling the <code>ExecuteScalar</code> method if required. However, to demonstrate the way the method works, the code here simply extracts the complete row set. The result is a single <code>Object</code> that you must cast to the appropriate type before displaying or consuming it in your code.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create a suitable command type for a SQL statement.</span></div>
 <div class="line"><span class="comment">// NB: For efficiency, aim to return only a single value or a single row.</span></div>
 <div class="line"><span class="keyword">using</span> (DbCommand sqlCmd = defaultDB.GetSqlStringCommand(<span class="stringliteral">&quot;SELECT [Name] FROM States&quot;</span>))</div>
@@ -395,6 +400,116 @@ Retrieving Data Asynchronously</h3>
 <p>As mentioned above, you can wrap a BeginXXX and EndXXX methods with a Task. </p><div class="fragment"><div class="line">await Task&lt;IDataReader&gt;.Factory</div>
 <div class="line">        .FromAsync&lt;DbCommand&gt;(asyncDB.BeginExecuteReader, </div>
 <div class="line">        asyncDB.EndExecuteReader, cmd, <span class="keyword">null</span>);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md13"></a>
+Updating Data</h3>
+<p>The Data Access block makes it easy to execute inline SQL statements, or SQL statements within stored procedures, that use the <code>UPDATE</code>, <code>DELETE</code>, or <code>INSERT</code> keywords. queries against a database. You can execute these kinds of queries using the <code>ExecuteNonQuery</code> method of the <code>Database</code> class.</p>
+<p>The <code>ExecuteNonQuery</code> method has a broad set of overloads. You can specify a <code>CommandType</code> (the default is <code>StoredProcedure</code>) and either a SQL statement or a stored procedure name. You can also pass in an array of Object instances that represent the parameters for the query. Alternatively, you can pass to the method a <code>DbCommand</code> object that contains any parameters you require. There are also <code>Begin</code> and <code>End</code> versions that allow you to execute update queries asynchronously. A future version will support a Task based asynchronous method.</p>
+<p>The following code shows how you can use the <code>ExecuteNonQuery</code> method to update a row in a table in the database. It updates the Description column of a single row in the Products table, checks that the update succeeded, and then updates it again to return it to the original value. The first step is to create the command and add the required parameters, as you've seen in earlier examples, and then call the <code>ExecuteNonQuery</code> method with the command as the single parameter. Next, the code changes the value of the command parameter named <code>description</code> to the original value in the database, and then executes the compensating update.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> oldDescription = <span class="stringliteral">&quot;Carries 4 bikes securely; steel construction, fits 2\&quot; receiver hitch.&quot;</span>;</div>
+<div class="line"><span class="keywordtype">string</span> newDescription = <span class="stringliteral">&quot;Bikes tend to fall off after a few miles.&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create command to execute the stored procedure and add the parameters.</span></div>
+<div class="line">DbCommand cmd = defaultDB.GetStoredProcCommand(<span class="stringliteral">&quot;UpdateProductsTable&quot;</span>);</div>
+<div class="line">defaultDB.AddInParameter(cmd, <span class="stringliteral">&quot;productID&quot;</span>, DbType.Int32, 84);</div>
+<div class="line">defaultDB.AddInParameter(cmd, <span class="stringliteral">&quot;description&quot;</span>, DbType.String, newDescription);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Execute the query and check if one row was updated.</span></div>
+<div class="line"><span class="keywordflow">if</span> (defaultDB.ExecuteNonQuery(cmd) == 1)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// Update succeeded.</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    Console.WriteLine(<span class="stringliteral">&quot;ERROR: Could not update just one row.&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Change the value of the second parameter</span></div>
+<div class="line">defaultDB.SetParameterValue(cmd, <span class="stringliteral">&quot;description&quot;</span>, oldDescription);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Execute query and check if one row was updated</span></div>
+<div class="line"><span class="keywordflow">if</span> (defaultDB.ExecuteNonQuery(cmd) == 1)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// Update succeeded.</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    Console.WriteLine(<span class="stringliteral">&quot;ERROR: Could not update just one row.&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The <code>ExecuteNonQuery</code> method returns an integer value that is the number of rows updated (or, to use the more accurate term, affected) by the query. In this example, we are specifying a single row as the target for the update by selecting on the unique ID column. Therefore, we expect only one row to be updated—any other value means there was a problem. If you are expecting to update multiple rows, you would check for a non-zero returned value.</p>
+<h3><a class="anchor" id="autotoc_md14"></a>
+Working with DataSets</h3>
+<h4><a class="anchor" id="autotoc_md15"></a>
+Retrieving data as DataSet</h4>
+<p>If you need to retrieve data and store it in a way that allows you to push changes back into the database, you will usually use a <code>DataSet</code>. The Data Access block supports simple operations on a normal (non-typed) <code>DataSet</code>, including the capability to fill a <code>DataSet</code> and then update the original database table from the <code>DataSet</code>.</p>
+<p>To fill a <code>DataSet</code>, you use the <a class="el" href="a00440.html#afde29063cc35c6985d15957c512f4a76">ExecuteDataSet</a> method, which returns a new instance of the <code>DataSet</code> class populated with a table containing the data for each row set returned by the query (which may be a multiple-statement batch query). The tables in this <code>DataSet</code> will have default names such as Table, Table1, and Table2.</p>
+<p>If you want to load data into an existing <code>DataSet</code>, you use the <code>LoadDataSet</code> method. This allows you to specify the name(s) of the target table(s) in the <code>DataSet</code>, and lets you add additional tables to an existing <code>DataSet</code> or refresh the contents of specific tables in the DataSet.</p>
+<p>Both of these methods have a broad set of overloads. You can specify a <code>CommandType</code> (the default is <code>StoredProcedure</code>) and either a SQL statement or a stored procedure name. You can also pass the values that represent the input parameters for the query. Alternatively, you can pass to the method a <code>DbCommand</code> object that contains any parameters you require.</p>
+<p>The following code example shows how you can use the <code>ExecuteDataSet</code> method with a SQL statement; with a stored procedure and a parameter array; and with a command pre-populated with parameters. The code assumes you have created the Data Access block <code>Database</code> instance named <code>db</code>.</p>
+<div class="fragment"><div class="line">DataSet productDataSet;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Using a SQL statement.</span></div>
+<div class="line"><span class="keywordtype">string</span> sql = <span class="stringliteral">&quot;SELECT CustomerName, CustomerPhone FROM Customers&quot;</span>;</div>
+<div class="line">productDataSet = db.ExecuteDataSet(CommandType.Text, sql);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Using a stored procedure and a parameter array.</span></div>
+<div class="line">productDataSet = db.ExecuteDataSet(<span class="stringliteral">&quot;GetProductsByCategory&quot;</span>, <span class="stringliteral">&quot;%bike%&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Using a stored procedure and a named parameter.</span></div>
+<div class="line">DbCommand cmd = db.GetStoredProcCommand(<span class="stringliteral">&quot;GetProductsByCategory&quot;</span>);</div>
+<div class="line">db.AddInParameter(cmd, <span class="stringliteral">&quot;CategoryID&quot;</span>, DbType.Int32, 7);</div>
+<div class="line">productDataSet = db.ExecuteDataSet(cmd);</div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md16"></a>
+Updating the Database from a DataSet</h4>
+<p>To update data in a database from a <code>DataSet</code>, you use the <a class="el" href="a00440.html#a32d38d4f1d2d5f13566d2ed19a6d28a2">UpdateDataSet</a> method, which returns a total count of the number of rows affected by the update, delete, and insert operations. The overloads of this method allow you to specify the source <code>DataSet</code> containing the updated rows, the name of the table in the database to update, and references to the three <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dbcommand">DbCommand</a> instances that the method will execute to perform UPDATE, DELETE, and INSERT operations on the specified database table.</p>
+<p>In addition, you can specify a value for the <a class="el" href="a00245.html#ae5a4ed3e9684a7321ace50e03543a92a">UpdateBehavior</a>, which determines how the method will apply the updates to the target table rows. You can specify one of the following values for this parameter:</p>
+<ul>
+<li><b>Standard</b>. If the underlying ADO.NET update process encounters an error, the update stops and no subsequent updates are applied to the target table.</li>
+<li><b>Continue</b>. If the underlying ADO.NET update process encounters an error, the update will continue and attempt to apply any subsequent updates.</li>
+<li><b>Transactional</b>. If the underlying ADO.NET update process encounters an error, all the updates made to all rows will be rolled back.</li>
+</ul>
+<p>Finally, you can optionally provide a value for the <code>updateBatchSize</code> parameter of the <code>UpdateDataSet</code> method. This forces the method to attempt to perform updates in batches instead of sending each one to the database individually. This is more efficient, but the return value for the method will show only the number of updates made in the final batch, and not the total number for all batches. Typically, you are likely to use a batch size value between 10 and 100. You should experiment to find the most appropriate batch size; it depends on the type of database you are using, the query you are executing, and the number of parameters for the query.</p>
+<p>The following examples demonstrates the <code>ExecuteDataSet</code> and <code>UpdateDataSet</code> methods. It uses the simple overloads of the <code>ExecuteDataSet</code> and <code>LoadDataSet</code> methods to fill two <code>DataSet</code> instances, using a separate routine named <code>DisplayTableNames</code> (not shown here) to display the table names and a count of the number of rows in these tables. This shows one of the differences between these two methods. Note that the <code>LoadDataSet</code> method requires a reference to an existing <code>DataSet</code> instance, and an array containing the names of the tables to populate.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> selectSQL = <span class="stringliteral">&quot;SELECT Id, Name, Description FROM Products WHERE Id &gt; 90&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Fill a DataSet from the Products table using the simple approach.</span></div>
+<div class="line">DataSet simpleDS = defaultDB.ExecuteDataSet(CommandType.Text, selectSQL);</div>
+<div class="line">DisplayTableNames(simpleDS, <span class="stringliteral">&quot;ExecuteDataSet&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Fill a DataSet from the Products table using the LoadDataSet method.</span></div>
+<div class="line"><span class="comment">// This allows you to specify the name(s) for the table(s) in the DataSet.</span></div>
+<div class="line">DataSet loadedDS = <span class="keyword">new</span> DataSet(<span class="stringliteral">&quot;ProductsDataSet&quot;</span>);</div>
+<div class="line">defaultDB.LoadDataSet(CommandType.Text, selectSQL, loadedDS, <span class="keyword">new</span> <span class="keywordtype">string</span>[] { <span class="stringliteral">&quot;Products&quot;</span> });</div>
+<div class="line">DisplayTableNames(loadedDS, <span class="stringliteral">&quot;LoadDataSet&quot;</span>);</div>
+</div><!-- fragment --><p> This produces the following result: </p><div class="fragment"><div class="line">Tables in the DataSet obtained using the ExecuteDataSet method:</div>
+<div class="line"> - Table named &#39;Table&#39; contains 6 rows.</div>
+<div class="line"> </div>
+<div class="line">Tables in the DataSet obtained using the LoadDataSet method:</div>
+<div class="line"> - Table named &#39;Products&#39; contains 6 rows.</div>
+</div><!-- fragment --><p>Let's say you updated, added and deleted some row in the Products table. The next stage is to create the commands that the <code>UpdateDataSet</code> method will use to update the target table in the database. The code declares three suitable SQL statements, and then builds the commands and adds the requisite parameters to them. Note that each parameter may be applied to multiple rows in the target table, so the actual value must be dynamically set based on the contents of the DataSet row whose updates are currently being applied to the target table.</p>
+<p>This means that you must specify, in addition to the parameter name and data type, the name and the version (Current or Original) of the row in the DataSet to take the value from. For an INSERT command, you need the current version of the row that contains the new values. For a DELETE command, you need the original value of the ID to locate the row in the table that will be deleted. For an UPDATE command, you need the original value of the ID to locate the row in the table that will be updated, and the current version of the values with which to update the remaining columns in the target table row.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> addSQL = <span class="stringliteral">&quot;INSERT INTO Products (Name, Description) VALUES (@name, @description)&quot;</span>;</div>
+<div class="line"><span class="keywordtype">string</span> updateSQL = <span class="stringliteral">&quot;UPDATE Products SET Name = @name, Description = @description WHERE Id = @id&quot;</span>;</div>
+<div class="line"><span class="keywordtype">string</span> deleteSQL = <span class="stringliteral">&quot;DELETE FROM Products WHERE Id = @id&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create the commands to update the original table in the database</span></div>
+<div class="line">DbCommand insertCommand = defaultDB.GetSqlStringCommand(addSQL);</div>
+<div class="line">defaultDB.AddInParameter(insertCommand, <span class="stringliteral">&quot;name&quot;</span>, DbType.String, <span class="stringliteral">&quot;Name&quot;</span>, DataRowVersion.Current);</div>
+<div class="line">defaultDB.AddInParameter(insertCommand, <span class="stringliteral">&quot;description&quot;</span>, DbType.String, <span class="stringliteral">&quot;Description&quot;</span>, DataRowVersion.Current);</div>
+<div class="line"> </div>
+<div class="line">DbCommand updateCommand = defaultDB.GetSqlStringCommand(updateSQL);</div>
+<div class="line">defaultDB.AddInParameter(updateCommand, <span class="stringliteral">&quot;name&quot;</span>, DbType.String, <span class="stringliteral">&quot;Name&quot;</span>, DataRowVersion.Current);</div>
+<div class="line">defaultDB.AddInParameter(updateCommand, <span class="stringliteral">&quot;description&quot;</span>, DbType.String, <span class="stringliteral">&quot;Description&quot;</span>, DataRowVersion.Current);</div>
+<div class="line">defaultDB.AddInParameter(updateCommand, <span class="stringliteral">&quot;id&quot;</span>, DbType.String, <span class="stringliteral">&quot;Id&quot;</span>, DataRowVersion.Original);</div>
+<div class="line"> </div>
+<div class="line">DbCommand deleteCommand = defaultDB.GetSqlStringCommand(deleteSQL);</div>
+<div class="line">defaultDB.AddInParameter(deleteCommand, <span class="stringliteral">&quot;id&quot;</span>, DbType.Int32, <span class="stringliteral">&quot;Id&quot;</span>, DataRowVersion.Original);</div>
+</div><!-- fragment --><p>Finally, you can apply the changes by calling the UpdateDataSet method, as shown here:</p>
+<div class="fragment"><div class="line"><span class="comment">// Apply the updates in the DataSet to the original table in the database.</span></div>
+<div class="line"><span class="keywordtype">int</span> rowsAffected = defaultDB.UpdateDataSet(loadedDS, <span class="stringliteral">&quot;Products&quot;</span>, insertCommand, updateCommand, deleteCommand, <a class="code" href="a00245.html#ae5a4ed3e9684a7321ace50e03543a92a">UpdateBehavior</a>.Standard);</div>
+<div class="line">Console.WriteLine(<span class="stringliteral">&quot;Updated a total of {0} rows in the database.&quot;</span>, rowsAffected);</div>
+<div class="ttc" id="aa00245_html_ae5a4ed3e9684a7321ace50e03543a92a"><div class="ttname"><a href="a00245.html#ae5a4ed3e9684a7321ace50e03543a92a">Microsoft.Practices.EnterpriseLibrary.Data.UpdateBehavior</a></div><div class="ttdeci">UpdateBehavior</div><div class="ttdoc">Used with the Database.UpdateDataSet method. Provides control over behavior when the Data Adapter's u...</div><div class="ttdef"><b>Definition:</b> UpdateBehavior.cs:10</div></div>
+</div><!-- fragment --><p> The code captures and displays the number of rows affected by the updates. As expected, this is three, as shown in the final section of the output from the example.</p>
+<div class="fragment"><div class="line">Updated a total of 3 rows in the database.</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -19,7 +19,9 @@ var annotated_dup =
       [ "Working with DataSets", "a00949.html#autotoc_md14", [
         [ "Retrieving data as DataSet", "a00949.html#autotoc_md15", null ],
         [ "Updating the Database from a DataSet", "a00949.html#autotoc_md16", null ]
-      ] ]
+      ] ],
+      [ "Managing Connections", "a00949.html#autotoc_md17", null ],
+      [ "Working with Connection-Based Transactions", "a00949.html#autotoc_md18", null ]
     ] ],
     [ "Microsoft", "a00242.html", [
       [ "Practices", "a00243.html", [

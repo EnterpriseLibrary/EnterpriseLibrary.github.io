@@ -108,6 +108,8 @@ $(document).ready(function(){initNavTree('a00949.html',''); initResizable(); });
 <li class="level4"><a href="#autotoc_md16">Updating the Database from a DataSet</a></li>
 </ul>
 </li>
+<li class="level3"><a href="#autotoc_md17">Managing Connections</a></li>
+<li class="level3"><a href="#autotoc_md18">Working with Connection-Based Transactions</a></li>
 </ul>
 </li>
 </ul>
@@ -204,7 +206,7 @@ Oracle Configuration</h3>
 Code Examples</h2>
 <h3><a class="anchor" id="autotoc_md4"></a>
 Creating Database Instances</h3>
-<p>The simplest approach for creating a <code>Database</code> object or one of its descendants is calling the <code>CreateDefault</code> or <code>Create</code> method of the <code>DatabaseProviderFactory</code> class, as shown here, and storing these instances in application-wide variables so that they can be accessed from anywhere in the code. </p><div class="fragment"><div class="line"><span class="comment">// Configure the DatabaseFactory to read its configuration from the .config file</span></div>
+<p>The simplest approach for creating a <a class="el" href="a00440.html">Database</a> object or one of its descendants is calling the <code>CreateDefault</code> or <code>Create</code> method of the <code>DatabaseProviderFactory</code> class, as shown here, and storing these instances in application-wide variables so that they can be accessed from anywhere in the code. </p><div class="fragment"><div class="line"><span class="comment">// Configure the DatabaseFactory to read its configuration from the .config file</span></div>
 <div class="line">DatabaseProviderFactory factory = <span class="keyword">new</span> DatabaseProviderFactory();</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Create the default Database object from the factory.</span></div>
@@ -220,7 +222,7 @@ Creating Database Instances</h3>
 <div class="line">defaultDB = DatabaseFactory.CreateDatabase(<span class="stringliteral">&quot;ExampleDatabase&quot;</span>);</div>
 <div class="line"><span class="comment">// Uses the default database from the configuration file.</span></div>
 <div class="line">sqlServerDB = DatabaseFactory.CreateDatabase() as SqlDatabase;</div>
-</div><!-- fragment --><p>In addition to using configuration to define the databases you will use, the Data Access block allows you to create instances of concrete types that inherit from the Database class directly in your code, as shown here.</p>
+</div><!-- fragment --><p>In addition to using configuration to define the databases you will use, the Data Access block allows you to create instances of concrete types that inherit from the <code>Database</code> class directly in your code, as shown here.</p>
 <div class="fragment"><div class="line">SqlDatabase sqlDatabase = <span class="keyword">new</span> SqlDatabase(myConnectionString);</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md5"></a>
 Reading Rows Using a Query with No Parameters</h3>
@@ -346,7 +348,7 @@ Retrieving XML Data</h3>
 Retrieving Single Scalar Values</h3>
 <p>The Data Access block provides the <code>ExecuteScalar</code> method to extract a single scalar value based on a query that selects either a single row or a single value. It executes the query you specify, and then returns the value of the first column of the first row of the result set as an Object type.</p>
 <p>The <code>ExecuteScalar</code> method has a set of overloads similar to the <code>ExecuteReader</code> method we used earlier in this document. You can specify a <code>CommandType</code> (the default is <code>StoredProcedure</code>) and either a SQL statement or a stored procedure name. You can also pass in an array of <code>Object</code> instances that represent the parameters for the query. Alternatively, you can pass to the method a <code>DbCommand</code> object that contains any parameters you require.</p>
-<p>The following code demonstrates passing a <code>DbCommand</code> object to the method to execute both an inline SQL statement and a stored procedure. It obtains a suitable <code>DbCommand</code> instance from the current Database instance using the <code>GetSqlStringCommand</code> and <code>GetStoredProcCommand</code> methods. You can add parameters to the command before calling the <code>ExecuteScalar</code> method if required. However, to demonstrate the way the method works, the code here simply extracts the complete row set. The result is a single <code>Object</code> that you must cast to the appropriate type before displaying or consuming it in your code.</p>
+<p>The following code demonstrates passing a <code>DbCommand</code> object to the method to execute both an inline SQL statement and a stored procedure. It obtains a suitable <code>DbCommand</code> instance from the current <code>Database</code> instance using the <code>GetSqlStringCommand</code> and <code>GetStoredProcCommand</code> methods. You can add parameters to the command before calling the <code>ExecuteScalar</code> method if required. However, to demonstrate the way the method works, the code here simply extracts the complete row set. The result is a single <code>Object</code> that you must cast to the appropriate type before displaying or consuming it in your code.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create a suitable command type for a SQL statement.</span></div>
 <div class="line"><span class="comment">// NB: For efficiency, aim to return only a single value or a single row.</span></div>
 <div class="line"><span class="keyword">using</span> (DbCommand sqlCmd = defaultDB.GetSqlStringCommand(<span class="stringliteral">&quot;SELECT [Name] FROM States&quot;</span>))</div>
@@ -368,7 +370,7 @@ Retrieving Single Scalar Values</h3>
 Retrieving Data Asynchronously</h3>
 <p>Databases are a major bottleneck in any enterprise application. One way that applications can minimize the performance hit from data access is to perform it asynchronously. This means that the application code can continue to execute, and the user interface can remain interactive during the process. It is also very useful in server applications where you can avoid blocking threads that could handle other requests, thus improving utilization. However, keep in mind that asynchronous data access has an effect on connection and data streaming performance over the wire. Don’t expect a query that returns ten rows to show any improvement using an asynchronous approach—it is more likely to take longer to return the results!</p>
 <p>The Data Access block provides asynchronous <code>Begin</code> and <code>End</code> versions of many of the standard data access methods, including <code>ExecuteReader</code>, <code>ExecuteScalar</code>, <code>ExecuteXmlReader</code>, and <code>ExecuteNonQuery</code>. It also provides asynchronous <code>Begin</code> and <code>End</code> versions of the <code>Execute</code> method for accessors that return data as a sequence of objects. This approach is known as the Asynchronous Programming Model (APM). A future version of the block will also support the <a href="https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-parallel-library-tpl">Task Parallel Library</a> (TPL). In the mean time, you can use <a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.taskfactory.fromasync">TaskFactory.FromAsync</a> to wrap a <code>Begin</code> and <code>End</code> method with a <code>Task</code>.</p>
-<p>Asynchronous processing in the Data Access block is only available for SQL Server databases. The <code>Database</code> class includes a property named <code>SupportsAsync</code> that you can query to see if the current Database instance supports asynchronous operations. The example for this chapter contains a simple check for this.</p>
+<p>Asynchronous processing in the Data Access block is only available for SQL Server databases. The <code>Database</code> class includes a property named <code>SupportsAsync</code> that you can query to see if the current <code>Database</code> instance supports asynchronous operations. The example for this chapter contains a simple check for this.</p>
 <p>The <code>BeginExecuteReader</code> method does not accept a <code>CommandBehavior</code> parameter. By default, the method will automatically set the <code>CommandBehavior</code> property on the underlying reader to <code>CloseConnection</code> unless you specify a transaction when you call the method. If you do specify a transaction, it does not set the <code>CommandBehavior</code> property.</p>
 <p>Always ensure you call the appropriate <code>EndExecute</code> method when you use asynchronous data access, even if you do not actually require access to the results, or call the Cancel method on the connection. Failing to do so can cause memory leaks and consume additional system resources.</p>
 <p>Using asynchronous data access with the Multiple Active Results Set (MARS) feature of ADO.NET may produce unexpected behavior, and should generally be avoided.</p>
@@ -396,9 +398,9 @@ Retrieving Data Asynchronously</h3>
 <div class="line">      Console.WriteLine(<span class="stringliteral">&quot;Error after data access completed: {0}&quot;</span>, ex.Message);</div>
 <div class="line">    }</div>
 <div class="line">  }, <span class="keyword">null</span>);</div>
-</div><!-- fragment --><p>The <code>AsyncState</code> parameter can be used to pass any required state information into the callback. For example, when you use a callback method instead of a lambda expression, you would pass a reference to the current <code>Database</code> instance as the <code>AsyncState</code> parameter so that the callback code can call the <code>EndExecuteReader</code> (or other appropriate End method) to obtain the results. When you use a Lambda expression, the current Database instance is available within the expression and, therefore, you do not need to populate the <code>AsyncState</code> parameter.</p>
+</div><!-- fragment --><p>The <code>AsyncState</code> parameter can be used to pass any required state information into the callback. For example, when you use a callback method instead of a lambda expression, you would pass a reference to the current <code>Database</code> instance as the <code>AsyncState</code> parameter so that the callback code can call the <code>EndExecuteReader</code> (or other appropriate End method) to obtain the results. When you use a Lambda expression, the current <code>Database</code> instance is available within the expression and, therefore, you do not need to populate the <code>AsyncState</code> parameter.</p>
 <p>As mentioned above, you can wrap a BeginXXX and EndXXX methods with a Task. </p><div class="fragment"><div class="line">await Task&lt;IDataReader&gt;.Factory</div>
-<div class="line">        .FromAsync&lt;DbCommand&gt;(asyncDB.BeginExecuteReader, </div>
+<div class="line">        .FromAsync&lt;DbCommand&gt;(asyncDB.BeginExecuteReader, .</div>
 <div class="line">        asyncDB.EndExecuteReader, cmd, <span class="keyword">null</span>);</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md13"></a>
 Updating Data</h3>
@@ -510,6 +512,57 @@ Updating the Database from a DataSet</h4>
 <div class="ttc" id="aa00245_html_ae5a4ed3e9684a7321ace50e03543a92a"><div class="ttname"><a href="a00245.html#ae5a4ed3e9684a7321ace50e03543a92a">Microsoft.Practices.EnterpriseLibrary.Data.UpdateBehavior</a></div><div class="ttdeci">UpdateBehavior</div><div class="ttdoc">Used with the Database.UpdateDataSet method. Provides control over behavior when the Data Adapter's u...</div><div class="ttdef"><b>Definition:</b> UpdateBehavior.cs:10</div></div>
 </div><!-- fragment --><p> The code captures and displays the number of rows affected by the updates. As expected, this is three, as shown in the final section of the output from the example.</p>
 <div class="fragment"><div class="line">Updated a total of 3 rows in the database.</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md17"></a>
+Managing Connections</h3>
+<p>Connections are scarce, expensive in terms of resource usage, and can cause a big performance hit if not managed correctly. You must obviously open a connection before you can access data, and you should make sure it is closed after you have finished with it. However, if the operating system does actually create a new connection, and then closes and destroys it every time, execution in your applications would flow like molasses.</p>
+<p>Instead, ADO.NET holds a pool of open connections that it hands out to applications that require them. Data access code must still go through the motions of calling the methods to create, open, and close connections, but ADO.NET automatically retrieves connections from the connection pool when possible, and decides when and whether to actually close the underlying connection and dispose it. The main issues arise when you have to decide when and how your code should call the <code>Close</code> method. The Data Access block helps to resolve these issues by automatically managing connections as far as is reasonably possible.</p>
+<p>When you use the Data Access block to retrieve a <code>DataSet</code>, the <code>ExecuteDataSet</code> method automatically opens and closes the connection to the database. If an error occurs, it will ensure that the connection is closed. If you want to keep a connection open, perhaps to perform multiple operations over that connection, you can access the <code>ActiveConnection</code> property of your <code>DbCommand</code> object and open it before calling the ExecuteDataSet method. The <code>ExecuteDataSet</code> method will leave the connection open when it completes, so you must ensure that your code closes it afterwards.</p>
+<p>In contrast, when you retrieve a <code>DataReader</code> or an <code>XmlReader</code>, the <a class="el" href="a00440.html#a027ed9810b2b0ad9f40e514041e47864">ExecuteReader</a> method (or, in the case of the <code>XmlReader</code>, the <a class="el" href="a00704.html#afc2086df0826b866c5460b57ad632657">ExecuteXmlReader</a> method) must leave the connection open so that you can read the data. The <code>ExecuteReader</code> method sets the <code>CommandBehavior</code> property of the reader to <code>CloseConnection</code> so that the connection is closed when you dispose the reader. Commonly, you will use a using construct to ensure that the reader is disposed, as shown here:</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> (IDataReader reader = db.ExecuteReader(cmd))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// use the reader here</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Typically, when you use the <code>ExecuteXmlReader</code> method, you will explicitly close the connection after you dispose the reader. This is because the underlying <code>XmlReader</code> class does not expose a <code>CommandBehavior</code> property. However, you should still use the same approach as with a <code>DataReader</code> (a using statement) to ensure that the <code>XmlReader</code> is correctly closed and disposed.</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> (XmlReader reader = db.ExecuteXmlReader(cmd))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// use the reader here</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Finally, if you want to be able to access the connection your code is using, perhaps to create connection-based transactions in your code, you can use the Data Access block methods to explicitly create a connection for your data access methods to use. This means that you must manage the connection yourself, usually through a using statement as shown below, which automatically closes and disposes the connection:</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> (DbConnection conn = db.CreateConnection())</div>
+<div class="line">{</div>
+<div class="line">    conn.Open();</div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// perform data access here</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// handle any errors here</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md18"></a>
+Working with Connection-Based Transactions</h3>
+<p>A common requirement in many applications is to perform multiple updates to data so that they all succeed, or can all be undone (rolled back) to leave the databases in a valid state that is consistent with the original content. The traditional example is when your bank carries out a monetary transaction that requires them to subtract a payment from one account and add the same amount to another account (or perhaps slightly less, with the commission going into their own account).</p>
+<p>Transactions should follow the four <b>ACID</b> principles. These are <b>Atomicity</b> (all of the tasks of a transaction are performed or none of them are), <b>Consistency</b> (the database remains in a consistent state before and after the transaction), <b>Isolation</b> (other operations cannot access or see the data in an intermediate state during a transaction), and <b>Durability</b> (the results of a successful transaction are persisted and will survive system failure).</p>
+<p>You can execute transactions when all of the updates occur in a single database by using the features of your database system (by including the relevant commands such as <code>BEGIN TRANSACTION</code> and <code>ROLLBACK TRANSACTION</code> in your stored procedures). ADO.NET also provides features that allow you to perform connection-based transactions over a single connection. This allows you to perform multiple actions on different tables in the same database, and manage the commit or rollback in your data access code.</p>
+<p>All of the methods of the Data Access block that retrieve or update data have overloads that accept a reference to an existing transaction as a DbTransaction type. As an example of their use, the following code explicitly creates a transaction over a connection. It assumes you have created the Data Access block <a class="el" href="a00440.html">Database</a> instance named <code>db</code> and two <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dbcommand">DbCommand</a> instances named <code>cmdA</code> and <code>cmdB</code>.</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> (DbConnection conn = db.CreateConnection())</div>
+<div class="line">{</div>
+<div class="line">    conn.Open();</div>
+<div class="line">    DbTransaction trans = conn.BeginTransaction();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// execute commands, passing in the current transaction to each one</span></div>
+<div class="line">        db.ExecuteNonQuery(cmdA, trans);</div>
+<div class="line">        db.ExecuteNonQuery(cmdB, trans);</div>
+<div class="line">        trans.Commit();    <span class="comment">// commit the transaction</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span></div>
+<div class="line">    {</div>
+<div class="line">        trans.Rollback();  <span class="comment">// rollback the transaction</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

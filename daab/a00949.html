@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('a00949.html',''); initResizable(); });
 </li>
 <li class="level3"><a href="#autotoc_md17">Managing Connections</a></li>
 <li class="level3"><a href="#autotoc_md18">Working with Connection-Based Transactions</a></li>
+<li class="level3"><a href="#autotoc_md19">Working with Distributed Transactions</a></li>
 </ul>
 </li>
 </ul>
@@ -562,6 +563,15 @@ Working with Connection-Based Transactions</h3>
 <div class="line">    {</div>
 <div class="line">        trans.Rollback();  <span class="comment">// rollback the transaction</span></div>
 <div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md19"></a>
+Working with Distributed Transactions</h3>
+<p>If you need to access different databases as part of the same transaction (including databases on separate servers), of if you need to include other data sources such as Microsoft Message Queuing (MSMQ) in your transaction, you must use a distributed transaction coordinator (DTC) mechanism such as Windows Component Services.</p>
+<p>However, ADO.NET supports the concept of automatic transactions through the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.transactions.transactionscope">TransactionScope</a> class. You can specify that a series of actions require transactional support, but ADO.NET will not generate an expensive distributed transaction until you actually open more than one connection within the transaction scope. This means that you can perform multiple transacted updates to different tables in the same database over a single connection. As soon as you open a new connection, ADO.NET automatically creates a distributed transaction (using Windows Component Services), and enrolls the original connections and all new connections created within the transaction scope into that distributed transaction. You then call methods on the transaction scope to either commit all updates, or to roll back (undo) all of them.</p>
+<p>This is done by the underlying ADO.NET. DAAB has no direct interaction with the DTC mechanism.</p>
+<p>Typically, you will use the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.transactions.transactionscope">TransactionScope</a> class in the following way: </p><div class="fragment"><div class="line"><span class="keyword">using</span> (TransactionScope scope = <span class="keyword">new</span> TransactionScope(TransactionScopeOption.RequiresNew))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// perform data access here</span></div>
 <div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

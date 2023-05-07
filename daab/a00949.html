@@ -216,7 +216,7 @@ Creating Database Instances</h3>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Create a Database object from the factory using the connection string name.</span></div>
 <div class="line">Database namedDB = factory.Create(<span class="stringliteral">&quot;ExampleDatabase&quot;</span>);</div>
-</div><!-- fragment --><p> where "ExampleDatabase" is a <code>name</code> of a connection string. With <code>CreateDefault</code>, the connection string specified by the <code>defaultDatabase</code> attribute of the <code>dataConfiguration</code> element in web.config is used, as described above. Using the default database is a useful approach because you can change which of the databases defined in your configuration is the default simply by editing the configuration file, without requiring recompilation or redeployment of the application.</p>
+</div><!-- fragment --><p> where "ExampleDatabase" is a <code>name</code> of a connection string. With <a class="el" href="a00460.html#a86f25a642857f4c96195bfd6256ad185">CreateDefault</a>, the connection string specified by the <code>defaultDatabase</code> attribute of the <code>dataConfiguration</code> element in web.config is used, as described above. Using the default database is a useful approach because you can change which of the databases defined in your configuration is the default simply by editing the configuration file, without requiring recompilation or redeployment of the application.</p>
 <p>Some features are only available in the concrete types for a specific database. For example, the <code>ExecuteXmlReader</code> method is only available in the <code>SqlDatabase</code> class. If you want to use such features, you must cast the database type you instantiate to the appropriate concrete type.</p>
 <p>As alternative to using the <code>DatabaseProviderFactory</code> class, you could use the static <code>DatabaseFactory</code> façade to create your <code>Database</code> instances. You must invoke the <code>SetDatabaseProviderFactory</code> method to set the details of the default database from the configuration file.</p>
 <div class="fragment"><div class="line">DatabaseFactory.SetDatabaseProviderFactory(factory, <span class="keyword">false</span>);</div>
@@ -573,7 +573,9 @@ Working with Distributed Transactions</h3>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// perform data access here</span></div>
 <div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><p>The example uses the Microsoft Distributed Transaction Coordinator (DTC) service. You must ensure that this service is running before you execute the example; depending on your operating system it may not be set to start automatically. To start the service, open the Services MMC snap-in from your Administrative Tools menu, right-click on the Distributed Transaction Coordinator service, and click Start. To see the effects of the <code>TransactionScope</code> and the way that it promotes a transaction, open the Component Services MMC snap-in from your Administrative Tools menu and expand the Component Services node until you can see the Transaction List in the central pane of the snap-in.</p>
+<p>Your code should call the <code>Complete</code> method of the <code>TransactionScope</code> object before it exits the <code>using</code> block in order to preserve the changes in the database, otherwise they are rolled back automatically. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
